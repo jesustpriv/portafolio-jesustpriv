@@ -1,0 +1,1764 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel Tovar | Coordinador de Producción y Desarrollo Tecnológico</title>
+    
+    <!-- Copyright & SEO Meta Tags -->
+    <meta name="author" content="Gabriel Tovar">
+    <meta name="copyright" content="© 2019 Gabriel Tovar. All rights reserved.">
+    <meta name="description" content="Portafolio profesional de Gabriel Tovar - Coordinador de Producción y Desarrollo Tecnológico">
+    <meta name="keywords" content="Gabriel Tovar, portafolio, desarrollo tecnológico, producción, diseño, fotografía, Venezuela">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Gabriel Tovar | Coordinador de Producción y Desarrollo Tecnológico">
+    <meta property="og:description" content="Portafolio profesional de Gabriel Tovar - Coordinador de Producción y Desarrollo Tecnológico">
+    <meta property="og:site_name" content="Gabriel Tovar Portfolio">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Gabriel Tovar | Coordinador de Producción y Desarrollo Tecnológico">
+    <meta property="twitter:description" content="Portafolio profesional de Gabriel Tovar">
+    
+    <!-- Robots -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+
+    <!-- Tailwind Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+
+
+    <style>
+        :root {
+            --accent: #10b981;
+            --accent-hover: #059669;
+        }
+
+        body {
+            background-color: #121212;
+            color: #f4f4f5;
+            min-height: 100vh;
+        }
+
+        /* Glassmorphism */
+        .glass {
+            background: rgba(24, 24, 27, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Header Scroll Effect */
+        header.scrolled {
+            background: rgba(9, 9, 11, 0.8);
+            backdrop-filter: blur(12px);
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Skill Tags */
+        .skill-tag {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: #18181b;
+            border: 1px solid #27272a;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            color: #d4d4d8;
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .skill-tag:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* Timeline */
+        .timeline-line {
+            position: absolute;
+            left: 1rem;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background-color: #27272a;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 1rem;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 9999px;
+            background-color: var(--accent);
+            border: 4px solid #09090b;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-dot {
+                left: 50%;
+            }
+        }
+
+        /* Form Inputs */
+        .form-input {
+            width: 100%;
+            background-color: #1a1a1a;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 0.5rem;
+            padding: 0.75rem 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+            color: #fff;
+        }
+
+        .form-input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+            background-color: #222;
+        }
+
+        /* Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Modal Animations */
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95) translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .animate-scale-in {
+            animation: scaleIn 0.3s ease-out forwards;
+        }
+
+        /* Social Action Buttons */
+        .social-action-btn {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.25rem;
+            background-color: #1a1a1a;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            color: #a1a1aa;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-action-btn:hover {
+            background-color: rgba(16, 185, 129, 0.1);
+            border-color: #10b981;
+            color: #10b981;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.1);
+        }
+
+        /* Gallery Styles */
+        .gallery-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            cursor: pointer;
+            height: 320px;
+            /* Fixed height for consistent display */
+            background-color: #222;
+            /* Blur-up background */
+        }
+
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            .gallery-card {
+                height: auto;
+                aspect-ratio: 1 / 1;
+                /* 1:1 square aspect ratio on mobile */
+            }
+
+            /* Hero Section Mobile */
+            #home h1 {
+                font-size: 3rem;
+                line-height: 1.1;
+            }
+
+            #home p {
+                font-size: 1rem;
+            }
+
+            /* Section Spacing Mobile */
+            section {
+                padding: 3rem 1rem;
+            }
+
+            /* Profile Image Mobile */
+            .w-40 {
+                width: 6rem;
+            }
+
+            .h-48 {
+                height: 7rem;
+            }
+
+            /* Service Cards Mobile */
+            .skill-card {
+                padding: 1rem;
+            }
+
+            /* Gallery Grid Mobile */
+            .grid-cols-1.md\:grid-cols-2.lg\:grid-cols-4 {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            /* Gallery Cards Mobile */
+            .gallery-card {
+                margin: 0 auto;
+                max-width: 100%;
+            }
+
+            /* Button Mobile */
+            .px-8 {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+
+            .py-4 {
+                padding-top: 0.75rem;
+                padding-bottom: 0.75rem;
+            }
+
+            /* Hero Buttons Mobile */
+            .flex-col.sm\:flex-row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .flex-col.sm\:flex-row .gap-4 {
+                gap: 1rem;
+            }
+
+            .flex-col.sm\:flex-row a {
+                width: 100%;
+                max-width: 280px;
+            }
+
+            /* Text Mobile */
+            .text-4xl {
+                font-size: 2rem;
+            }
+
+            .text-2xl {
+                font-size: 1.25rem;
+            }
+
+            /* Navigation Mobile */
+            header {
+                padding: 1rem;
+            }
+
+            /* Contact Form Mobile */
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .contact-full {
+                grid-column: span 1;
+            }
+
+            /* Services Section Mobile */
+            .grid.md\:grid-cols-3 {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            /* About Section Mobile */
+            .grid.md\:grid-cols-2 {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            /* Skill Tags Mobile */
+            .flex-wrap.gap-3 {
+                gap: 0.5rem;
+            }
+
+            .skill-tag {
+                font-size: 0.75rem;
+                padding: 0.375rem 0.75rem;
+            }
+
+            /* Reveal animations mobile */
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+
+            /* Modal Mobile */
+            .modal-content {
+                margin: 1rem;
+                max-height: 95vh;
+            }
+
+            .modal-info {
+                padding: 1rem;
+            }
+
+            /* Footer Mobile */
+            footer {
+                padding: 2rem 1rem;
+            }
+        }
+
+        .gallery-card img {
+            transition: transform 0.5s ease, opacity 0.8s ease;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-card img.loaded {
+            opacity: 1;
+        }
+
+        .gallery-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            backdrop-filter: blur(4px);
+        }
+
+        .gallery-card:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        /* Modal / Lightbox */
+        #gallery-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        #gallery-modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            max-width: 1000px;
+            width: 90%;
+            max-height: 85vh;
+            background: #121212;
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+            position: relative;
+        }
+
+        @media (min-width: 768px) {
+            .modal-content {
+                width: 85%;
+                max-width: 1100px;
+                flex-direction: row;
+            }
+        }
+
+        .modal-img-container {
+            flex: 1.5;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            min-height: 350px;
+            max-height: 85vh;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .modal-img-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(16, 185, 129, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .modal-img-container::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.02), transparent);
+            animation: shimmer 3s infinite;
+            pointer-events: none;
+        }
+
+        @media (min-width: 768px) {
+            .modal-img-container {
+                flex: 2;
+                max-height: none;
+                padding: 2.5rem;
+            }
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .modal-img-container img {
+            width: 100%;
+            height: auto;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 1rem;
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.8),
+                0 10px 20px rgba(16, 185, 129, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .modal-img-container img:hover {
+            transform: scale(1.02);
+            box-shadow: 
+                0 25px 50px rgba(0, 0, 0, 0.9),
+                0 15px 30px rgba(16, 185, 129, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.15);
+        }
+
+        .modal-info {
+            width: 100%;
+            padding: 1.5rem;
+            padding-bottom: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: linear-gradient(to bottom, #121212, #0a0a0a);
+            position: relative;
+            flex: 1;
+        }
+
+        @media (min-width: 768px) {
+            .modal-info {
+                width: 350px;
+                flex: 1;
+                padding-bottom: 1.5rem;
+            }
+        }
+
+        /* Skill Pills */
+        .skill-pill {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1.25rem;
+            background-color: #1a1a1a;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            color: #d4d4d8;
+            font-size: 0.875rem;
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .skill-pill:hover {
+            background-color: rgba(16, 185, 129, 0.1);
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.1);
+        }
+
+        .skill-pill i {
+            font-size: 1.1rem;
+        }
+
+        /* Skill Cards */
+        .skill-card {
+            background-color: #121212;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover {
+            border-color: var(--accent);
+            background-color: rgba(16, 185, 129, 0.05);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.2);
+        }
+
+        /* Contact Form Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 640px) {
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .contact-full {
+                grid-column: span 2;
+            }
+        }
+
+        /* Enhanced Copyright & Image Protection */
+        .copyright-notice {
+            position: relative;
+            padding: 1rem;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 0.5rem;
+            margin: 1rem 0;
+            font-size: 0.875rem;
+            color: #10b981;
+            text-align: center;
+        }
+
+        .watermark {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            pointer-events: none;
+            z-index: 10;
+            opacity: 0.8;
+        }
+
+        .protected-image {
+            position: relative;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            pointer-events: none;
+        }
+
+        .protected-image::after {
+            content: "© Gabriel Tovar";
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            background: rgba(16, 185, 129, 0.9);
+            color: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            opacity: 0.8;
+            pointer-events: none;
+        }
+
+        /* Disable right click on images */
+        .gallery-card img {
+            pointer-events: none;
+            -webkit-touch-callout: none;
+            -webkit-user-drag: none;
+            user-select: none;
+        }
+
+        /* Disable text selection on entire page */
+        body {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-touch-callout: none;
+        }
+
+        /* Allow text selection only for input fields */
+        input, textarea, [contenteditable] {
+            -webkit-user-select: text;
+            -moz-user-select: text;
+            -ms-user-select: text;
+            user-select: text;
+        }
+
+        /* Disable print */
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            .copyright-notice, .footer-copyright {
+                visibility: visible;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 24px;
+            }
+        }
+
+        /* Modal copyright */
+        .modal-copyright {
+            margin-top: auto;
+            background: rgba(16, 185, 129, 0.95);
+            color: white;
+            padding: 10px;
+            font-size: 0.75rem;
+            text-align: center;
+            z-index: 30;
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+        }
+
+        @media (min-width: 768px) {
+            .modal-copyright {
+                margin-top: 1rem;
+                border-radius: 6px;
+            }
+        }
+
+        /* Footer copyright enhancement */
+        .footer-copyright {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        /* Disable drag and drop */
+        * {
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-drag: none;
+        }
+
+        /* Disable selection */
+        * {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+    </style>
+</head>
+
+<body class="selection:bg-accent selection:text-zinc-950">
+
+    <!-- Header / Nav -->
+    <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-6">
+        <nav class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-display font-bold tracking-tighter text-accent">
+                GABRIEL<span class="text-white">.</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#home" class="text-sm font-medium text-zinc-400 hover:text-accent transition-colors">Inicio</a>
+                <a href="#portfolio"
+                    class="text-sm font-medium text-zinc-400 hover:text-accent transition-colors">Proyectos</a>
+                <a href="#about"
+                    class="text-sm font-medium text-zinc-400 hover:text-accent transition-colors">Perfil</a>
+                <a href="#services"
+                    class="text-sm font-medium text-zinc-400 hover:text-accent transition-colors">Servicios</a>
+                <a href="#experience"
+                    class="text-sm font-medium text-zinc-400 hover:text-accent transition-colors">Experiencia</a>
+                <a href="#contact"
+                    class="text-sm font-medium text-zinc-400 hover:text-accent transition-colors">Contacto</a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button id="mobile-menu-toggle" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden absolute top-full left-0 w-full bg-zinc-900/95 backdrop-blur-md border-b border-white/10 md:hidden flex flex-col p-6 gap-4">
+            <a href="#home"
+                class="mobile-link flex items-center gap-3 text-lg font-medium text-zinc-300 hover:text-accent">
+                <i class="fas fa-home w-6"></i> Inicio
+            </a>
+            <a href="#portfolio"
+                class="mobile-link flex items-center gap-3 text-lg font-medium text-zinc-300 hover:text-accent">
+                <i class="fas fa-briefcase w-6"></i> Proyectos
+            </a>
+            <a href="#about"
+                class="mobile-link flex items-center gap-3 text-lg font-medium text-zinc-300 hover:text-accent">
+                <i class="fas fa-user w-6"></i> Perfil
+            </a>
+            <a href="#services"
+                class="mobile-link flex items-center gap-3 text-lg font-medium text-zinc-300 hover:text-accent">
+                <i class="fas fa-th-list w-6"></i> Servicios
+            </a>
+            <a href="#experience"
+                class="mobile-link flex items-center gap-3 text-lg font-medium text-zinc-300 hover:text-accent">
+                <i class="fas fa-history w-6"></i> Experiencia
+            </a>
+            <a href="#contact"
+                class="mobile-link flex items-center gap-3 text-lg font-medium text-zinc-300 hover:text-accent">
+                <i class="fas fa-envelope w-6"></i> Contacto
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home"
+            class="min-h-screen flex flex-col justify-center items-center px-6 pt-20 relative overflow-hidden">
+            <div class="absolute inset-0 -z-10">
+                <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse"></div>
+                <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"
+                    style="animation-delay: 1s;"></div>
+            </div>
+
+            <div class="text-center reveal">
+                <span class="text-accent font-mono text-sm tracking-widest uppercase mb-4 block">Coordinador de
+                    Producción y Desarrollo</span>
+                <h1 class="text-6xl md:text-8xl font-display font-bold tracking-tighter mb-6">
+                    GABRIEL <span class="text-accent">TOVAR</span>
+                </h1>
+
+                <div class="h-12 flex items-center justify-center mb-8">
+                    <p id="dynamic-title"
+                        class="text-2xl md:text-4xl text-zinc-400 font-light italic transition-opacity duration-500">
+                        Gestión de Proyectos Tecnológicos
+                    </p>
+                </div>
+
+                <p class="max-w-2xl mx-auto text-zinc-500 text-lg mb-10 leading-relaxed">
+                    Coordinador de proyectos digitales con visión integral que une creatividad, tecnología y telecomunicaciones. 
+                    Especialista en transformar ideas en realidades visuales y técnicas de alto impacto, desde infraestructura FTTH 
+                    hasta desarrollo frontend asistido por IA y fotografía profesional.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#contact"
+                        class="bg-accent hover:bg-accent-hover text-zinc-950 px-8 py-4 rounded-full font-bold flex items-center justify-center gap-2 transition-all transform hover:scale-105">
+                        <i class="fas fa-paper-plane"></i>
+                        Hablemos
+                    </a>
+                    <a href="https://www.linkedin.com/in/gabrieljtovar/" target="_blank"
+                        class="border border-zinc-800 hover:border-accent px-8 py-4 rounded-full font-bold flex items-center justify-center gap-2 transition-all">
+                        <i class="fab fa-linkedin"></i>
+                        Ver LinkedIn
+                    </a>
+                    <a href="#portfolio"
+                        class="border border-zinc-800 hover:border-accent px-8 py-4 rounded-full font-bold flex items-center justify-center gap-2 transition-all">
+                        Ver Proyectos
+                        <i class="fas fa-chevron-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
+                <span class="text-[10px] uppercase tracking-[0.3em] text-zinc-600">Scroll</span>
+                <div class="w-px h-12 bg-gradient-to-b from-accent to-transparent"></div>
+            </div>
+        </section>
+
+        <!-- Portafolio -->
+        <section id="portfolio" class="py-24 px-6 bg-black/20">
+            <div class="max-w-7xl mx-auto">
+                <!-- Diseño Section -->
+                <div class="mb-20">
+                    <div class="reveal mb-12">
+                        <h2 class="text-4xl font-display font-bold mb-4 flex items-center gap-4">
+                            <span class="text-accent text-xl font-mono">01.</span> Portafolio de Diseño
+                        </h2>
+                        <p class="text-zinc-500">Una selección de mis trabajos de identidad visual y branding.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="gallery-card group reveal" data-img="assets/design-1.webp" data-title="Akion"
+                            data-description="Identidad visual de marca personal.">
+                            <img src="assets/design-1.webp" alt="Proyecto Akion" class="w-full h-full object-cover protected-image"
+                                loading="lazy" decoding="async">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
+                                <span class="text-white font-bold">Ver Diseño</span>
+                            </div>
+                        </div>
+                        <div class="gallery-card group reveal" data-img="assets/design-2.webp"
+                            data-title="Panda Express"
+                            data-description="Diseño de marca para servicio de comida china.">
+                            <img src="assets/design-2.webp" alt="Proyecto Panda Express"
+                                class="w-full h-full object-cover protected-image" loading="lazy" decoding="async">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
+                                <span class="text-white font-bold">Ver Diseño</span>
+                            </div>
+                        </div>
+                        <div class="gallery-card group reveal" data-img="assets/design-3.webp" data-title="Sof's"
+                            data-description="Identidad para servicios del área médica y estética.">
+                            <img src="assets/design-3.webp" alt="Proyecto Sof's" class="w-full h-full object-cover protected-image"
+                                loading="lazy" decoding="async">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
+                                <span class="text-white font-bold">Ver Diseño</span>
+                            </div>
+                        </div>
+                        <div class="gallery-card group reveal" data-img="assets/design-4.webp" data-title="Optimum"
+                            data-description="Marca de gadgets y electrónicos de consumo.">
+                            <img src="assets/design-4.webp" alt="Proyecto Optimum" class="w-full h-full object-cover protected-image"
+                                loading="lazy" decoding="async">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
+                                <span class="text-white font-bold">Ver Diseño</span>
+                            </div>
+                        </div>
+                        <div class="gallery-card group reveal" data-img="assets/design-5.webp"
+                            data-title="Barbería Freelance"
+                            data-description="Branding para servicios de estilismo masculino.">
+                            <img src="assets/design-5.webp" alt="Proyecto Barbería Freelance"
+                                class="w-full h-full object-cover protected-image" loading="lazy" decoding="async">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
+                                <span class="text-white font-bold">Ver Diseño</span>
+                            </div>
+                        </div>
+                        <div class="gallery-card group reveal" data-img="assets/design-6.webp"
+                            data-title="La Evolución S.S"
+                            data-description="Identidad para servicio técnico informático especializado.">
+                            <img src="assets/design-6.webp" alt="Proyecto La Evolución S.S"
+                                class="w-full h-full object-cover protected-image" loading="lazy" decoding="async">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
+                                <span class="text-white font-bold">Ver Diseño</span>
+                            </div>
+                        </div>
+                        <div class="gallery-card group reveal" data-img="assets/design-7.webp" data-title="M.E.I.T"
+                            data-description="Identificador gráfico para movimiento estudiantil.">
+                            <img src="assets/design-7.webp" alt="Proyecto M.E.I.T" class="w-full h-full object-cover protected-image"
+                                loading="lazy" decoding="async">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
+                                <span class="text-white font-bold">Ver Diseño</span>
+                            </div>
+                        </div>
+                        <div class="gallery-card group reveal" data-img="assets/design-8.webp"
+                            data-title="Ivanna's Boutique"
+                            data-description="Marca para tienda de ropa y artículos de belleza.">
+                            <img src="assets/design-8.webp" alt="Proyecto Ivanna's Boutique"
+                                class="w-full h-full object-cover protected-image" loading="lazy" decoding="async">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
+                                <span class="text-white font-bold">Ver Diseño</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fotografía Section -->
+                <div>
+                    <div class="reveal mb-12">
+                        <h2 class="text-4xl font-display font-bold mb-4 flex items-center gap-4">
+                            <span class="text-accent text-xl font-mono">02.</span> Portafolio Fotográfico
+                        </h2>
+                        <p class="text-zinc-500">Una selección de mis capturas y composiciones.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="gallery-card group reveal" data-img="assets/imagen-1.webp" data-title="Be the One"
+                            data-description="Gourmet The One Place.">
+                            <img src="assets/imagen-1.webp" alt="Fotografía Be the One" class="w-full h-full object-cover protected-image"
+                                loading="lazy" decoding="async">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
+                                <span class="text-white font-bold">Ver Foto</span>
+                            </div>
+                        </div>
+                        <div class="gallery-card group reveal" data-img="assets/imagen-2.webp"
+                            data-title="Domo Olímpico" data-description="B&W, Villa Olímpica.">
+                            <img src="assets/imagen-2.webp" alt="Fotografía Domo Olímpico"
+                                class="w-full h-full object-cover protected-image" loading="lazy" decoding="async">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
+                                <span class="text-white font-bold">Ver Foto</span>
+                            </div>
+                        </div>
+                        <div class="gallery-card group reveal" data-img="assets/imagen-3.webp" data-title="Minina"
+                            data-description="Retrato felino.">
+                            <img src="assets/imagen-3.webp" alt="Fotografía Minina" class="w-full h-full object-cover protected-image"
+                                loading="lazy" decoding="async">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
+                                <span class="text-white font-bold">Ver Foto</span>
+                            </div>
+                        </div>
+                        <div class="gallery-card group reveal" data-img="assets/imagen-4.webp" data-title="Hotel Termal"
+                            data-description="B&W, Monumento Natural.">
+                            <img src="assets/imagen-4.webp" alt="Fotografía Hotel Termal"
+                                class="w-full h-full object-cover protected-image" loading="lazy" decoding="async">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
+                                <span class="text-white font-bold">Ver Foto</span>
+                            </div>
+                        </div>
+                        <div class="gallery-card group reveal" data-img="assets/imagen-5.webp" data-title="Odra"
+                            data-description="Retrato de artista.">
+                            <img src="assets/imagen-5.webp" alt="Fotografía Odra" class="w-full h-full object-cover protected-image"
+                                loading="lazy" decoding="async">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
+                                <span class="text-white font-bold">Ver Foto</span>
+                            </div>
+                        </div>
+                        <div class="gallery-card group reveal" data-img="assets/imagen-6.webp" data-title="El Ofertazo"
+                            data-description="B&W, Av. Bolívar.">
+                            <img src="assets/imagen-6.webp" alt="Fotografía El Ofertazo"
+                                class="w-full h-full object-cover protected-image" loading="lazy" decoding="async">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
+                                <span class="text-white font-bold">Ver Foto</span>
+                            </div>
+                        </div>
+                        <div class="gallery-card group reveal" data-img="assets/imagen-7.webp"
+                            data-title="Antena y Faro" data-description="Urb. Rómulo Gallegos.">
+                            <img src="assets/imagen-7.webp" alt="Fotografía Antena y Faro"
+                                class="w-full h-full object-cover protected-image" loading="lazy" decoding="async">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
+                                <span class="text-white font-bold">Ver Foto</span>
+                            </div>
+                        </div>
+                        <div class="gallery-card group reveal" data-img="assets/imagen-8.webp"
+                            data-title="Rafael García" data-description="Sesión B&W.">
+                            <img src="assets/imagen-8.webp" alt="Fotografía Rafael García"
+                                class="w-full h-full object-cover protected-image" loading="lazy" decoding="async">
+                            <div class="gallery-overlay">
+                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
+                                <span class="text-white font-bold">Ver Foto</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copyright Notice -->
+                <div class="copyright-notice">
+                    <p><i class="fas fa-copyright"></i> 2019 Gabriel Tovar - Todos los derechos reservados</p>
+                    <p class="text-xs mt-2">Las imágenes y diseños mostrados son propiedad intelectual de Gabriel Tovar y están protegidos por leyes de derechos de autor.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios / Propuesta de Valor -->
+        <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
+            <div class="reveal mb-16 text-center">
+                <h2 class="text-4xl font-display font-bold mb-4">Servicios Especializados</h2>
+                <p class="text-zinc-500 max-w-2xl mx-auto">Soluciones integrales que combinan visión estratégica, diseño
+                    de vanguardia y ejecución técnica.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Identidad Visual -->
+                <div class="skill-card reveal">
+                    <div class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center text-accent mb-6">
+                        <i class="fas fa-palette text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Identidad Visual</h3>
+                    <p class="text-zinc-500 text-sm leading-relaxed mb-6">
+                        Diseño de marcas con propósito. Desde logotipos hasta sistemas visuales completos que capturan
+                        la esencia de tu negocio.
+                    </p>
+                    <ul class="space-y-2 text-xs text-zinc-400">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> Branding & Logos
+                        </li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> Manuales de Marca
+                        </li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> Diseño Publicitario
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Gestión de Proyectos -->
+                <div class="skill-card reveal" style="transition-delay: 0.1s;">
+                    <div class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center text-accent mb-6">
+                        <i class="fas fa-tasks text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Gestión de Proyectos</h3>
+                    <p class="text-zinc-500 text-sm leading-relaxed mb-6">
+                        Coordinación experta de equipos y procesos para asegurar que cada entrega cumpla con los más
+                        altos estándares.
+                    </p>
+                    <ul class="space-y-2 text-xs text-zinc-400">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> Coordinación de
+                            Equipos</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> Optimización de
+                            Procesos</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> Soporte Estratégico
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Producción Audiovisual -->
+                <div class="skill-card reveal" style="transition-delay: 0.2s;">
+                    <div class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center text-accent mb-6">
+                        <i class="fas fa-camera-retro text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Producción Audiovisual</h3>
+                    <p class="text-zinc-500 text-sm leading-relaxed mb-6">
+                        Creación de contenido visual de alto impacto que comunica y conecta con tu audiencia de manera
+                        profesional.
+                    </p>
+                    <ul class="space-y-2 text-xs text-zinc-400">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> Fotografía
+                            Profesional</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> Edición de Video
+                        </li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> Dirección Creativa
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Perfil Profesional -->
+        <section id="about" class="py-32 px-6 max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-32 items-start">
+                <!-- Left Column: Profile Section -->
+                <div class="reveal">
+                    <!-- Profile Image -->
+                    <div class="mb-12">
+                        <div class="w-48 h-56 mx-auto rounded-3xl overflow-hidden border-2 border-zinc-800/50 shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                            <img src="assets/profile.webp" alt="Gabriel Tovar" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    
+                    <h2 class="text-5xl font-display font-bold mb-10 flex items-center gap-4">
+                        <span class="text-accent text-xl font-mono">03.</span> Perfil Profesional
+                    </h2>
+                    <div class="space-y-8 text-zinc-300 leading-relaxed text-lg">
+                        <p>
+                            Coordinador de Producción y Desarrollo en Coder.y con experiencia integral que abarca desde 
+                            infraestructura de telecomunicaciones FTTH hasta desarrollo frontend asistido por IA. 
+                            Mi enfoque une la visión estética y gráfica con implementación tecnológica de vanguardia.
+                        </p>
+                        <p>
+                            Actualmente coordino procesos creativos y técnicos, asegurando que cada entrega tecnológica 
+                            cumpla con altos estándares de calidad y resolución técnica. Domino lenguajes como TypeScript 
+                            y herramientas como VSCode, Google AI Studio y Windsurf para optimizar el desarrollo.
+                        </p>
+                        <p>
+                            Mi experiencia abarca producción audiovisual, diseño de identidades visuales con Adobe Creative Suite 
+                            y Affinity, fotografía profesional con capturas en blanco y negro y color, y gestión operativa en 
+                            entornos de tecnología y telecomunicaciones. Esto me permite tener una visión integral de cada 
+                            desafío, desde la estrategia digital con Instagram/Facebook Ads hasta la implementación técnica.
+                        </p>
+                    </div>
+
+                    <div class="mt-12">
+                        <a href="https://wa.me/584243591727?text=Hola%20Gabriel,%20vi%20tu%20portafolio%20y%20me%20gustaría%20solicitar%20tu%20CV%20actualizado."
+                            target="_blank"
+                            class="group flex items-center gap-4 text-accent font-bold hover:text-white transition-all duration-300 text-lg">
+                            <div
+                                class="w-12 h-12 rounded-full border-2 border-accent/30 flex items-center justify-center group-hover:bg-accent group-hover:text-zinc-950 transition-all duration-300 group-hover:scale-110">
+                                <i class="fab fa-whatsapp text-xl"></i>
+                            </div>
+                            Solicitar Síntesis por WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Skills Section -->
+                <div class="reveal space-y-8">
+                    <!-- Infraestructura -->
+                    <div class="skill-card p-6 transform hover:scale-102 transition-transform duration-300">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent">
+                                <i class="fas fa-network-wired text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white">Infraestructura & Telecom</h3>
+                                <p class="text-xs text-zinc-400">Gestión de redes FTTH y Radio Enlace.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Mikrotik</span>
+                            <span
+                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Mikrowisp</span>
+                            <span
+                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">AdminOLT</span>
+                            <span
+                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">SmartOLT</span>
+                            <span
+                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">AirControl</span>
+                        </div>
+                    </div>
+
+                    <!-- Diseño -->
+                    <div class="skill-card p-6 transform hover:scale-102 transition-transform duration-300">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent">
+                                <i class="fas fa-palette text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white">Suite Creativa</h3>
+                                <p class="text-xs text-zinc-400">Identidad visual y contenido multimedia.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Photoshop</span>
+                            <span
+                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Illustrator</span>
+                            <span
+                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">CorelDraw</span>
+                            <span
+                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Canva</span>
+                            <span
+                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">CapCut</span>
+                            <span
+                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Affinity</span>
+                        </div>
+                    </div>
+
+                    <!-- Estrategia -->
+                    <div class="skill-card p-6 transform hover:scale-102 transition-transform duration-300">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent">
+                                <i class="fas fa-bullhorn text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white">Estrategia Digital</h3>
+                                <p class="text-xs text-zinc-400">Gestión de marca y posicionamiento.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Redacción</span>
+                            <span
+                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Redes
+                                Sociales</span>
+                            <span
+                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Marketing
+                                Digital</span>
+                            <span
+                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Estudio de Mercado</span>
+                            <span
+                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Instagram Ads</span>
+                            <span
+                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Facebook Ads</span>
+                            <span
+                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Google Workplace</span>
+                            <span
+                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Google Cloud</span>
+                        </div>
+                    </div>
+
+                    <!-- Desarrollo -->
+                    <div class="skill-card p-6 transform hover:scale-102 transition-transform duration-300">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent">
+                                <i class="fas fa-code text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white">Desarrollo & IA</h3>
+                                <p class="text-xs text-zinc-400">Herramientas de desarrollo y programación asistida.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">VSCode</span>
+                            <span
+                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Antigravity</span>
+                            <span
+                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Windsurf</span>
+                            <span
+                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Google AI Studio</span>
+                            <span
+                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Stitch</span>
+                            <span
+                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">GitHub</span>
+                            <span
+                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">TypeScript</span>
+                            <span
+                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Frontend</span>
+                            <span
+                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Vibe Coding</span>
+                            <span
+                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">AI Coding</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 p-6 bg-gradient-to-r from-zinc-900/50 to-zinc-800/50 rounded-2xl border border-zinc-700/50">
+                        <h3 class="text-lg font-bold mb-6 text-white uppercase tracking-wider">Habilidades Clave</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-tag px-4 py-2 text-sm bg-accent/10 border border-accent/30 hover:bg-accent/20 transition-colors">Coordinación de Proyectos</span>
+                            <span class="skill-tag px-4 py-2 text-sm bg-accent/10 border border-accent/30 hover:bg-accent/20 transition-colors">Desarrollo Frontend</span>
+                            <span class="skill-tag px-4 py-2 text-sm bg-accent/10 border border-accent/30 hover:bg-accent/20 transition-colors">Infraestructura FTTH</span>
+                            <span class="skill-tag px-4 py-2 text-sm bg-accent/10 border border-accent/30 hover:bg-accent/20 transition-colors">Fotografía Profesional</span>
+                            <span class="skill-tag px-4 py-2 text-sm bg-accent/10 border border-accent/30 hover:bg-accent/20 transition-colors">IA Coding</span>
+                            <span class="skill-tag px-4 py-2 text-sm bg-accent/10 border border-accent/30 hover:bg-accent/20 transition-colors">Diseño Digital</span>
+                            <span class="skill-tag px-4 py-2 text-sm bg-accent/10 border border-accent/30 hover:bg-accent/20 transition-colors">Marketing Digital</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experiencia -->
+        <section id="experience" class="py-24 px-6 max-w-4xl mx-auto">
+            <h2 class="text-4xl font-display font-bold mb-16 flex items-center gap-4 reveal">
+                <span class="text-accent text-xl font-mono">04.</span> Experiencia
+            </h2>
+
+            <div class="relative reveal">
+                <div class="timeline-line"></div>
+
+                <div class="space-y-12">
+                    <!-- Coder.y -->
+                    <div class="relative pl-12 md:pl-0">
+                        <div class="timeline-dot"></div>
+                        <div class="md:w-1/2 md:pr-12 md:text-right">
+                            <span class="text-accent font-mono text-sm mb-2 block">Actualidad</span>
+                            <h3 class="text-xl font-bold text-white mb-1">Coordinación de Producción y Desarrollo</h3>
+                            <h4 class="text-zinc-400 font-medium mb-4">Coder.y</h4>
+                            <p class="text-zinc-500 text-sm leading-relaxed">
+                                Superviso la creación de apps y sitios web desde una perspectiva de gestión y diseño,
+                                asegurando estándares de calidad y funcionalidad tecnológica.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Sabor Oriental -->
+                    <div class="relative pl-12 md:pl-0">
+                        <div class="timeline-dot"></div>
+                        <div class="md:w-1/2 md:ml-auto md:pl-12">
+                            <span class="text-accent font-mono text-sm mb-2 block">2025</span>
+                            <h3 class="text-xl font-bold text-white mb-1">Mesero / DJ</h3>
+                            <h4 class="text-zinc-400 font-medium mb-4">Sabor Oriental</h4>
+                            <p class="text-zinc-500 text-sm leading-relaxed">
+                                Servicio de atención al cliente y animación musical en eventos y ambiente del local.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Supernova -->
+                    <div class="relative pl-12 md:pl-0">
+                        <div class="timeline-dot"></div>
+                        <div class="md:w-1/2 md:pr-12 md:text-right">
+                            <span class="text-accent font-mono text-sm mb-2 block">2024</span>
+                            <h3 class="text-xl font-bold text-white mb-1">Coordinador del Centro de Operaciones Remotas</h3>
+                            <h4 class="text-zinc-400 font-medium mb-4">Supernova Telecomunicaciones</h4>
+                            <p class="text-zinc-500 text-sm leading-relaxed">
+                                Gestión y supervisión del centro de operaciones. Garantizo que los flujos de soporte y
+                                atención al usuario en servicios FTTH funcionen correctamente.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Bodegón Los Morros -->
+                    <div class="relative pl-12 md:pl-0">
+                        <div class="timeline-dot"></div>
+                        <div class="md:w-1/2 md:ml-auto md:pl-12">
+                            <span class="text-accent font-mono text-sm mb-2 block">2023</span>
+                            <h3 class="text-xl font-bold text-white mb-1">Encargado de Barra</h3>
+                            <h4 class="text-zinc-400 font-medium mb-4">Bodegón Los Morros</h4>
+                            <p class="text-zinc-500 text-sm leading-relaxed">
+                                Gestión operativa y coordinación de atención al cliente.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- DukuPhone -->
+                    <div class="relative pl-12 md:pl-0">
+                        <div class="timeline-dot"></div>
+                        <div class="md:w-1/2 md:pr-12 md:text-right">
+                            <span class="text-accent font-mono text-sm mb-2 block">2022</span>
+                            <h3 class="text-xl font-bold text-white mb-1">Vendedor</h3>
+                            <h4 class="text-zinc-400 font-medium mb-4">DukuPhone</h4>
+                            <p class="text-zinc-500 text-sm leading-relaxed">
+                                Asesoría comercial en dispositivos tecnológicos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- S.T La Evolución -->
+                    <div class="relative pl-12 md:pl-0">
+                        <div class="timeline-dot"></div>
+                        <div class="md:w-1/2 md:ml-auto md:pl-12">
+                            <span class="text-accent font-mono text-sm mb-2 block">2020 — 2022</span>
+                            <h3 class="text-xl font-bold text-white mb-1">Soporte Técnico Informático</h3>
+                            <h4 class="text-zinc-400 font-medium mb-4">S.T La Evolución S.S</h4>
+                            <p class="text-zinc-500 text-sm leading-relaxed">
+                                Diagnóstico y gestión de reparación de hardware y dispositivos inteligentes.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Mundo G7 -->
+                    <div class="relative pl-12 md:pl-0">
+                        <div class="timeline-dot"></div>
+                        <div class="md:w-1/2 md:pr-12 md:text-right">
+                            <span class="text-accent font-mono text-sm mb-2 block">2020</span>
+                            <h3 class="text-xl font-bold text-white mb-1">Gerente de Ventas</h3>
+                            <h4 class="text-zinc-400 font-medium mb-4">Mundo G7</h4>
+                            <p class="text-zinc-500 text-sm leading-relaxed">
+                                Liderazgo del departamento de ventas y estrategias comerciales.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contact" class="py-24 px-6 max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div class="reveal">
+                    <h2 class="text-4xl font-display font-bold mb-8 flex items-center gap-4">
+                        <span class="text-accent text-xl font-mono">05.</span> Contacto
+                    </h2>
+                    <p class="text-zinc-500 mb-10 text-lg">
+                        ¿Tienes un proyecto en mente? Estoy disponible para colaboraciones y nuevas oportunidades
+                        estratégicas.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl glass flex items-center justify-center text-accent">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-zinc-600 uppercase tracking-widest block">Ubicación</span>
+                                <span class="text-lg font-medium">San Juan de los Morros, Venezuela</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl glass flex items-center justify-center text-accent">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-zinc-600 uppercase tracking-widest block">Email</span>
+                                <a href="mailto:jesustpriv@gmail.com"
+                                    class="text-lg font-medium hover:text-accent transition-colors">jesustpriv@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl glass flex items-center justify-center text-accent">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-zinc-600 uppercase tracking-widest block">WhatsApp</span>
+                                <a href="https://wa.me/584243591727" target="_blank"
+                                    class="text-lg font-medium hover:text-accent transition-colors">04243591727</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <form id="contact-form" action="https://formspree.io/f/xojnklda" method="POST"
+                    class="reveal bg-[#121212] p-8 rounded-xl border border-white/5">
+                    <div class="contact-grid">
+                        <div class="space-y-2">
+                            <label for="name"
+                                class="text-xs font-bold uppercase tracking-widest text-zinc-500">Nombre</label>
+                            <input type="text" id="name" name="nombre" required class="form-input"
+                                placeholder="Tu nombre">
+                        </div>
+                        <div class="space-y-2">
+                            <label for="email"
+                                class="text-xs font-bold uppercase tracking-widest text-zinc-500">Email</label>
+                            <input type="email" id="email" name="email" required class="form-input"
+                                placeholder="tu@email.com">
+                        </div>
+                        <div class="space-y-2 contact-full">
+                            <label for="message"
+                                class="text-xs font-bold uppercase tracking-widest text-zinc-500">Mensaje</label>
+                            <textarea id="message" name="mensaje" rows="4" required class="form-input resize-none"
+                                placeholder="Escribe tu mensaje aquí..."></textarea>
+                        </div>
+                        <button type="submit"
+                            class="contact-full bg-accent hover:bg-accent-hover text-zinc-950 font-bold py-4 rounded-lg transition-all transform hover:scale-[1.01] flex items-center justify-center gap-2">
+                            <span>Enviar Mensaje</span>
+                            <i class="fas fa-paper-plane text-sm"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4 reveal">
+                    <a href="https://www.instagram.com/gabrielt.designs" target="_blank" class="social-action-btn">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram Diseño</span>
+                    </a>
+                    <a href="https://www.instagram.com/gabrielt.photograph" target="_blank" class="social-action-btn">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram Fotografía</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/gabriel-tovar-486888233" target="_blank"
+                        class="social-action-btn">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>Perfil Profesional</span>
+                    </a>
+                    <a href="https://github.com/jesustpriv" target="_blank" class="social-action-btn">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 px-6 border-t border-zinc-900 text-center">
+        <div class="footer-copyright max-w-4xl mx-auto">
+            <p class="text-zinc-600 text-sm mb-2">
+                <i class="fas fa-copyright"></i> 2019 Gabriel Tovar. Todos los derechos reservados.
+            </p>
+            <p class="text-zinc-500 text-xs mb-2">
+                San Juan de los Morros, Guárico, Venezuela | Co-CEO en <a href="https://coder-ytech.netlify.app/" target="_blank" class="text-accent hover:underline">Coder.y</a>
+            </p>
+            <p class="text-zinc-400 text-xs">
+                El contenido de este sitio web está protegido por leyes de derechos de autor y propiedad intelectual. Queda prohibida la reproducción total o parcial sin autorización expresa.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Gallery Modal / Lightbox -->
+    <div id="gallery-modal">
+        <div class="modal-content animate-scale-in relative">
+            <button id="close-gallery" class="absolute top-4 right-4 text-white hover:text-accent text-2xl z-10">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-img-container">
+                <img id="modal-img" src="" alt="Preview" class="max-w-full max-h-full object-contain">
+            </div>
+            <div class="modal-info">
+                <h3 id="modal-title" class="text-2xl font-bold text-white mb-2"></h3>
+                <p id="modal-description" class="text-zinc-400 text-sm"></p>
+                <div class="modal-copyright">
+                    <p><i class="fas fa-copyright"></i> 2019 Gabriel Tovar - Todos los derechos reservados</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        accent: {
+                            DEFAULT: '#10b981',
+                            hover: '#059669',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script>
+        // Scroll to top on load
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Header Scroll
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // Mobile Menu
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Dynamic Title
+            const titles = [
+                "Gestión de Proyectos Tecnológicos",
+                "Diseño de Identidad Visual",
+                "Coordinación de Equipos",
+                "Soporte Estratégico"
+            ];
+            let titleIndex = 0;
+            const dynamicTitleElement = document.getElementById('dynamic-title');
+
+            setInterval(() => {
+                titleIndex = (titleIndex + 1) % titles.length;
+                dynamicTitleElement.style.opacity = 0;
+                setTimeout(() => {
+                    dynamicTitleElement.textContent = titles[titleIndex];
+                    dynamicTitleElement.style.opacity = 1;
+                }, 500);
+            }, 4000);
+
+            // Reveal on Scroll
+            const revealElements = document.querySelectorAll('.reveal');
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            revealElements.forEach(el => {
+                revealObserver.observe(el);
+            });
+
+            // Formspree Form Handling
+            const form = document.getElementById('contact-form');
+            form.addEventListener('submit', function (e) {
+                // This is a basic example. For a better UX, you would handle this with AJAX.
+                // For now, we'll let the default Formspree submission happen.
+            });
+
+            // Image Loading Effect
+            const galleryImages = document.querySelectorAll('.gallery-card img');
+            galleryImages.forEach(img => {
+                if (img.complete) {
+                    img.classList.add('loaded');
+                } else {
+                    img.addEventListener('load', () => {
+                        img.classList.add('loaded');
+                    });
+                }
+            });
+
+            // Gallery Filtering & Modal
+            const galleryItems = document.querySelectorAll('.gallery-card');
+            const modal = document.getElementById('gallery-modal');
+            const closeModalBtn = document.getElementById('close-gallery');
+            const modalImg = document.getElementById('modal-img');
+            const modalTitle = document.getElementById('modal-title');
+            const modalDescription = document.getElementById('modal-description');
+
+            galleryItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    modalImg.src = item.dataset.img;
+                    modalTitle.textContent = item.dataset.title;
+                    modalDescription.textContent = item.dataset.description;
+                    modal.classList.add('active');
+                });
+            });
+
+            closeModalBtn.addEventListener('click', () => {
+                modal.classList.remove('active');
+            });
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                }
+            });
+
+            // Set current year in footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            // Copyright Protection
+            document.addEventListener('contextmenu', (e) => {
+                if (e.target.tagName === 'IMG' || e.target.closest('section') || e.target.closest('main')) {
+                    e.preventDefault();
+                    showCopyrightNotice();
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+S
+                if (e.key === 'F12' || 
+                    (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) || 
+                    (e.ctrlKey && e.key === 'U') ||
+                    (e.ctrlKey && e.key === 'S') ||
+                    (e.metaKey && e.key === 'S')) {
+                    e.preventDefault();
+                    showCopyrightNotice();
+                }
+            });
+
+            // Disable drag and drop
+            document.addEventListener('dragstart', (e) => {
+                if (e.target.tagName === 'IMG' || e.target.tagName === 'A') {
+                    e.preventDefault();
+                }
+            });
+
+            // Disable text selection on entire page
+            document.addEventListener('selectstart', (e) => {
+                if (e.target.tagName === 'IMG' || e.target.closest('.gallery-card') || e.target.closest('section')) {
+                    e.preventDefault();
+                }
+            });
+
+            // Disable print functionality
+            window.addEventListener('beforeprint', (e) => {
+                e.preventDefault();
+                showCopyrightNotice();
+                return false;
+            });
+
+            // Disable save page functionality
+            window.addEventListener('keydown', (e) => {
+                if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+                    e.preventDefault();
+                    showCopyrightNotice();
+                    return false;
+                }
+            });
+
+            // Add meta tag to disable right click
+            const metaNoRightClick = document.createElement('meta');
+            metaNoRightClick.name = 'robots';
+            metaNoRightClick.content = 'noarchive, nosnippet, noimageindex';
+            document.head.appendChild(metaNoRightClick);
+
+            // Add meta tag to disable caching
+            const metaNoCache = document.createElement('meta');
+            metaNoCache.httpEquiv = 'Cache-Control';
+            metaNoCache.content = 'no-cache, no-store, must-revalidate';
+            document.head.appendChild(metaNoCache);
+
+            const metaPragma = document.createElement('meta');
+            metaPragma.httpEquiv = 'Pragma';
+            metaPragma.content = 'no-cache';
+            document.head.appendChild(metaPragma);
+
+            const metaExpires = document.createElement('meta');
+            metaExpires.httpEquiv = 'Expires';
+            metaExpires.content = '0';
+            document.head.appendChild(metaExpires);
+
+            function showCopyrightNotice() {
+                const notice = document.createElement('div');
+                notice.className = 'fixed top-4 right-4 bg-accent text-white px-4 py-2 rounded-lg shadow-lg z-50 text-sm';
+                notice.innerHTML = '<i class="fas fa-copyright"></i> Contenido protegido - No disponible para descarga';
+                document.body.appendChild(notice);
+                
+                setTimeout(() => {
+                    notice.remove();
+                }, 3000);
+            }
+
+            // Add watermark dynamically to all images
+            const images = document.querySelectorAll('.protected-image');
+            images.forEach(img => {
+                const watermark = document.createElement('div');
+                watermark.className = 'watermark';
+                watermark.textContent = '© G. Tovar';
+                img.parentElement.style.position = 'relative';
+                img.parentElement.appendChild(watermark);
+            });
+
+            // Disable view source
+            document.addEventListener('keydown', (e) => {
+                if (e.ctrlKey && e.key === 'u') {
+                    e.preventDefault();
+                    showCopyrightNotice();
+                    return false;
+                }
+            });
+
+            // Disable developer tools
+            setInterval(() => {
+                const devtools = /./;
+                devtools.toString = function() {
+                    showCopyrightNotice();
+                    return '';
+                };
+            }, 1000);
+
+        });
+    </script>
+</body>
+
+</html>
