@@ -151,15 +151,12 @@ npm run preview  # Previsualizar build local
 
 ## 📧 Contacto
 
-- 📧 **Email**: [contacto@gabriel-tovar.com](mailto:contacto@gabriel-tovar.com)
-- 📱 **WhatsApp**: +58 400-0000000 (contacto profesional)
+- 📧 **Email**: [jesustpriv@gmail.com](mailto:jesustpriv@gmail.com)
+- 📱 **Teléfono**: +58 424-359-1727
 - 📍 **Ubicación**: San Juan de los Morros, Guárico, Venezuela
 - 💼 **LinkedIn**: [Perfil Profesional](https://linkedin.com/in/gabriel-tovar)
 - 🐙 **GitHub**: [jesustpriv](https://github.com/jesustpriv)
 - 🌐 **Coder.y**: [coder-ytech.netlify.app](https://coder-ytech.netlify.app/)
-
-### 🔒 **Nota sobre Privacidad**
-Para proteger la información personal, los datos de contacto en el repositorio público son ejemplos. En producción, estos deben ser reemplazados con la información real o configurados a través de variables de entorno en Netlify.
 
 ## 📄 Licencia
 
