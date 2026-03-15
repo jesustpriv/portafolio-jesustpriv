@@ -497,10 +497,10 @@
         .modal-info {
             width: 100%;
             padding: 1.5rem;
-            padding-bottom: 3rem;
+            padding-bottom: 1.5rem;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             background: linear-gradient(to bottom, #121212, #0a0a0a);
             position: relative;
             flex: 1;
@@ -511,6 +511,7 @@
                 width: 350px;
                 flex: 1;
                 padding-bottom: 1.5rem;
+                justify-content: center;
             }
         }
 
@@ -668,21 +669,23 @@
 
         /* Modal copyright */
         .modal-copyright {
-            margin-top: auto;
+            margin-top: 1.5rem;
             background: rgba(16, 185, 129, 0.95);
             color: white;
-            padding: 10px;
+            padding: 12px;
             font-size: 0.75rem;
             text-align: center;
             z-index: 30;
             backdrop-filter: blur(10px);
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 6px;
+            flex-shrink: 0;
         }
 
         @media (min-width: 768px) {
             .modal-copyright {
                 margin-top: 1rem;
+                padding: 10px;
                 border-radius: 6px;
             }
         }
