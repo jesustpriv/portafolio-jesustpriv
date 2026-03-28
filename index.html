@@ -108,11 +108,13 @@
     <main>
         <!-- Hero Section -->
         <section id="home"
-            class="min-h-screen flex flex-col justify-center items-center px-6 pt-20 relative overflow-hidden">
-            <div class="absolute inset-0 -z-10">
-                <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse"></div>
-                <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"
-                    style="animation-delay: 1s;"></div>
+            class="min-h-screen flex flex-col justify-center items-center px-6 pt-20 relative overflow-hidden bg-[var(--color-surface)]">
+            <!-- Neon Vignettes -->
+            <div class="bg-glow-violet -top-20 -left-20 opacity-10"></div>
+            <div class="bg-glow-violet bottom-0 -right-20 opacity-5"></div>
+            
+            <div class="absolute inset-0 -z-10 opacity-30">
+                <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse"></div>
             </div>
 
             <div class="text-center reveal">
@@ -161,7 +163,8 @@
         </section>
 
         <!-- Portafolio -->
-        <section id="portfolio" class="py-24 px-6 bg-black/20">
+        <section id="portfolio" class="py-32 px-6 bg-[var(--color-surface-low)] relative overflow-hidden">
+            <div class="bg-glow-violet top-1/2 -left-40 opacity-10"></div>
             <div class="max-w-7xl mx-auto">
                 <!-- Diseño Section -->
                 <div class="mb-20">
@@ -344,7 +347,7 @@
         </section>
 
         <!-- Servicios / Propuesta de Valor -->
-        <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
+        <section id="services" class="py-32 px-6 max-w-7xl mx-auto bg-[var(--color-surface)]">
             <div class="reveal mb-16 text-center">
                 <h2 class="text-4xl font-display font-bold mb-4">Servicios Especializados</h2>
                 <p class="text-zinc-500 max-w-2xl mx-auto">Soluciones integrales que combinan visión estratégica, diseño
@@ -353,7 +356,7 @@
 
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Identidad Visual -->
-                <div class="skill-card reveal">
+                <div class="skill-card reveal glass-premium p-8">
                     <div class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center text-accent mb-6">
                         <i class="fas fa-palette text-2xl"></i>
                     </div>
@@ -415,7 +418,8 @@
         </section>
 
         <!-- Perfil Profesional -->
-        <section id="about" class="py-32 px-6 max-w-7xl mx-auto">
+        <section id="about" class="py-40 px-6 max-w-7xl mx-auto bg-[var(--color-surface-low)] rounded-[48px] my-12 relative overflow-hidden">
+            <div class="bg-glow-violet -bottom-20 -right-20 opacity-10"></div>
             <div class="grid md:grid-cols-2 gap-32 items-start">
                 <!-- Left Column: Profile Section -->
                 <div class="reveal">
@@ -464,7 +468,7 @@
                 <!-- Right Column: Skills Section -->
                 <div class="reveal space-y-8">
                     <!-- Infraestructura -->
-                    <div class="skill-card p-6 transform hover:scale-102 transition-transform duration-300">
+                    <div class="skill-card p-6 glass-premium transform hover:scale-102 transition-transform duration-300">
                         <div class="flex items-center gap-4 mb-4">
                             <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent">
                                 <i class="fas fa-network-wired text-xl"></i>
@@ -489,7 +493,7 @@
                     </div>
 
                     <!-- Diseño -->
-                    <div class="skill-card p-6 transform hover:scale-102 transition-transform duration-300">
+                    <div class="skill-card p-6 glass-premium transform hover:scale-102 transition-transform duration-300">
                         <div class="flex items-center gap-4 mb-4">
                             <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent">
                                 <i class="fas fa-palette text-xl"></i>
@@ -516,7 +520,7 @@
                     </div>
 
                     <!-- Estrategia -->
-                    <div class="skill-card p-6 transform hover:scale-102 transition-transform duration-300">
+                    <div class="skill-card p-6 glass-premium transform hover:scale-102 transition-transform duration-300">
                         <div class="flex items-center gap-4 mb-4">
                             <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent">
                                 <i class="fas fa-bullhorn text-xl"></i>
@@ -549,7 +553,7 @@
                     </div>
 
                     <!-- Desarrollo -->
-                    <div class="skill-card p-6 transform hover:scale-102 transition-transform duration-300">
+                    <div class="skill-card p-6 glass-premium transform hover:scale-102 transition-transform duration-300">
                         <div class="flex items-center gap-4 mb-4">
                             <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent">
                                 <i class="fas fa-code text-xl"></i>
@@ -738,7 +742,7 @@
                             </div>
                         </div>
                         <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-xl glass flex items-center justify-center text-accent">
+                            <div class="w-12 h-12 rounded-xl glass-premium flex items-center justify-center text-accent">
                                 <i class="fab fa-whatsapp"></i>
                             </div>
                             <div>

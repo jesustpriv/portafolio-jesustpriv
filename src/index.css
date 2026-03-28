@@ -2,24 +2,44 @@
 
 @theme {
   --color-accent: #B130FF;
+  --color-accent-glow: #B130FF1A;
   --color-accent-hover: #C666FF;
   --color-zinc-950: #09090b;
-  --font-inter: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-space: "Space Grotesk", monospace;
+  --font-inter: "Inter", sans-serif;
+  --font-space: "Space Grotesk", sans-serif;
+  
+  /* Surfaces inspiradas en Aether Nexus */
+  --color-surface: #0e0e0e;
+  --color-surface-low: #131313;
+  --color-surface-card: #1a1919;
+  --color-outline-glass: rgba(255, 255, 255, 0.05);
 }
 
-body {
-    background-color: #121212;
-    color: #f4f4f5;
-    min-height: 100vh;
+@layer base {
+  body {
+    @apply bg-[var(--color-surface)] text-gray-300 font-inter selection:bg-accent selection:text-white;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-space tracking-tight; /* -0.02em aproximado */
+  }
 }
 
-/* Glassmorphism */
-.glass {
-    background: rgba(24, 24, 27, 0.7);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+@layer components {
+  /* Glassmorphism 2.0 con Ultra-Blur */
+  .glass-premium {
+    @apply backdrop-blur-3xl bg-white/5 border border-[var(--color-outline-glass)];
+    box-shadow: 0 0 40px -10px var(--color-accent-glow);
+  }
+
+  /* Vignettes / Light Leaks */
+  .bg-glow-violet {
+    @apply absolute pointer-events-none rounded-full blur-[120px] opacity-20;
+    background: radial-gradient(circle, var(--color-accent), transparent 70%);
+    width: 600px;
+    height: 600px;
+  }
 }
 
 /* Header Scroll Effect */
