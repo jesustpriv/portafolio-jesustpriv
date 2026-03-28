@@ -29,8 +29,13 @@
 @layer components {
   /* Glassmorphism 2.0 con Ultra-Blur */
   .glass-premium {
-    @apply backdrop-blur-3xl bg-white/5 border border-[var(--color-outline-glass)];
+    @apply backdrop-blur-2xl bg-zinc-950/80 border border-[var(--color-outline-glass)];
     box-shadow: 0 0 40px -10px var(--color-accent-glow);
+  }
+
+  /* Ajuste específico para el menú móvil */
+  .mobile-menu-glass {
+    @apply backdrop-blur-3xl bg-zinc-950/90 border-b border-white/5 shadow-2xl;
   }
 
   /* Vignettes / Light Leaks */
