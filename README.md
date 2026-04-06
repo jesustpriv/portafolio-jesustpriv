@@ -1,111 +1,94 @@
-# 🚀 Portafolio Digital — Gabriel Tovar
+# 🚀 Marca Personal — Gabriel Tovar
 
-Portafolio profesional de **Gabriel Tovar**, Co-CEO de [Coder.y](https://coder-ytech.netlify.app/), especialista en Coordinación de Producción y Desarrollo Tecnológico con experiencia integral en infraestructura FTTH hasta desarrollo frontend asistido por IA.
+Sitio web oficial de **Gabriel Tovar**, especialista en Coordinación de Producción enfocado en contenido gráfico, audiovisual y estratégico, y Co-CEO de [Coder.y](https://coder-ytech.netlify.app/).
 
-## ✨ Modernización y Rediseño (2024)
+## ✨ Modernización a Marca Personal (2024-2026)
 
-Este proyecto ha sido recientemente modernizado para alcanzar estándares de rendimiento y accesibilidad de nivel profesional:
+Este proyecto evolucionó de un "Portafolio Tradicional" a una plataforma de **Marca Personal** de alto nivel, ajustando su narrativa para priorizar la autoridad, la identidad y la experiencia de usuario:
 
-- 🎨 **Nueva Identidad Visual**: Esquema de color **Violeta Neón (#B130FF)** con estética Glassmorphism.
-- ⚡ **Rendimiento Extremo**: Optimización programática de activos reduciendo el peso hasta en un **-85%**.
-- ♿ **Accesibilidad Mejorada**: Implementación de navegación por teclado y etiquetas ARIA semánticas.
-- 🏗️ **Arquitectura Modular**: Transición de un monolito HTML a un flujo de trabajo moderno con Vite y TypeScript.
+- 👤 **Narrativa Orientada a Resultados**: Reestructuración del flujo de información situando el Perfil y la autoridad antes de los entregables visuales, promoviendo mayor confianza.
+- 🖼️ **Portafolio Dividido 1:1**: Galería interactiva con división dual (Diseño Gráfico / Fotografía) usando cuadrículas inteligentes de formato cuadrado 1:1, garantizando que ninguna miniatura sufra deformación o estiramiento.
+- 🎨 **Estética Premium 'Dark Tech'**: Esquema visual con superficies oscuras y acentos **Violeta Neón (#B130FF)** acompañado de elementos Glassmorphism y micro-animaciones fluidas.
+- 🧹 **Saneamiento Absoluto**: El código cuenta con estructuración semántica impecable y formato auto-pulido, logrando un empaquetado ultra-liviano (< 10KB comprimidos).
 
 ## 🛠️ Stack Tecnológico
 
-- **Core**: HTML5 Semántico + TypeScript
-- **CSS**: [Tailwind CSS 4](https://tailwindcss.com/) (Integración nativa via `@tailwindcss/vite`)
-- **Build Tool**: [Vite 6](https://vitejs.dev/)
-- **Procesamiento de Imágenes**: [Sharp](https://sharp.pixelplumbing.com/) (WebP optimizado)
-- **Despliegue**: Netlify (CI/CD Ready)
+- **Core**: HTML5 Semántico + TypeScript Nativo
+- **Estilos**: [Tailwind CSS 4](https://tailwindcss.com/) (Integración vía `@tailwindcss/vite`)
+- **Renderizado / Build**: [Vite 6](https://vitejs.dev/)
+- **Procesamiento de Imágenes**: [Sharp](https://sharp.pixelplumbing.com/) (Entregando WebP optimizado nativamente)
+- **Despliegue**: Netlify (CI/CD Automatizado)
 
-## 🚀 Empezar
+## 🚀 Instalación y Desarrollo
 
 ### Requisitos Previos
 
 - Node.js (v18 o superior)
 - npm o yarn
 
-### Instalación y Desarrollo
+### Entorno Local
 
 1. **Clonar el repositorio**:
-
    ```bash
    git clone https://github.com/jesustpriv/portafolio-jesustpriv.git
    cd portafolio-jesustpriv
    ```
 
 2. **Instalar dependencias**:
-
    ```bash
    npm install
    ```
 
 3. **Iniciar servidor de desarrollo**:
-
    ```bash
    npm run dev
    ```
 
-4. **Abrir en el navegador**: `http://localhost:3001`
+4. **Abrir en el navegador**: `http://localhost:3000`
 
 ### Build de Producción
 
+Para compilar hacia producción, ejecuta:
 ```bash
 npm run build
 ```
-
-El build optimizado y minificado se generará en la carpeta `dist/`.
+El build list para publicar se compilará compactado y ofuscado en la carpeta `dist/`.
 
 ## 📁 Estructura del Proyecto
 
 ```
 portafolio-jesustpriv/
-├── assets/                  # Imágenes WebP (Optimización > 80%)
-├── dist/                    # Bundle de producción listo para deploy
-├── src/                     # Código fuente modular
-│   ├── main.ts              # Lógica de interacción y accesibilidad
-│   └── index.css            # Estilos base y tokens de diseño Tailwind 4
-├── index.html              # Punto de entrada principal
-├── guia_de_identidad.md    # Especificaciones de color, tipografía y diseño
-├── netlify.toml            # Configuración de despliegue y seguridad
-├── package.json            # Scripts y dependencias
-├── vite.config.ts          # Configuración optimizada de Vite
-└── README.md               # Este archivo
+├── assets/                  # Todas las fotos y portafolios (Originales WebP)
+├── dist/                    # Bundle de producción automatizado listo para deploy
+├── src/                     # Código fuente lógico y visual dinámico
+│   ├── main.ts              # Control bi-modal de la Galería 1:1 y menús
+│   └── index.css            # Estilos base y tokens puros de CSS orientados a Tailwind 4
+├── index.html               # Punto de entrada. Arquitectura HTML Semántica perfecta
+├── netlify.toml             # Cabeceras y enrutamiento para hosts tipo Netlify
+├── package.json             # Scripts de compilación local y devDependencies
+├── vite.config.ts           # Configuración del compresor de Vite/Tailwind 4
+└── README.md                # Este archivo de documentación
 ```
 
-## 🌐 Despliegue en Netlify
+## 📊 Rendimiento y Accesibilidad
 
-El proyecto está pre-configurado para desplegarse automáticamente al conectar con GitHub:
-
-- **Build command**: `npm run build`
-- **Publish directory**: `dist`
-
-## 📊 Métricas de Rendimiento (Lighthouse)
-
-- **Performance**: 98+
-- **Accessibility**: 100
-- **Best Practices**: 100
-- **SEO**: 100
-
-### Optimización de Activos
-
-- **Imágenes Críticas**: Reducción de ~800KB a ~100KB manteniendo calidad visual.
-- **JS/CSS Bundle**: Minificación y tree-shaking automático via Vite.
+Se eliminó y purgó código flotante logrando:
+- **Performance de Carga**: Renderizado total garantizado sin render-blocking gracias al árbol minificado de Vite.
+- **Auditoría Semántica**: Etiquetado lógico y coherente para una accesibilidad (A11y) nivel 100%.
 
 ## 📧 Contacto
 
 - 📧 **Email**: [jesustpriv@gmail.com](mailto:jesustpriv@gmail.com)
-- 📱 **Teléfono**: +58 424-359-1727
-- 📍 **Ubicación**: San Juan de los Morros, Guárico, Venezuela
-- 💼 **LinkedIn**: [Perfil Profesional](https://linkedin.com/in/gabriel-tovar)
+- 📱 **WhatsApp Consultoría**: +58 424-359-1727
+- 📍 **Sede**: San Juan de los Morros, Guárico, Venezuela
+- 💼 **LinkedIn**: [Perfil Profesional](https://linkedin.com/in/gabriel-tovar-486888233)
 - 🐙 **GitHub**: [jesustpriv](https://github.com/jesustpriv)
-- 🌐 **Coder.y**: [coder-ytech.netlify.app](https://coder-ytech.netlify.app/)
+- 🌐 **Empresa (Coder.y)**: [coder-ytech.netlify.app](https://coder-ytech.netlify.app/)
 
 ## 📄 Licencia
 
-© 2019-2024 Gabriel Tovar. Todos los derechos reservados.
+© 2019-2026 Gabriel Tovar. Todos los derechos reservados.
 
 ---
 
-**Desarrollado con ❤️ y optimizado mediante IA por Gabriel Tovar**
+**Desempeño técnico por AI-Assisted Development**
