@@ -22,23 +22,27 @@ Este proyecto ha sido recientemente modernizado para alcanzar estándares de ren
 ## 🚀 Empezar
 
 ### Requisitos Previos
+
 - Node.js (v18 o superior)
 - npm o yarn
 
 ### Instalación y Desarrollo
 
 1. **Clonar el repositorio**:
+
    ```bash
    git clone https://github.com/jesustpriv/portafolio-jesustpriv.git
    cd portafolio-jesustpriv
    ```
 
 2. **Instalar dependencias**:
+
    ```bash
    npm install
    ```
 
 3. **Iniciar servidor de desarrollo**:
+
    ```bash
    npm run dev
    ```
@@ -73,6 +77,7 @@ portafolio-jesustpriv/
 ## 🌐 Despliegue en Netlify
 
 El proyecto está pre-configurado para desplegarse automáticamente al conectar con GitHub:
+
 - **Build command**: `npm run build`
 - **Publish directory**: `dist`
 
@@ -84,6 +89,7 @@ El proyecto está pre-configurado para desplegarse automáticamente al conectar 
 - **SEO**: 100
 
 ### Optimización de Activos
+
 - **Imágenes Críticas**: Reducción de ~800KB a ~100KB manteniendo calidad visual.
 - **JS/CSS Bundle**: Minificación y tree-shaking automático via Vite.
 
@@ -101,4 +107,5 @@ El proyecto está pre-configurado para desplegarse automáticamente al conectar 
 © 2019-2024 Gabriel Tovar. Todos los derechos reservados.
 
 ---
+
 **Desarrollado con ❤️ y optimizado mediante IA por Gabriel Tovar**

@@ -1,846 +1,1269 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gabriel Tovar | Especialista en Soluciones Digitales</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabriel Tovar | Coordinador de Producción y Desarrollo Tecnológico</title>
-    
     <!-- Copyright & SEO Meta Tags -->
-    <meta name="author" content="Gabriel Tovar">
-    <meta name="copyright" content="© 2019 Gabriel Tovar. All rights reserved.">
-    <meta name="description" content="Portafolio profesional de Gabriel Tovar - Coordinador de Producción y Desarrollo Tecnológico">
-    <meta name="keywords" content="Gabriel Tovar, portafolio, desarrollo tecnológico, producción, diseño, fotografía, Venezuela">
-    
+    <meta name="author" content="Gabriel Tovar" />
+    <meta name="copyright" content="2019 Gabriel Tovar. All rights reserved." />
+    <meta
+      name="description"
+      content="Especialista en crear soluciones digitales completas que combinan diseño, tecnología y estrategia para hacer crecer negocios"
+    />
+    <meta
+      name="keywords"
+      content="soluciones digitales, diseño gráfico, marketing digital, UI/UX, desarrollo web, branding, optimización de conversión"
+    />
+
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Gabriel Tovar | Coordinador de Producción y Desarrollo Tecnológico">
-    <meta property="og:description" content="Portafolio profesional de Gabriel Tovar - Coordinador de Producción y Desarrollo Tecnológico">
-    <meta property="og:site_name" content="Gabriel Tovar Portfolio">
-    
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Gabriel Tovar | Especialista en Soluciones Digitales"
+    />
+    <meta
+      property="og:description"
+      content="Especialista en crear soluciones digitales completas que combinan diseño, tecnología y estrategia para hacer crecer negocios"
+    />
+    <meta property="og:site_name" content="Gabriel Tovar Portfolio" />
+
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Gabriel Tovar | Coordinador de Producción y Desarrollo Tecnológico">
-    <meta property="twitter:description" content="Portafolio profesional de Gabriel Tovar">
-    
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:title"
+      content="Gabriel Tovar | Especialista en Soluciones Digitales"
+    />
+    <meta
+      property="twitter:description"
+      content="Especialista en crear soluciones digitales completas que combinan diseño, tecnología y estrategia para hacer crecer negocios"
+    />
+
     <!-- Robots -->
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
 
     <!-- Tailwind CSS (Modular) -->
     <script type="module" src="/src/main.ts"></script>
 
+    <!-- CSS Direct -->
+    <link rel="stylesheet" href="/src/index.css" />
+
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
 
-
-
-
-</head>
-
-<body class="selection:bg-accent selection:text-zinc-950">
-
+  <body class="selection:bg-accent selection:text-zinc-950">
     <!-- Header / Nav -->
-    <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-6">
-        <nav class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-            <a href="#home" class="text-2xl font-display font-bold tracking-tighter text-accent">
-                GABRIEL<span class="text-white">.</span>
-            </a>
+    <header
+      id="header"
+      class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-6"
+    >
+      <nav class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+        <a
+          href="#home"
+          class="text-2xl font-display font-bold tracking-tighter text-accent"
+        >
+          GABRIEL<span class="text-white">.</span>
+        </a>
 
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center gap-8">
-                <a href="#home" class="text-sm font-medium text-zinc-400 hover:text-accent transition-colors">Inicio</a>
-                <a href="#portfolio"
-                    class="text-sm font-medium text-zinc-400 hover:text-accent transition-colors">Proyectos</a>
-                <a href="#about"
-                    class="text-sm font-medium text-zinc-400 hover:text-accent transition-colors">Perfil</a>
-                <a href="#services"
-                    class="text-sm font-medium text-zinc-400 hover:text-accent transition-colors">Servicios</a>
-                <a href="#experience"
-                    class="text-sm font-medium text-zinc-400 hover:text-accent transition-colors">Experiencia</a>
-                <a href="#contact"
-                    class="text-sm font-medium text-zinc-400 hover:text-accent transition-colors">Contacto</a>
-            </div>
-
-            <!-- Mobile Toggle -->
-            <button id="mobile-menu-toggle" class="md:hidden text-white focus:outline-none" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-menu">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
-        </nav>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu"
-            class="hidden absolute top-full left-0 w-full mobile-menu-glass md:hidden flex flex-col p-8 gap-6">
-            <a href="#home"
-                class="mobile-link flex items-center gap-3 text-lg font-medium text-zinc-300 hover:text-accent">
-                <i class="fas fa-home w-6"></i> Inicio
-            </a>
-            <a href="#portfolio"
-                class="mobile-link flex items-center gap-3 text-lg font-medium text-zinc-300 hover:text-accent">
-                <i class="fas fa-briefcase w-6"></i> Proyectos
-            </a>
-            <a href="#about"
-                class="mobile-link flex items-center gap-3 text-lg font-medium text-zinc-300 hover:text-accent">
-                <i class="fas fa-user w-6"></i> Perfil
-            </a>
-            <a href="#services"
-                class="mobile-link flex items-center gap-3 text-lg font-medium text-zinc-300 hover:text-accent">
-                <i class="fas fa-th-list w-6"></i> Servicios
-            </a>
-            <a href="#experience"
-                class="mobile-link flex items-center gap-3 text-lg font-medium text-zinc-300 hover:text-accent">
-                <i class="fas fa-history w-6"></i> Experiencia
-            </a>
-            <a href="#contact"
-                class="mobile-link flex items-center gap-3 text-lg font-medium text-zinc-300 hover:text-accent">
-                <i class="fas fa-envelope w-6"></i> Contacto
-            </a>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-8">
+          <a
+            href="#home"
+            class="text-sm font-medium text-zinc-400 hover:text-accent transition-colors"
+            >Inicio</a
+          >
+          <a
+            href="#services"
+            class="text-sm font-medium text-zinc-400 hover:text-accent transition-colors"
+            >Servicios</a
+          >
+          <a
+            href="#portfolio"
+            class="text-sm font-medium text-zinc-400 hover:text-accent transition-colors"
+            >Proyectos</a
+          >
+          <a
+            href="#about"
+            class="text-sm font-medium text-zinc-400 hover:text-accent transition-colors"
+            >Perfil</a
+          >
+          <a
+            href="#experience"
+            class="text-sm font-medium text-zinc-400 hover:text-accent transition-colors"
+            >Experiencia</a
+          >
+          <a
+            href="#contact"
+            class="text-sm font-medium text-zinc-400 hover:text-accent transition-colors"
+            >Contacto</a
+          >
         </div>
+
+        <!-- Mobile Toggle -->
+        <button
+          id="mobile-menu-toggle"
+          class="md:hidden text-white focus:outline-none"
+          aria-label="Abrir menú de navegación"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden absolute top-full left-0 w-full mobile-menu-glass md:hidden flex flex-col p-8 gap-6"
+      >
+        <a
+          href="#home"
+          class="mobile-link flex items-center gap-3 text-lg font-medium text-zinc-300 hover:text-accent"
+        >
+          <i class="fas fa-home w-6"></i> Inicio
+        </a>
+        <a
+          href="#services"
+          class="mobile-link flex items-center gap-3 text-lg font-medium text-zinc-300 hover:text-accent"
+        >
+          <i class="fas fa-th-list w-6"></i> Servicios
+        </a>
+        <a
+          href="#portfolio"
+          class="mobile-link flex items-center gap-3 text-lg font-medium text-zinc-300 hover:text-accent"
+        >
+          <i class="fas fa-briefcase w-6"></i> Proyectos
+        </a>
+        <a
+          href="#about"
+          class="mobile-link flex items-center gap-3 text-lg font-medium text-zinc-300 hover:text-accent"
+        >
+          <i class="fas fa-user w-6"></i> Perfil
+        </a>
+        <a
+          href="#experience"
+          class="mobile-link flex items-center gap-3 text-lg font-medium text-zinc-300 hover:text-accent"
+        >
+          <i class="fas fa-history w-6"></i> Experiencia
+        </a>
+        <a
+          href="#contact"
+          class="mobile-link flex items-center gap-3 text-lg font-medium text-zinc-300 hover:text-accent"
+        >
+          <i class="fas fa-envelope w-6"></i> Contacto
+        </a>
+        <div class="pt-6 border-t border-white/5">
+          <p class="text-xs text-zinc-500 uppercase tracking-widest mb-4">
+            Redes Sociales
+          </p>
+          <div class="flex gap-6">
+            <a
+              href="https://www.instagram.com/gabrielt.designs"
+              target="_blank"
+              class="text-zinc-400 hover:text-accent text-xl"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/gabriel-tovar-486888233"
+              target="_blank"
+              class="text-zinc-400 hover:text-accent text-xl"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://github.com/jesustpriv"
+              target="_blank"
+              class="text-zinc-400 hover:text-accent text-xl"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section id="home"
-            class="min-h-screen flex flex-col justify-center items-center px-6 pt-20 relative overflow-hidden bg-[var(--color-surface)]">
-            <!-- Neon Vignettes -->
-            <div class="bg-glow-violet -top-20 -left-20 opacity-10"></div>
-            <div class="bg-glow-violet bottom-0 -right-20 opacity-5"></div>
-            
-            <div class="absolute inset-0 -z-10 opacity-30">
-                <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse"></div>
+      <!-- Hero Section -->
+      <section
+        id="home"
+        class="min-h-screen flex flex-col justify-center items-center px-6 pt-20 relative overflow-hidden bg-[var(--color-surface)]"
+      >
+        <!-- Neon Vignettes -->
+        <div class="bg-glow-violet -top-20 -left-20 opacity-10"></div>
+        <div class="bg-glow-violet bottom-0 -right-20 opacity-5"></div>
+
+        <div class="absolute inset-0 -z-10 opacity-30">
+          <div
+            class="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse"
+          ></div>
+        </div>
+
+        <div class="text-center reveal">
+          <span
+            class="text-accent font-mono text-sm tracking-widest uppercase mb-4 block"
+            >Soluciones Digitales Integrales</span
+          >
+          <h1
+            class="text-5xl sm:text-7xl md:text-8xl font-display font-bold tracking-tighter mb-6 leading-tight"
+          >
+            GABRIEL <span class="text-accent">TOVAR</span>
+          </h1>
+
+          <div class="h-20 flex items-center justify-center mb-10">
+            <p
+              id="dynamic-title"
+              class="text-2xl md:text-3xl text-zinc-400 font-light italic transition-opacity duration-500"
+            >
+              Diseño, construyo y optimizo soluciones digitales que hacen crecer
+              negocios
+            </p>
+          </div>
+
+          <p
+            class="max-w-2xl mx-auto text-zinc-500 text-base sm:text-lg mb-10 leading-relaxed px-2"
+          >
+            Combino diseño gráfico, marketing y desarrollo para crear
+            experiencias que no solo se ven bien, sino que generan resultados
+            reales.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#portfolio"
+              class="bg-accent hover:bg-accent-hover text-zinc-950 px-8 py-4 rounded-full font-bold flex items-center justify-center gap-2 transition-all transform hover:scale-105"
+              aria-label="Ver proyectos"
+            >
+              <i class="fas fa-briefcase"></i>
+              Ver proyectos
+            </a>
+            <a
+              href="#contact"
+              class="border border-zinc-800 hover:border-accent px-8 py-4 rounded-full font-bold flex items-center justify-center gap-2 transition-all"
+              aria-label="Trabajar conmigo"
+            >
+              <i class="fas fa-handshake"></i>
+              Trabajar conmigo
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50"
+        >
+          <span class="text-[10px] uppercase tracking-[0.3em] text-zinc-600"
+            >Scroll</span
+          >
+          <div
+            class="w-px h-12 bg-gradient-to-b from-accent to-transparent"
+          ></div>
+        </div>
+      </section>
+
+      <!-- Perfil Profesional -->
+      <section
+        id="about"
+        class="py-28 px-6 max-w-7xl mx-auto relative overflow-hidden"
+      >
+        <div class="bg-glow-violet -bottom-20 -right-20 opacity-10"></div>
+        <div class="grid md:grid-cols-2 gap-32 items-start">
+          <!-- Left Column: Profile Section -->
+          <div class="reveal">
+            <!-- Profile Image -->
+            <div class="mb-12">
+              <div
+                class="w-48 h-56 mx-auto rounded-3xl overflow-hidden border-2 border-zinc-800/50 shadow-2xl transform hover:scale-105 transition-transform duration-300"
+              >
+                <img
+                  src="assets/profile.webp"
+                  alt="Gabriel Tovar"
+                  class="w-full h-full object-cover"
+                />
+              </div>
             </div>
 
-            <div class="text-center reveal">
-                <span class="text-accent font-mono text-sm tracking-widest uppercase mb-4 block">Coordinador de
-                    Producción y Desarrollo</span>
-                <h1 class="text-5xl sm:text-7xl md:text-8xl font-display font-bold tracking-tighter mb-6 leading-tight">
-                    GABRIEL <span class="text-accent">TOVAR</span>
-                </h1>
-
-                <div class="h-12 flex items-center justify-center mb-8">
-                    <p id="dynamic-title"
-                        class="text-2xl md:text-4xl text-zinc-400 font-light italic transition-opacity duration-500">
-                        Gestión de Proyectos Tecnológicos
-                    </p>
-                </div>
-
-                <p class="max-w-2xl mx-auto text-zinc-500 text-base sm:text-lg mb-10 leading-relaxed px-2">
-                    Coordinador de proyectos digitales con visión integral que une creatividad, tecnología y telecomunicaciones. 
-                    Especialista en transformar ideas en realidades visuales y técnicas de alto impacto, desde infraestructura FTTH 
-                    hasta desarrollo frontend asistido por IA y fotografía profesional.
-                </p>
-
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#contact"
-                        class="bg-accent hover:bg-accent-hover text-zinc-950 px-8 py-4 rounded-full font-bold flex items-center justify-center gap-2 transition-all transform hover:scale-105" aria-label="Ir a la sección de contacto">
-                        <i class="fas fa-paper-plane"></i>
-                        Hablemos
-                    </a>
-                    <a href="https://www.linkedin.com/in/gabrieljtovar/" target="_blank"
-                        class="border border-zinc-800 hover:border-accent px-8 py-4 rounded-full font-bold flex items-center justify-center gap-2 transition-all" aria-label="Ver perfil de LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                        Ver LinkedIn
-                    </a>
-                    <a href="#portfolio"
-                        class="border border-zinc-800 hover:border-accent px-8 py-4 rounded-full font-bold flex items-center justify-center gap-2 transition-all" aria-label="Ir a la sección de proyectos">
-                        Ver Proyectos
-                        <i class="fas fa-chevron-right ml-2 text-xs"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
-                <span class="text-[10px] uppercase tracking-[0.3em] text-zinc-600">Scroll</span>
-                <div class="w-px h-12 bg-gradient-to-b from-accent to-transparent"></div>
-            </div>
-        </section>
-
-        <!-- Portafolio -->
-        <!-- Portafolio -->
-        <section id="portfolio" class="py-32 px-4 sm:px-6 bg-[var(--color-surface-low)] relative overflow-hidden">
-            <div class="bg-glow-violet top-1/2 -left-40 opacity-10"></div>
-            <div class="max-w-7xl mx-auto">
-                <!-- Diseño Section -->
-                <div class="mb-20">
-                    <div class="reveal mb-12">
-                        <h2 class="text-4xl font-display font-bold mb-4 flex items-center gap-4">
-                            <span class="text-accent text-xl font-mono">01.</span> Portafolio de Diseño
-                        </h2>
-                        <p class="text-zinc-500">Una selección de mis trabajos de identidad visual y branding.</p>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div class="gallery-card group reveal" data-img="assets/design-1.webp" data-title="Akion"
-                            data-description="Identidad visual de marca personal." role="button" tabindex="0" aria-label="Ver proyecto Akion">
-                            <img src="assets/design-1.webp" alt="Proyecto Akion" class="w-full h-full object-cover protected-image"
-                                loading="lazy" decoding="async">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
-                                <span class="text-white font-bold">Ver Diseño</span>
-                            </div>
-                        </div>
-                        <div class="gallery-card group reveal" data-img="assets/design-2.webp"
-                            data-title="Panda Express"
-                            data-description="Diseño de marca para servicio de comida china." role="button" tabindex="0" aria-label="Ver proyecto Panda Express">
-                            <img src="assets/design-2.webp" alt="Proyecto Panda Express"
-                                class="w-full h-full object-cover protected-image" loading="lazy" decoding="async">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
-                                <span class="text-white font-bold">Ver Diseño</span>
-                            </div>
-                        </div>
-                        <div class="gallery-card group reveal" data-img="assets/design-3.webp" data-title="Sof's"
-                            data-description="Identidad para servicios del área médica y estética." role="button" tabindex="0" aria-label="Ver proyecto Sof's">
-                            <img src="assets/design-3.webp" alt="Proyecto Sof's" class="w-full h-full object-cover protected-image"
-                                loading="lazy" decoding="async">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
-                                <span class="text-white font-bold">Ver Diseño</span>
-                            </div>
-                        </div>
-                        <div class="gallery-card group reveal" data-img="assets/design-4.webp" data-title="Optimum"
-                            data-description="Marca de gadgets y electrónicos de consumo." role="button" tabindex="0" aria-label="Ver proyecto Optimum">
-                            <img src="assets/design-4.webp" alt="Proyecto Optimum" class="w-full h-full object-cover protected-image"
-                                loading="lazy" decoding="async">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
-                                <span class="text-white font-bold">Ver Diseño</span>
-                            </div>
-                        </div>
-                        <div class="gallery-card group reveal" data-img="assets/design-5.webp"
-                            data-title="Barbería Freelance"
-                            data-description="Branding para servicios de estilismo masculino." role="button" tabindex="0" aria-label="Ver proyecto Barbería Freelance">
-                            <img src="assets/design-5.webp" alt="Proyecto Barbería Freelance"
-                                class="w-full h-full object-cover protected-image" loading="lazy" decoding="async">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
-                                <span class="text-white font-bold">Ver Diseño</span>
-                            </div>
-                        </div>
-                        <div class="gallery-card group reveal" data-img="assets/design-6.webp"
-                            data-title="La Evolución S.S"
-                            data-description="Identidad para servicio técnico informático especializado." role="button" tabindex="0" aria-label="Ver proyecto La Evolución S.S">
-                            <img src="assets/design-6.webp" alt="Proyecto La Evolución S.S"
-                                class="w-full h-full object-cover protected-image" loading="lazy" decoding="async">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
-                                <span class="text-white font-bold">Ver Diseño</span>
-                            </div>
-                        </div>
-                        <div class="gallery-card group reveal" data-img="assets/design-7.webp" data-title="M.E.I.T"
-                            data-description="Identificador gráfico para movimiento estudiantil." role="button" tabindex="0" aria-label="Ver proyecto M.E.I.T">
-                            <img src="assets/design-7.webp" alt="Proyecto M.E.I.T" class="w-full h-full object-cover protected-image"
-                                loading="lazy" decoding="async">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
-                                <span class="text-white font-bold">Ver Diseño</span>
-                            </div>
-                        </div>
-                        <div class="gallery-card group reveal" data-img="assets/design-8.webp"
-                            data-title="Ivanna's Boutique"
-                            data-description="Marca para tienda de ropa y artículos de belleza." role="button" tabindex="0" aria-label="Ver proyecto Ivanna's Boutique">
-                            <img src="assets/design-8.webp" alt="Proyecto Ivanna's Boutique"
-                                class="w-full h-full object-cover protected-image" loading="lazy" decoding="async">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
-                                <span class="text-white font-bold">Ver Diseño</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Fotografía Section -->
-                <div>
-                    <div class="reveal mb-12">
-                        <h2 class="text-4xl font-display font-bold mb-4 flex items-center gap-4">
-                            <span class="text-accent text-xl font-mono">02.</span> Portafolio Fotográfico
-                        </h2>
-                        <p class="text-zinc-500">Una selección de mis capturas y composiciones.</p>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div class="gallery-card group reveal" data-img="assets/imagen-1.webp" data-title="Be the One"
-                            data-description="Gourmet The One Place." role="button" tabindex="0" aria-label="Ver fotografía Be the One">
-                            <img src="assets/imagen-1.webp" alt="Fotografía Be the One" class="w-full h-full object-cover protected-image"
-                                loading="lazy" decoding="async">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
-                                <span class="text-white font-bold">Ver Foto</span>
-                            </div>
-                        </div>
-                        <div class="gallery-card group reveal" data-img="assets/imagen-2.webp"
-                            data-title="Domo Olímpico" data-description="B&W, Villa Olímpica." role="button" tabindex="0" aria-label="Ver fotografía Domo Olímpico">
-                            <img src="assets/imagen-2.webp" alt="Fotografía Domo Olímpico"
-                                class="w-full h-full object-cover protected-image" loading="lazy" decoding="async">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
-                                <span class="text-white font-bold">Ver Foto</span>
-                            </div>
-                        </div>
-                        <div class="gallery-card group reveal" data-img="assets/imagen-3.webp" data-title="Minina"
-                            data-description="Retrato felino." role="button" tabindex="0" aria-label="Ver fotografía Minina">
-                            <img src="assets/imagen-3.webp" alt="Fotografía Minina" class="w-full h-full object-cover protected-image"
-                                loading="lazy" decoding="async">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
-                                <span class="text-white font-bold">Ver Foto</span>
-                            </div>
-                        </div>
-                        <div class="gallery-card group reveal" data-img="assets/imagen-4.webp" data-title="Hotel Termal"
-                            data-description="B&W, Monumento Natural." role="button" tabindex="0" aria-label="Ver fotografía Hotel Termal">
-                            <img src="assets/imagen-4.webp" alt="Fotografía Hotel Termal"
-                                class="w-full h-full object-cover protected-image" loading="lazy" decoding="async">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
-                                <span class="text-white font-bold">Ver Foto</span>
-                            </div>
-                        </div>
-                        <div class="gallery-card group reveal" data-img="assets/imagen-5.webp" data-title="Odra"
-                            data-description="Retrato de artista." role="button" tabindex="0" aria-label="Ver fotografía Odra">
-                            <img src="assets/imagen-5.webp" alt="Fotografía Odra" class="w-full h-full object-cover protected-image"
-                                loading="lazy" decoding="async">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
-                                <span class="text-white font-bold">Ver Foto</span>
-                            </div>
-                        </div>
-                        <div class="gallery-card group reveal" data-img="assets/imagen-6.webp" data-title="El Ofertazo"
-                            data-description="B&W, Av. Bolívar." role="button" tabindex="0" aria-label="Ver fotografía El Ofertazo">
-                            <img src="assets/imagen-6.webp" alt="Fotografía El Ofertazo"
-                                class="w-full h-full object-cover protected-image" loading="lazy" decoding="async">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
-                                <span class="text-white font-bold">Ver Foto</span>
-                            </div>
-                        </div>
-                        <div class="gallery-card group reveal" data-img="assets/imagen-7.webp"
-                            data-title="Antena y Faro" data-description="Urb. Rómulo Gallegos." role="button" tabindex="0" aria-label="Ver fotografía Antena y Faro">
-                            <img src="assets/imagen-7.webp" alt="Fotografía Antena y Faro"
-                                class="w-full h-full object-cover protected-image" loading="lazy" decoding="async">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
-                                <span class="text-white font-bold">Ver Foto</span>
-                            </div>
-                        </div>
-                        <div class="gallery-card group reveal" data-img="assets/imagen-8.webp"
-                            data-title="Rafael García" data-description="Sesión B&W." role="button" tabindex="0" aria-label="Ver fotografía Rafael García">
-                            <img src="assets/imagen-8.webp" alt="Fotografía Rafael García"
-                                class="w-full h-full object-cover protected-image" loading="lazy" decoding="async">
-                            <div class="gallery-overlay">
-                                <i class="fas fa-expand text-white text-2xl mb-2"></i>
-                                <span class="text-white font-bold">Ver Foto</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Copyright Notice -->
-                <div class="copyright-notice">
-                    <p><i class="fas fa-copyright"></i> 2019 Gabriel Tovar - Todos los derechos reservados</p>
-                    <p class="text-xs mt-2">Las imágenes y diseños mostrados son propiedad intelectual de Gabriel Tovar y están protegidos por leyes de derechos de autor.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Servicios / Propuesta de Valor -->
-        <section id="services" class="py-32 px-6 max-w-7xl mx-auto bg-[var(--color-surface)]">
-            <div class="reveal mb-16 text-center">
-                <h2 class="text-4xl font-display font-bold mb-4">Servicios Especializados</h2>
-                <p class="text-zinc-500 max-w-2xl mx-auto">Soluciones integrales que combinan visión estratégica, diseño
-                    de vanguardia y ejecución técnica.</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Identidad Visual -->
-                <div class="skill-card reveal glass-premium p-8">
-                    <div class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center text-accent mb-6">
-                        <i class="fas fa-palette text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-4">Identidad Visual</h3>
-                    <p class="text-zinc-500 text-sm leading-relaxed mb-6">
-                        Diseño de marcas con propósito. Desde logotipos hasta sistemas visuales completos que capturan
-                        la esencia de tu negocio.
-                    </p>
-                    <ul class="space-y-2 text-xs text-zinc-400">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> Branding & Logos
-                        </li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> Manuales de Marca
-                        </li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> Diseño Publicitario
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Gestión de Proyectos -->
-                <div class="skill-card reveal" style="transition-delay: 0.1s;">
-                    <div class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center text-accent mb-6">
-                        <i class="fas fa-tasks text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-4">Gestión de Proyectos</h3>
-                    <p class="text-zinc-500 text-sm leading-relaxed mb-6">
-                        Coordinación experta de equipos y procesos para asegurar que cada entrega cumpla con los más
-                        altos estándares.
-                    </p>
-                    <ul class="space-y-2 text-xs text-zinc-400">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> Coordinación de
-                            Equipos</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> Optimización de
-                            Procesos</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> Soporte Estratégico
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Producción Audiovisual -->
-                <div class="skill-card reveal" style="transition-delay: 0.2s;">
-                    <div class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center text-accent mb-6">
-                        <i class="fas fa-camera-retro text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-4">Producción Audiovisual</h3>
-                    <p class="text-zinc-500 text-sm leading-relaxed mb-6">
-                        Creación de contenido visual de alto impacto que comunica y conecta con tu audiencia de manera
-                        profesional.
-                    </p>
-                    <ul class="space-y-2 text-xs text-zinc-400">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> Fotografía
-                            Profesional</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> Edición de Video
-                        </li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent"></i> Dirección Creativa
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Perfil Profesional -->
-        <section id="about" class="py-40 px-6 max-w-7xl mx-auto bg-[var(--color-surface-low)] rounded-[48px] my-12 relative overflow-hidden">
-            <div class="bg-glow-violet -bottom-20 -right-20 opacity-10"></div>
-            <div class="grid md:grid-cols-2 gap-32 items-start">
-                <!-- Left Column: Profile Section -->
-                <div class="reveal">
-                    <!-- Profile Image -->
-                    <div class="mb-12">
-                        <div class="w-48 h-56 mx-auto rounded-3xl overflow-hidden border-2 border-zinc-800/50 shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                            <img src="assets/profile.webp" alt="Gabriel Tovar" class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                    
-                    <h2 class="text-5xl font-display font-bold mb-10 flex items-center gap-4">
-                        <span class="text-accent text-xl font-mono">03.</span> Perfil Profesional
-                    </h2>
-                    <div class="space-y-8 text-zinc-300 leading-relaxed text-lg">
-                        <p>
-                            Coordinador de Producción y Desarrollo en Coder.y con experiencia integral que abarca desde 
-                            infraestructura de telecomunicaciones FTTH hasta desarrollo frontend asistido por IA. 
-                            Mi enfoque une la visión estética y gráfica con implementación tecnológica de vanguardia.
-                        </p>
-                        <p>
-                            Actualmente coordino procesos creativos y técnicos, asegurando que cada entrega tecnológica 
-                            cumpla con altos estándares de calidad y resolución técnica. Domino lenguajes como TypeScript 
-                            y herramientas como VSCode, Google AI Studio y Windsurf para optimizar el desarrollo.
-                        </p>
-                        <p>
-                            Mi experiencia abarca producción audiovisual, diseño de identidades visuales con Adobe Creative Suite 
-                            y Affinity, fotografía profesional con capturas en blanco y negro y color, y gestión operativa en 
-                            entornos de tecnología y telecomunicaciones. Esto me permite tener una visión integral de cada 
-                            desafío, desde la estrategia digital con Instagram/Facebook Ads hasta la implementación técnica.
-                        </p>
-                    </div>
-
-                    <div class="mt-12">
-                        <a href="https://wa.me/584243591727?text=Hola%20Gabriel,%20vi%20tu%20portafolio%20y%20me%20gustaría%20solicitar%20tu%20CV%20actualizado."
-                            target="_blank"
-                            class="group flex items-center gap-4 text-accent font-bold hover:text-white transition-all duration-300 text-lg" aria-label="Solicitar CV por WhatsApp">
-                            <div
-                                class="w-12 h-12 rounded-full border-2 border-accent/30 flex items-center justify-center group-hover:bg-accent group-hover:text-zinc-950 transition-all duration-300 group-hover:scale-110">
-                                <i class="fab fa-whatsapp text-xl"></i>
-                            </div>
-                            Solicitar Síntesis por WhatsApp
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Right Column: Skills Section -->
-                <div class="reveal space-y-8">
-                    <!-- Infraestructura -->
-                    <div class="skill-card p-6 glass-premium transform hover:scale-102 transition-transform duration-300">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent">
-                                <i class="fas fa-network-wired text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-bold text-white">Infraestructura & Telecom</h3>
-                                <p class="text-xs text-zinc-400">Gestión de redes FTTH y Radio Enlace.</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span
-                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Mikrotik</span>
-                            <span
-                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Mikrowisp</span>
-                            <span
-                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">AdminOLT</span>
-                            <span
-                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">SmartOLT</span>
-                            <span
-                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">AirControl</span>
-                        </div>
-                    </div>
-
-                    <!-- Diseño -->
-                    <div class="skill-card p-6 glass-premium transform hover:scale-102 transition-transform duration-300">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent">
-                                <i class="fas fa-palette text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-bold text-white">Suite Creativa</h3>
-                                <p class="text-xs text-zinc-400">Identidad visual y contenido multimedia.</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span
-                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Photoshop</span>
-                            <span
-                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Illustrator</span>
-                            <span
-                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">CorelDraw</span>
-                            <span
-                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Canva</span>
-                            <span
-                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">CapCut</span>
-                            <span
-                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Affinity</span>
-                        </div>
-                    </div>
-
-                    <!-- Estrategia -->
-                    <div class="skill-card p-6 glass-premium transform hover:scale-102 transition-transform duration-300">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent">
-                                <i class="fas fa-bullhorn text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-bold text-white">Estrategia Digital</h3>
-                                <p class="text-xs text-zinc-400">Gestión de marca y posicionamiento.</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span
-                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Redacción</span>
-                            <span
-                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Redes
-                                Sociales</span>
-                            <span
-                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Marketing
-                                Digital</span>
-                            <span
-                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Estudio de Mercado</span>
-                            <span
-                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Instagram Ads</span>
-                            <span
-                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Facebook Ads</span>
-                            <span
-                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Google Workplace</span>
-                            <span
-                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Google Cloud</span>
-                        </div>
-                    </div>
-
-                    <!-- Desarrollo -->
-                    <div class="skill-card p-6 glass-premium transform hover:scale-102 transition-transform duration-300">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent">
-                                <i class="fas fa-code text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-bold text-white">Desarrollo & IA</h3>
-                                <p class="text-xs text-zinc-400">Herramientas de desarrollo y programación asistida.</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span
-                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">VSCode</span>
-                            <span
-                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Antigravity</span>
-                            <span
-                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Windsurf</span>
-                            <span
-                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Google AI Studio</span>
-                            <span
-                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Stitch</span>
-                            <span
-                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">GitHub</span>
-                            <span
-                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">TypeScript</span>
-                            <span
-                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Frontend</span>
-                            <span
-                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">Vibe Coding</span>
-                            <span
-                                class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors">AI Coding</span>
-                        </div>
-                    </div>
-
-                    <div class="mt-12 p-6 bg-gradient-to-r from-zinc-900/50 to-zinc-800/50 rounded-2xl border border-zinc-700/50">
-                        <h3 class="text-lg font-bold mb-6 text-white uppercase tracking-wider">Habilidades Clave</h3>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="skill-tag px-4 py-2 text-sm bg-accent/10 border border-accent/30 hover:bg-accent/20 transition-colors">Coordinación de Proyectos</span>
-                            <span class="skill-tag px-4 py-2 text-sm bg-accent/10 border border-accent/30 hover:bg-accent/20 transition-colors">Desarrollo Frontend</span>
-                            <span class="skill-tag px-4 py-2 text-sm bg-accent/10 border border-accent/30 hover:bg-accent/20 transition-colors">Infraestructura FTTH</span>
-                            <span class="skill-tag px-4 py-2 text-sm bg-accent/10 border border-accent/30 hover:bg-accent/20 transition-colors">Fotografía Profesional</span>
-                            <span class="skill-tag px-4 py-2 text-sm bg-accent/10 border border-accent/30 hover:bg-accent/20 transition-colors">IA Coding</span>
-                            <span class="skill-tag px-4 py-2 text-sm bg-accent/10 border border-accent/30 hover:bg-accent/20 transition-colors">Diseño Digital</span>
-                            <span class="skill-tag px-4 py-2 text-sm bg-accent/10 border border-accent/30 hover:bg-accent/20 transition-colors">Marketing Digital</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experiencia -->
-        <section id="experience" class="py-24 px-6 max-w-4xl mx-auto">
-            <h2 class="text-4xl font-display font-bold mb-16 flex items-center gap-4 reveal">
-                <span class="text-accent text-xl font-mono">04.</span> Experiencia
+            <h2
+              class="text-5xl font-display font-bold mb-10 flex items-center gap-4"
+            >
+              Perfil Profesional
             </h2>
-
-            <div class="relative reveal">
-                <div class="timeline-line"></div>
-
-                <div class="space-y-12">
-                    <!-- Coder.y -->
-                    <div class="relative pl-12 md:pl-0">
-                        <div class="timeline-dot"></div>
-                        <div class="md:w-1/2 md:pr-12 md:text-right">
-                            <span class="text-accent font-mono text-sm mb-2 block">Actualidad</span>
-                            <h3 class="text-xl font-bold text-white mb-1">Coordinación de Producción y Desarrollo</h3>
-                            <h4 class="text-zinc-400 font-medium mb-4">Coder.y</h4>
-                            <p class="text-zinc-500 text-sm leading-relaxed">
-                                Superviso la creación de apps y sitios web desde una perspectiva de gestión y diseño,
-                                asegurando estándares de calidad y funcionalidad tecnológica.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Sabor Oriental -->
-                    <div class="relative pl-12 md:pl-0">
-                        <div class="timeline-dot"></div>
-                        <div class="md:w-1/2 md:ml-auto md:pl-12">
-                            <span class="text-accent font-mono text-sm mb-2 block">2025</span>
-                            <h3 class="text-xl font-bold text-white mb-1">Mesero / DJ</h3>
-                            <h4 class="text-zinc-400 font-medium mb-4">Sabor Oriental</h4>
-                            <p class="text-zinc-500 text-sm leading-relaxed">
-                                Servicio de atención al cliente y animación musical en eventos y ambiente del local.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Supernova -->
-                    <div class="relative pl-12 md:pl-0">
-                        <div class="timeline-dot"></div>
-                        <div class="md:w-1/2 md:pr-12 md:text-right">
-                            <span class="text-accent font-mono text-sm mb-2 block">2024</span>
-                            <h3 class="text-xl font-bold text-white mb-1">Coordinador del Centro de Operaciones Remotas</h3>
-                            <h4 class="text-zinc-400 font-medium mb-4">Supernova Telecomunicaciones</h4>
-                            <p class="text-zinc-500 text-sm leading-relaxed">
-                                Gestión y supervisión del centro de operaciones. Garantizo que los flujos de soporte y
-                                atención al usuario en servicios FTTH funcionen correctamente.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Bodegón Los Morros -->
-                    <div class="relative pl-12 md:pl-0">
-                        <div class="timeline-dot"></div>
-                        <div class="md:w-1/2 md:ml-auto md:pl-12">
-                            <span class="text-accent font-mono text-sm mb-2 block">2023</span>
-                            <h3 class="text-xl font-bold text-white mb-1">Encargado de Barra</h3>
-                            <h4 class="text-zinc-400 font-medium mb-4">Bodegón Los Morros</h4>
-                            <p class="text-zinc-500 text-sm leading-relaxed">
-                                Gestión operativa y coordinación de atención al cliente.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- DukuPhone -->
-                    <div class="relative pl-12 md:pl-0">
-                        <div class="timeline-dot"></div>
-                        <div class="md:w-1/2 md:pr-12 md:text-right">
-                            <span class="text-accent font-mono text-sm mb-2 block">2022</span>
-                            <h3 class="text-xl font-bold text-white mb-1">Vendedor</h3>
-                            <h4 class="text-zinc-400 font-medium mb-4">DukuPhone</h4>
-                            <p class="text-zinc-500 text-sm leading-relaxed">
-                                Asesoría comercial en dispositivos tecnológicos.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- S.T La Evolución -->
-                    <div class="relative pl-12 md:pl-0">
-                        <div class="timeline-dot"></div>
-                        <div class="md:w-1/2 md:ml-auto md:pl-12">
-                            <span class="text-accent font-mono text-sm mb-2 block">2020 — 2022</span>
-                            <h3 class="text-xl font-bold text-white mb-1">Soporte Técnico Informático</h3>
-                            <h4 class="text-zinc-400 font-medium mb-4">S.T La Evolución S.S</h4>
-                            <p class="text-zinc-500 text-sm leading-relaxed">
-                                Diagnóstico y gestión de reparación de hardware y dispositivos inteligentes.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Mundo G7 -->
-                    <div class="relative pl-12 md:pl-0">
-                        <div class="timeline-dot"></div>
-                        <div class="md:w-1/2 md:pr-12 md:text-right">
-                            <span class="text-accent font-mono text-sm mb-2 block">2020</span>
-                            <h3 class="text-xl font-bold text-white mb-1">Gerente de Ventas</h3>
-                            <h4 class="text-zinc-400 font-medium mb-4">Mundo G7</h4>
-                            <p class="text-zinc-500 text-sm leading-relaxed">
-                                Liderazgo del departamento de ventas y estrategias comerciales.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+            <div class="space-y-8 text-zinc-300 leading-relaxed text-lg">
+              <p>
+                Coordinador de Producción en Coder.y con experiencia integral
+                que abarca desde infraestructura de telecomunicaciones FTTH
+                hasta producción audiovisual y gráfica. Mi enfoque resalta la
+                visión estética combinada con estrategias comerciales efectivas.
+              </p>
+              <p>
+                Actualmente coordino procesos creativos, asegurando que cada
+                entrega cumpla con altos estándares de calidad gráfica y
+                audiovisual, apoyándome en potentes herramientas de diseño y
+                flujo de trabajo digital.
+              </p>
+              <p>
+                Mi experiencia abarca producción audiovisual, diseño de
+                identidades visuales con Adobe Creative Suite y Affinity,
+                fotografía profesional con capturas en blanco y negro y color, y
+                gestión operativa en entornos de tecnología y
+                telecomunicaciones. Esto me permite tener una visión integral de
+                cada desafío, desde la estrategia digital con Instagram/Facebook
+                Ads hasta la implementación estética final.
+              </p>
             </div>
-        </section>
 
-        <!-- Contacto -->
-        <section id="contact" class="py-24 px-6 max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-16">
-                <div class="reveal">
-                    <h2 class="text-3xl md:text-4xl font-display font-bold mb-8 flex items-center gap-4">
-                        <span class="text-accent text-xl font-mono">05.</span> Contacto
-                    </h2>
-                    <p class="text-zinc-500 mb-10 text-lg">
-                        ¿Tienes un proyecto en mente? Estoy disponible para colaboraciones y nuevas oportunidades
-                        estratégicas.
-                    </p>
-
-                    <div class="space-y-6">
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-xl glass flex items-center justify-center text-accent">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div>
-                                <span class="text-xs text-zinc-600 uppercase tracking-widest block">Ubicación</span>
-                                <span class="text-lg font-medium">San Juan de los Morros, Venezuela</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-xl glass flex items-center justify-center text-accent">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div>
-                                <span class="text-xs text-zinc-600 uppercase tracking-widest block">Email</span>
-                                <a href="mailto:jesustpriv@gmail.com"
-                                    class="text-lg font-medium hover:text-accent transition-colors">jesustpriv@gmail.com</a>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-xl glass-premium flex items-center justify-center text-accent">
-                                <i class="fab fa-whatsapp"></i>
-                            </div>
-                            <div>
-                                <span class="text-xs text-zinc-600 uppercase tracking-widest block">WhatsApp</span>
-                                <a href="https://wa.me/584243591727" target="_blank"
-                                    class="text-lg font-medium hover:text-accent transition-colors">04243591727</a>
-                            </div>
-                        </div>
-                    </div>
-
+            <div class="mt-12">
+              <a
+                href="https://wa.me/584243591727?text=Hola%20Gabriel,%20vi%20tu%20portafolio%20y%20me%20gustaría%20solicitar%20tu%20CV%20actualizado."
+                target="_blank"
+                class="group flex items-center gap-4 text-accent font-bold hover:text-white transition-all duration-300 text-lg"
+                aria-label="Solicitar CV por WhatsApp"
+              >
+                <div
+                  class="w-12 h-12 rounded-full border-2 border-accent/30 flex items-center justify-center group-hover:bg-accent group-hover:text-zinc-950 transition-all duration-300 group-hover:scale-110"
+                >
+                  <i class="fab fa-whatsapp text-xl"></i>
                 </div>
-
-                <form id="contact-form" action="https://formspree.io/f/xojnklda" method="POST"
-                    class="reveal bg-[#121212] p-8 rounded-xl border border-white/5">
-                    <div class="contact-grid">
-                        <div class="space-y-2">
-                            <label for="name"
-                                class="text-xs font-bold uppercase tracking-widest text-zinc-500">Nombre</label>
-                            <input type="text" id="name" name="nombre" required class="form-input"
-                                placeholder="Tu nombre">
-                        </div>
-                        <div class="space-y-2">
-                            <label for="email"
-                                class="text-xs font-bold uppercase tracking-widest text-zinc-500">Email</label>
-                            <input type="email" id="email" name="email" required class="form-input"
-                                placeholder="tu@email.com">
-                        </div>
-                        <div class="space-y-2 contact-full">
-                            <label for="message"
-                                class="text-xs font-bold uppercase tracking-widest text-zinc-500">Mensaje</label>
-                            <textarea id="message" name="mensaje" rows="4" required class="form-input resize-none"
-                                placeholder="Escribe tu mensaje aquí..."></textarea>
-                        </div>
-                        <button type="submit"
-                            class="contact-full bg-accent hover:bg-accent-hover text-zinc-950 font-bold py-4 rounded-lg transition-all transform hover:scale-[1.01] flex items-center justify-center gap-2">
-                            <span>Enviar Mensaje</span>
-                            <i class="fas fa-paper-plane text-sm"></i>
-                        </button>
-                    </div>
-                </form>
-
-                <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4 reveal">
-                    <a href="https://www.instagram.com/gabrielt.designs" target="_blank" class="social-action-btn" aria-label="Ver mi Instagram de diseño">
-                        <i class="fab fa-instagram"></i>
-                        <span>Instagram Diseño</span>
-                    </a>
-                    <a href="https://www.instagram.com/gabrielt.photograph" target="_blank" class="social-action-btn" aria-label="Ver mi Instagram de fotografía">
-                        <i class="fab fa-instagram"></i>
-                        <span>Instagram Fotografía</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/gabriel-tovar-486888233" target="_blank"
-                        class="social-action-btn" aria-label="Ver mi perfil profesional en LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                        <span>Perfil Profesional</span>
-                    </a>
-                    <a href="https://github.com/jesustpriv" target="_blank" class="social-action-btn" aria-label="Ver mi perfil de GitHub">
-                        <i class="fab fa-github"></i>
-                        <span>GitHub</span>
-                    </a>
-                </div>
+                Hablemos de tu proyecto
+              </a>
             </div>
-        </section>
+          </div>
+
+          <!-- Right Column: Skills Section -->
+          <div class="reveal space-y-8">
+            <!-- Infraestructura -->
+            <div
+              class="skill-card p-6 glass-premium transform hover:scale-102 transition-transform duration-300"
+            >
+              <div class="flex items-center gap-4 mb-4">
+                <div
+                  class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent"
+                >
+                  <i class="fas fa-network-wired text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-white">
+                    Infraestructura & Telecom
+                  </h3>
+                  <p class="text-xs text-zinc-400">
+                    Gestión de redes FTTH y Radio Enlace.
+                  </p>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors"
+                  >Mikrotik</span
+                >
+                <span
+                  class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors"
+                  >Mikrowisp</span
+                >
+                <span
+                  class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors"
+                  >AdminOLT</span
+                >
+                <span
+                  class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors"
+                  >SmartOLT</span
+                >
+                <span
+                  class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors"
+                  >AirControl</span
+                >
+              </div>
+            </div>
+
+            <!-- Diseño -->
+            <div
+              class="skill-card p-6 glass-premium transform hover:scale-102 transition-transform duration-300"
+            >
+              <div class="flex items-center gap-4 mb-4">
+                <div
+                  class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent"
+                >
+                  <i class="fas fa-palette text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-white">Suite Creativa</h3>
+                  <p class="text-xs text-zinc-400">
+                    Identidad visual y contenido multimedia.
+                  </p>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors"
+                  >Photoshop</span
+                >
+                <span
+                  class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors"
+                  >Illustrator</span
+                >
+                <span
+                  class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors"
+                  >CorelDraw</span
+                >
+                <span
+                  class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors"
+                  >Canva</span
+                >
+                <span
+                  class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors"
+                  >CapCut</span
+                >
+                <span
+                  class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors"
+                  >Affinity</span
+                >
+              </div>
+            </div>
+
+            <!-- Estrategia -->
+            <div
+              class="skill-card p-6 glass-premium transform hover:scale-102 transition-transform duration-300"
+            >
+              <div class="flex items-center gap-4 mb-4">
+                <div
+                  class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent"
+                >
+                  <i class="fas fa-bullhorn text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-white">
+                    Estrategia Digital
+                  </h3>
+                  <p class="text-xs text-zinc-400">
+                    Gestión de marca y posicionamiento.
+                  </p>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors"
+                  >Redacción</span
+                >
+                <span
+                  class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors"
+                  >Redes Sociales</span
+                >
+                <span
+                  class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors"
+                  >Marketing Digital</span
+                >
+                <span
+                  class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors"
+                  >Estudio de Mercado</span
+                >
+                <span
+                  class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors"
+                  >Instagram Ads</span
+                >
+                <span
+                  class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors"
+                  >Facebook Ads</span
+                >
+                <span
+                  class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors"
+                  >Google Workplace</span
+                >
+                <span
+                  class="px-3 py-1 bg-zinc-900/50 rounded-lg text-xs text-zinc-300 border border-zinc-700/50 hover:border-accent/50 transition-colors"
+                  >Google Cloud</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="mt-12 p-6 bg-gradient-to-r from-zinc-900/50 to-zinc-800/50 rounded-2xl border border-zinc-700/50"
+            >
+              <h3
+                class="text-lg font-bold mb-6 text-white uppercase tracking-wider"
+              >
+                Habilidades Clave
+              </h3>
+              <div class="flex flex-wrap gap-3">
+                <span
+                  class="skill-tag px-4 py-2 text-sm bg-accent/10 border border-accent/30 hover:bg-accent/20 transition-colors"
+                  >Coordinación de Proyectos</span
+                >
+                <span
+                  class="skill-tag px-4 py-2 text-sm bg-accent/10 border border-accent/30 hover:bg-accent/20 transition-colors"
+                  >Producción Audiovisual</span
+                >
+                <span
+                  class="skill-tag px-4 py-2 text-sm bg-accent/10 border border-accent/30 hover:bg-accent/20 transition-colors"
+                  >Infraestructura FTTH</span
+                >
+                <span
+                  class="skill-tag px-4 py-2 text-sm bg-accent/10 border border-accent/30 hover:bg-accent/20 transition-colors"
+                  >Fotografía Profesional</span
+                >
+                <span
+                  class="skill-tag px-4 py-2 text-sm bg-accent/10 border border-accent/30 hover:bg-accent/20 transition-colors"
+                  >Diseño Digital y Gráfico</span
+                >
+                <span
+                  class="skill-tag px-4 py-2 text-sm bg-accent/10 border border-accent/30 hover:bg-accent/20 transition-colors"
+                  >Marketing Digital y Publicidad</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Servicios Replanteados -->
+      <section
+        id="services"
+        class="py-28 px-6 max-w-7xl mx-auto bg-[var(--color-surface)] relative overflow-hidden"
+      >
+        <div class="bg-glow-violet -top-20 -right-40 opacity-5"></div>
+        <div class="reveal mb-16 text-center">
+          <h2 class="text-4xl font-display font-bold mb-4">
+            Servicios Integrales
+          </h2>
+          <p class="text-zinc-500 max-w-2xl mx-auto text-lg">
+            Soluciones completas diseñadas para hacer crecer tu negocio de
+            manera sostenible.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-16">
+          <!-- Creación de Identidad Visual y Branding -->
+          <div class="skill-card reveal glass-premium p-8">
+            <div
+              class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center text-accent mb-6"
+            >
+              <i class="fas fa-palette text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">
+              Creación de Identidad Visual y Branding
+            </h3>
+            <p class="text-zinc-500 text-sm leading-relaxed mb-6">
+              Diseño de marcas memorables que conectan emocionalmente con tu
+              audiencia y generan reconocimiento instantáneo.
+            </p>
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-check-circle text-accent text-sm"></i>
+                <span class="text-zinc-300 text-sm"
+                  >Identidad visual completa y coherente</span
+                >
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fas fa-check-circle text-accent text-sm"></i>
+                <span class="text-zinc-300 text-sm"
+                  >Sistemas de marca escalables</span
+                >
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fas fa-check-circle text-accent text-sm"></i>
+                <span class="text-zinc-300 text-sm"
+                  >Posicionamiento estratégico</span
+                >
+              </div>
+            </div>
+            <div class="p-3 bg-zinc-800/50 rounded-lg">
+              <p class="text-xs text-zinc-400">
+                <span class="text-accent font-semibold">Resultado:</span> Marcas
+                que generan confianza y se diferencian en el mercado.
+              </p>
+            </div>
+          </div>
+
+          <!-- Diseño de Experiencias Digitales (UI/UX) -->
+          <div
+            class="skill-card reveal glass-premium p-8"
+            style="transition-delay: 0.1s"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center text-accent mb-6"
+            >
+              <i class="fas fa-laptop text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">
+              Diseño de Experiencias Digitales (UI/UX)
+            </h3>
+            <p class="text-zinc-500 text-sm leading-relaxed mb-6">
+              Interfaces intuitivas y optimizadas que convierten visitantes en
+              clientes leales y mejoran la retención.
+            </p>
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-check-circle text-accent text-sm"></i>
+                <span class="text-zinc-300 text-sm"
+                  >Diseño centrado en el usuario</span
+                >
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fas fa-check-circle text-accent text-sm"></i>
+                <span class="text-zinc-300 text-sm"
+                  >Optimización de conversiones</span
+                >
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fas fa-check-circle text-accent text-sm"></i>
+                <span class="text-zinc-300 text-sm"
+                  >Experiencias móviles first</span
+                >
+              </div>
+            </div>
+            <div class="p-3 bg-zinc-800/50 rounded-lg">
+              <p class="text-xs text-zinc-400">
+                <span class="text-accent font-semibold">Resultado:</span> Mayor
+                tasa de conversión y satisfacción del usuario.
+              </p>
+            </div>
+          </div>
+
+          <!-- Diseño Digital y Contenido Visual -->
+          <div
+            class="skill-card reveal glass-premium p-8"
+            style="transition-delay: 0.2s"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center text-accent mb-6"
+            >
+              <i class="fas fa-camera text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">
+              Producción y Contenido Visual
+            </h3>
+            <p class="text-zinc-500 text-sm leading-relaxed mb-6">
+              Producción de recursos gráficos y fotográficos de alto impacto
+              para potenciar la comunicación de marca.
+            </p>
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-check-circle text-accent text-sm"></i>
+                <span class="text-zinc-300 text-sm"
+                  >Sesiones fotográficas premium</span
+                >
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fas fa-check-circle text-accent text-sm"></i>
+                <span class="text-zinc-300 text-sm"
+                  >Piezas gráficas publicitarias</span
+                >
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fas fa-check-circle text-accent text-sm"></i>
+                <span class="text-zinc-300 text-sm"
+                  >Edición visual avanzada</span
+                >
+              </div>
+            </div>
+            <div class="p-3 bg-zinc-800/50 rounded-lg">
+              <p class="text-xs text-zinc-400">
+                <span class="text-accent font-semibold">Resultado:</span>
+                Elementos visuales que captan la atención y comunican
+                profesionalidad.
+              </p>
+            </div>
+          </div>
+
+          <!-- Estrategia Digital y Optimización de Presencia Online -->
+          <div
+            class="skill-card reveal glass-premium p-8"
+            style="transition-delay: 0.3s"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center text-accent mb-6"
+            >
+              <i class="fas fa-chart-line text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">
+              Estrategia Digital y Optimización Online
+            </h3>
+            <p class="text-zinc-500 text-sm leading-relaxed mb-6">
+              Estrategias integrales de marketing digital que aumentan tu
+              visibilidad y generan leads calificados.
+            </p>
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-check-circle text-accent text-sm"></i>
+                <span class="text-zinc-300 text-sm"
+                  >Marketing de contenidos estratégico</span
+                >
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fas fa-check-circle text-accent text-sm"></i>
+                <span class="text-zinc-300 text-sm"
+                  >Gestión de redes sociales</span
+                >
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fas fa-check-circle text-accent text-sm"></i>
+                <span class="text-zinc-300 text-sm"
+                  >Publicidad digital optimizada</span
+                >
+              </div>
+            </div>
+            <div class="p-3 bg-zinc-800/50 rounded-lg">
+              <p class="text-xs text-zinc-400">
+                <span class="text-accent font-semibold">Resultado:</span> Mayor
+                alcance cualificado y retorno de inversión.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Value Proposition -->
+        <div class="reveal text-center">
+          <div
+            class="max-w-4xl mx-auto p-8 bg-gradient-to-r from-zinc-900/50 to-zinc-800/50 rounded-2xl border border-zinc-700/50"
+          >
+            <h3 class="text-2xl font-bold text-white mb-4">
+              No solo servicios, soluciones integrales
+            </h3>
+            <p class="text-zinc-300 mb-6">
+              Cada servicio está diseñado para integrarse con los demás, creando
+              un ecosistema digital completo que potencia los resultados de tu
+              negocio.
+            </p>
+            <div class="grid md:grid-cols-4 gap-4 text-center">
+              <div>
+                <div class="text-2xl font-bold text-accent mb-1">+250%</div>
+                <div class="text-xs text-zinc-400">
+                  ROI promedio en proyectos
+                </div>
+              </div>
+              <div>
+                <div class="text-2xl font-bold text-accent mb-1">-60%</div>
+                <div class="text-xs text-zinc-400">
+                  Tiempo de implementación
+                </div>
+              </div>
+              <div>
+                <div class="text-2xl font-bold text-accent mb-1">95%</div>
+                <div class="text-xs text-zinc-400">
+                  Satisfacción del cliente
+                </div>
+              </div>
+              <div>
+                <div class="text-2xl font-bold text-accent mb-1">24/7</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portafolio / Galería -->
+      <section
+        id="portfolio"
+        class="py-28 px-6 max-w-7xl mx-auto relative overflow-hidden"
+      >
+        <div class="bg-glow-violet top-1/2 -right-40 opacity-10"></div>
+        <div class="reveal mb-12 text-center">
+          <h2
+            class="text-4xl font-display font-bold mb-4 flex items-center justify-center gap-4"
+          >
+            Portafolio Digital
+          </h2>
+          <p class="text-zinc-500 max-w-2xl mx-auto text-lg mb-10">
+            Una selección de proyectos dividida por disciplina para apreciar
+            mejor cada proceso creativo.
+          </p>
+
+          <!-- Categorías (Tabs) -->
+          <div class="flex justify-center gap-4 mb-12">
+            <button
+              id="tab-design"
+              class="portfolio-tab active px-8 py-3 rounded-full text-sm font-bold transition-all border border-white/5 bg-zinc-900/50 hover:bg-zinc-800 text-zinc-400"
+            >
+              Diseño Gráfico
+            </button>
+            <button
+              id="tab-photo"
+              class="portfolio-tab px-8 py-3 rounded-full text-sm font-bold transition-all border border-white/5 bg-zinc-900/50 hover:bg-zinc-800 text-zinc-400"
+            >
+              Fotografía
+            </button>
+          </div>
+        </div>
+
+        <!-- Grid de Diseño -->
+        <div id="grid-design" class="portfolio-grid reveal">
+          <!-- 8 Items de Diseño -->
+          <div class="gallery-card group" data-img="assets/design-6.webp">
+            <img src="assets/design-6.webp" alt="Diseño 1" loading="lazy" />
+          </div>
+          <div class="gallery-card group" data-img="assets/design-1.webp">
+            <img src="assets/design-1.webp" alt="Diseño 2" loading="lazy" />
+          </div>
+          <div class="gallery-card group" data-img="assets/design-7.webp">
+            <img src="assets/design-7.webp" alt="Diseño 3" loading="lazy" />
+          </div>
+          <div class="gallery-card group" data-img="assets/design-3.webp">
+            <img src="assets/design-3.webp" alt="Diseño 4" loading="lazy" />
+          </div>
+          <div class="gallery-card group" data-img="assets/design-5.webp">
+            <img src="assets/design-5.webp" alt="Diseño 5" loading="lazy" />
+          </div>
+          <div class="gallery-card group" data-img="assets/design-2.webp">
+            <img src="assets/design-2.webp" alt="Diseño 6" loading="lazy" />
+          </div>
+          <div class="gallery-card group" data-img="assets/design-4.webp">
+            <img src="assets/design-4.webp" alt="Diseño 7" loading="lazy" />
+          </div>
+          <div class="gallery-card group" data-img="assets/design-8.webp">
+            <img src="assets/design-8.webp" alt="Diseño 8" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- Grid de Fotografía -->
+        <div id="grid-photo" class="portfolio-grid reveal hidden">
+          <!-- 8 Items de Foto -->
+          <div class="gallery-card group" data-img="assets/imagen-3.webp">
+            <img src="assets/imagen-3.webp" alt="Foto 1" loading="lazy" />
+          </div>
+          <div class="gallery-card group" data-img="assets/imagen-4.webp">
+            <img src="assets/imagen-4.webp" alt="Foto 2" loading="lazy" />
+          </div>
+          <div class="gallery-card group" data-img="assets/imagen-1.webp">
+            <img src="assets/imagen-1.webp" alt="Foto 3" loading="lazy" />
+          </div>
+          <div class="gallery-card group" data-img="assets/imagen-2.webp">
+            <img src="assets/imagen-2.webp" alt="Foto 4" loading="lazy" />
+          </div>
+          <div class="gallery-card group" data-img="assets/imagen-5.webp">
+            <img src="assets/imagen-5.webp" alt="Foto 5" loading="lazy" />
+          </div>
+          <div class="gallery-card group" data-img="assets/imagen-6.webp">
+            <img src="assets/imagen-6.webp" alt="Foto 6" loading="lazy" />
+          </div>
+          <div class="gallery-card group" data-img="assets/imagen-7.webp">
+            <img src="assets/imagen-7.webp" alt="Foto 7" loading="lazy" />
+          </div>
+          <div class="gallery-card group" data-img="assets/imagen-8.webp">
+            <img src="assets/imagen-8.webp" alt="Foto 8" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="mt-16 text-center reveal">
+          <a
+            href="#contact"
+            class="inline-flex items-center gap-2 text-zinc-400 hover:text-accent transition-colors group"
+          >
+            <span>¿Interesado en una solución similar? Hablemos</span>
+            <i
+              class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"
+            ></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- Experiencia -->
+      <section
+        id="experience"
+        class="py-28 px-6 max-w-4xl mx-auto relative overflow-hidden"
+      >
+        <div class="bg-glow-violet -bottom-40 -left-40 opacity-5"></div>
+        <h2
+          class="text-4xl font-display font-bold mb-16 flex items-center gap-4 reveal"
+        >
+          Experiencia
+        </h2>
+
+        <div class="relative reveal">
+          <div class="timeline-line"></div>
+
+          <div class="space-y-12">
+            <!-- Coder.y -->
+            <div class="relative pl-12 md:pl-0">
+              <div class="timeline-dot"></div>
+              <div class="md:w-1/2 md:pr-12 md:text-right">
+                <span class="text-accent font-mono text-sm mb-2 block"
+                  >Actualidad</span
+                >
+                <h3 class="text-xl font-bold text-white mb-1">
+                  Coordinación de Producción y Desarrollo
+                </h3>
+                <h4 class="text-zinc-400 font-medium mb-4">Coder.y</h4>
+                <p class="text-zinc-500 text-sm leading-relaxed">
+                  Superviso la creación de apps y sitios web desde una
+                  perspectiva de gestión y diseño, asegurando estándares de
+                  calidad y funcionalidad tecnológica.
+                </p>
+              </div>
+            </div>
+
+            <!-- Sabor Oriental -->
+            <div class="relative pl-12 md:pl-0">
+              <div class="timeline-dot"></div>
+              <div class="md:w-1/2 md:ml-auto md:pl-12">
+                <span class="text-accent font-mono text-sm mb-2 block"
+                  >2025</span
+                >
+                <h3 class="text-xl font-bold text-white mb-1">Mesero / DJ</h3>
+                <h4 class="text-zinc-400 font-medium mb-4">Sabor Oriental</h4>
+                <p class="text-zinc-500 text-sm leading-relaxed">
+                  Servicio de atención al cliente y animación musical en eventos
+                  y ambiente del local.
+                </p>
+              </div>
+            </div>
+
+            <!-- Supernova -->
+            <div class="relative pl-12 md:pl-0">
+              <div class="timeline-dot"></div>
+              <div class="md:w-1/2 md:pr-12 md:text-right">
+                <span class="text-accent font-mono text-sm mb-2 block"
+                  >2024</span
+                >
+                <h3 class="text-xl font-bold text-white mb-1">
+                  Coordinador del Centro de Operaciones Remotas
+                </h3>
+                <h4 class="text-zinc-400 font-medium mb-4">
+                  Supernova Telecomunicaciones
+                </h4>
+                <p class="text-zinc-500 text-sm leading-relaxed">
+                  Gestión y supervisión del centro de operaciones. Garantizo que
+                  los flujos de soporte y atención al usuario en servicios FTTH
+                  funcionen correctamente.
+                </p>
+              </div>
+            </div>
+
+            <!-- Bodegón Los Morros -->
+            <div class="relative pl-12 md:pl-0">
+              <div class="timeline-dot"></div>
+              <div class="md:w-1/2 md:ml-auto md:pl-12">
+                <span class="text-accent font-mono text-sm mb-2 block"
+                  >2023</span
+                >
+                <h3 class="text-xl font-bold text-white mb-1">
+                  Encargado de Barra
+                </h3>
+                <h4 class="text-zinc-400 font-medium mb-4">
+                  Bodegón Los Morros
+                </h4>
+                <p class="text-zinc-500 text-sm leading-relaxed">
+                  Gestión operativa y coordinación de atención al cliente.
+                </p>
+              </div>
+            </div>
+
+            <!-- DukuPhone -->
+            <div class="relative pl-12 md:pl-0">
+              <div class="timeline-dot"></div>
+              <div class="md:w-1/2 md:pr-12 md:text-right">
+                <span class="text-accent font-mono text-sm mb-2 block"
+                  >2022</span
+                >
+                <h3 class="text-xl font-bold text-white mb-1">Vendedor</h3>
+                <h4 class="text-zinc-400 font-medium mb-4">DukuPhone</h4>
+                <p class="text-zinc-500 text-sm leading-relaxed">
+                  Asesoría comercial en dispositivos tecnológicos.
+                </p>
+              </div>
+            </div>
+
+            <!-- S.T La Evolución -->
+            <div class="relative pl-12 md:pl-0">
+              <div class="timeline-dot"></div>
+              <div class="md:w-1/2 md:ml-auto md:pl-12">
+                <span class="text-accent font-mono text-sm mb-2 block"
+                  >2020 — 2022</span
+                >
+                <h3 class="text-xl font-bold text-white mb-1">
+                  Soporte Técnico Informático
+                </h3>
+                <h4 class="text-zinc-400 font-medium mb-4">
+                  S.T La Evolución S.S
+                </h4>
+                <p class="text-zinc-500 text-sm leading-relaxed">
+                  Diagnóstico y gestión de reparación de hardware y dispositivos
+                  inteligentes.
+                </p>
+              </div>
+            </div>
+
+            <!-- Mundo G7 -->
+            <div class="relative pl-12 md:pl-0">
+              <div class="timeline-dot"></div>
+              <div class="md:w-1/2 md:pr-12 md:text-right">
+                <span class="text-accent font-mono text-sm mb-2 block"
+                  >2020</span
+                >
+                <h3 class="text-xl font-bold text-white mb-1">
+                  Gerente de Ventas
+                </h3>
+                <h4 class="text-zinc-400 font-medium mb-4">Mundo G7</h4>
+                <p class="text-zinc-500 text-sm leading-relaxed">
+                  Liderazgo del departamento de ventas y estrategias
+                  comerciales.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contacto -->
+      <section id="contact" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16">
+          <div class="reveal">
+            <h2
+              class="text-3xl md:text-4xl font-display font-bold mb-8 flex items-center gap-4"
+            >
+              Contacto
+            </h2>
+            <p class="text-zinc-500 mb-10 text-lg">
+              ¿Quieres mejorar la imagen, presencia o sistema digital de tu
+              negocio?
+            </p>
+
+            <div class="mb-8">
+              <p class="text-zinc-400 mb-6">
+                Estoy listo para ayudarte a crear soluciones integrales que
+                combinen diseño, estrategia y tecnología para hacer crecer tu
+                negocio.
+              </p>
+              <a
+                href="https://wa.me/584243591727?text=Hola%20Gabriel,%20quiero%20mejorar%20mi%20negocio%20con%20soluciones%20digitales%20integrales"
+                target="_blank"
+                class="bg-accent hover:bg-accent-hover text-zinc-950 px-8 py-4 rounded-full font-bold inline-flex items-center gap-2 transition-all transform hover:scale-105"
+              >
+                <i class="fas fa-handshake"></i>
+                Trabajar conmigo
+              </a>
+            </div>
+
+            <div class="space-y-6">
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 rounded-xl glass flex items-center justify-center text-accent"
+                >
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <span
+                    class="text-xs text-zinc-600 uppercase tracking-widest block"
+                    >Ubicación</span
+                  >
+                  <span class="text-lg font-medium"
+                    >San Juan de los Morros, Venezuela</span
+                  >
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 rounded-xl glass flex items-center justify-center text-accent"
+                >
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <span
+                    class="text-xs text-zinc-600 uppercase tracking-widest block"
+                    >Email</span
+                  >
+                  <a
+                    href="mailto:jesustpriv@gmail.com"
+                    class="text-lg font-medium hover:text-accent transition-colors"
+                    >jesustpriv@gmail.com</a
+                  >
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 rounded-xl glass-premium flex items-center justify-center text-accent"
+                >
+                  <i class="fab fa-whatsapp"></i>
+                </div>
+                <div>
+                  <span
+                    class="text-xs text-zinc-600 uppercase tracking-widest block"
+                    >WhatsApp</span
+                  >
+                  <a
+                    href="https://wa.me/584243591727"
+                    target="_blank"
+                    class="text-lg font-medium hover:text-accent transition-colors"
+                    >04243591727</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form
+            id="contact-form"
+            action="https://formspree.io/f/xojnklda"
+            method="POST"
+            class="reveal bg-[#121212] p-8 rounded-xl border border-white/5"
+          >
+            <div class="mb-6">
+              <h3 class="text-xl font-bold text-white mb-2">
+                Inicia tu proyecto
+              </h3>
+              <p class="text-zinc-400 text-sm">
+                Cuéntame sobre tu negocio y cómo puedo ayudarte a crecer.
+              </p>
+            </div>
+            <div class="contact-grid">
+              <div class="space-y-2">
+                <label
+                  for="name"
+                  class="text-xs font-bold uppercase tracking-widest text-zinc-500"
+                  >Nombre</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="nombre"
+                  required
+                  class="form-input"
+                  placeholder="Tu nombre"
+                />
+              </div>
+              <div class="space-y-2">
+                <label
+                  for="email"
+                  class="text-xs font-bold uppercase tracking-widest text-zinc-500"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="form-input"
+                  placeholder="tu@email.com"
+                />
+              </div>
+              <div class="space-y-2 contact-full">
+                <label
+                  for="message"
+                  class="text-xs font-bold uppercase tracking-widest text-zinc-500"
+                  >¿Qué necesitas?</label
+                >
+                <textarea
+                  id="message"
+                  name="mensaje"
+                  rows="4"
+                  required
+                  class="form-input resize-none"
+                  placeholder="Describe tu proyecto o negocio..."
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="contact-full bg-accent hover:bg-accent-hover text-zinc-950 font-bold py-4 rounded-lg transition-all transform hover:scale-[1.01] flex items-center justify-center gap-2"
+              >
+                <span>Enviar solicitud</span>
+                <i class="fas fa-paper-plane text-sm"></i>
+              </button>
+            </div>
+          </form>
+
+          <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4 reveal">
+            <a
+              href="https://www.instagram.com/gabrielt.designs"
+              target="_blank"
+              class="social-action-btn"
+              aria-label="Ver mi Instagram de diseño"
+            >
+              <i class="fab fa-instagram"></i>
+              <span>Instagram Diseño</span>
+            </a>
+            <a
+              href="https://www.instagram.com/gabrielt.photograph"
+              target="_blank"
+              class="social-action-btn"
+              aria-label="Ver mi Instagram de fotografía"
+            >
+              <i class="fab fa-instagram"></i>
+              <span>Instagram Fotografía</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/gabriel-tovar-486888233"
+              target="_blank"
+              class="social-action-btn"
+              aria-label="Ver mi perfil profesional en LinkedIn"
+            >
+              <i class="fab fa-linkedin-in"></i>
+              <span>Perfil Profesional</span>
+            </a>
+            <a
+              href="https://github.com/jesustpriv"
+              target="_blank"
+              class="social-action-btn"
+              aria-label="Ver mi perfil de GitHub"
+            >
+              <i class="fab fa-github"></i>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="py-12 px-6 border-t border-zinc-900 text-center">
-        <div class="footer-copyright max-w-4xl mx-auto">
-            <p class="text-zinc-600 text-sm mb-2">
-                <i class="fas fa-copyright"></i> 2019 Gabriel Tovar. Todos los derechos reservados.
-            </p>
-            <p class="text-zinc-500 text-xs mb-2">
-                San Juan de los Morros, Guárico, Venezuela | Co-CEO en <a href="https://coder-ytech.netlify.app/" target="_blank" class="text-accent hover:underline">Coder.y</a>
-            </p>
-            <p class="text-zinc-400 text-xs">
-                El contenido de este sitio web está protegido por leyes de derechos de autor y propiedad intelectual. Queda prohibida la reproducción total o parcial sin autorización expresa.
-            </p>
-        </div>
+      <div class="footer-copyright max-w-4xl mx-auto">
+        <p class="text-zinc-600 text-sm mb-2">
+          <i class="fas fa-copyright"></i> <span id="year">2019</span> Gabriel
+          Tovar. Todos los derechos reservados.
+        </p>
+        <p class="text-zinc-500 text-xs mb-2">
+          San Juan de los Morros, Guárico, Venezuela | Co-CEO en
+          <a
+            href="https://coder-ytech.netlify.app/"
+            target="_blank"
+            class="text-accent hover:underline"
+            >Coder.y</a
+          >
+        </p>
+        <p class="text-zinc-400 text-xs">
+          El contenido de este sitio web está protegido por leyes de derechos de
+          autor y propiedad intelectual. Queda prohibida la reproducción total o
+          parcial sin autorización expresa.
+        </p>
+      </div>
     </footer>
 
     <!-- Gallery Modal / Lightbox -->
     <div id="gallery-modal">
-        <div class="modal-content animate-scale-in relative">
-            <button id="close-gallery" class="absolute top-4 right-4 text-white hover:text-accent text-2xl z-10" aria-label="Cerrar galería">
-                <i class="fas fa-times"></i>
-            </button>
-            <div class="modal-img-container">
-                <img id="modal-img" src="" alt="Preview" class="max-w-full max-h-full object-contain">
-            </div>
-            <div class="modal-info">
-                <h3 id="modal-title" class="text-2xl font-bold text-white mb-2"></h3>
-                <p id="modal-description" class="text-zinc-400 text-sm"></p>
-                <div class="modal-copyright">
-                    <p><i class="fas fa-copyright"></i> 2019 Gabriel Tovar - Todos los derechos reservados</p>
-                </div>
-            </div>
+      <div class="modal-content animate-scale-in relative">
+        <button
+          id="close-gallery"
+          class="absolute top-4 right-4 text-white hover:text-accent text-2xl z-10"
+          aria-label="Cerrar galería"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-img-container">
+          <img
+            id="modal-img"
+            src=""
+            alt="Preview"
+            class="max-w-full max-h-full object-contain"
+          />
         </div>
+        <div class="modal-info">
+          <div class="modal-copyright text-center w-full">
+            <p>
+              <i class="fas fa-copyright"></i> 2019 Gabriel Tovar - Todos los
+              derechos reservados
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-
-</body>
-
+  </body>
 </html>
