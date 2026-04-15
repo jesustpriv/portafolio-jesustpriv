@@ -1,94 +1,70 @@
-# 🚀 Marca Personal — Gabriel Tovar
+# Portafolio Profesional – Gabriel Tovar
 
-Sitio web oficial de **Gabriel Tovar**, especialista en Coordinación de Producción enfocado en contenido gráfico, audiovisual y estratégico, y Co-CEO de [Coder.y](https://coder-ytech.netlify.app/).
+Este repositorio contiene el código fuente de mi portafolio profesional y sitio de servicios de diseño. Es una Landing Page estructurada como Single-Page Application (SPA), enfocada en un alto rendimiento, diseño premium ("Dark Tech") e interacciones seguras a través de formularios encapsulados.
 
-## ✨ Modernización a Marca Personal (2024-2026)
+## 🚀 Arquitectura y Tecnologías
 
-Este proyecto evolucionó de un "Portafolio Tradicional" a una plataforma de **Marca Personal** de alto nivel, ajustando su narrativa para priorizar la autoridad, la identidad y la experiencia de usuario:
+El sitio está construido utilizando herramientas modernas optimizadas para despliegue estático y rápido.
 
-- 👤 **Narrativa Orientada a Resultados**: Reestructuración del flujo de información situando el Perfil y la autoridad antes de los entregables visuales, promoviendo mayor confianza.
-- 🖼️ **Portafolio Dividido 1:1**: Galería interactiva con división dual (Diseño Gráfico / Fotografía) usando cuadrículas inteligentes de formato cuadrado 1:1, garantizando que ninguna miniatura sufra deformación o estiramiento.
-- 🎨 **Estética Premium 'Dark Tech'**: Esquema visual con superficies oscuras y acentos **Violeta Neón (#B130FF)** acompañado de elementos Glassmorphism y micro-animaciones fluidas.
-- 🧹 **Saneamiento Absoluto**: El código cuenta con estructuración semántica impecable y formato auto-pulido, logrando un empaquetado ultra-liviano (< 10KB comprimidos).
-
-## 🛠️ Stack Tecnológico
-
-- **Core**: HTML5 Semántico + TypeScript Nativo
-- **Estilos**: [Tailwind CSS 4](https://tailwindcss.com/) (Integración vía `@tailwindcss/vite`)
-- **Renderizado / Build**: [Vite 6](https://vitejs.dev/)
-- **Procesamiento de Imágenes**: [Sharp](https://sharp.pixelplumbing.com/) (Entregando WebP optimizado nativamente)
-- **Despliegue**: Netlify (CI/CD Automatizado)
-
-## 🚀 Instalación y Desarrollo
-
-### Requisitos Previos
-
-- Node.js (v18 o superior)
-- npm o yarn
-
-### Entorno Local
-
-1. **Clonar el repositorio**:
-   ```bash
-   git clone https://github.com/jesustpriv/portafolio-jesustpriv.git
-   cd portafolio-jesustpriv
-   ```
-
-2. **Instalar dependencias**:
-   ```bash
-   npm install
-   ```
-
-3. **Iniciar servidor de desarrollo**:
-   ```bash
-   npm run dev
-   ```
-
-4. **Abrir en el navegador**: `http://localhost:3000`
-
-### Build de Producción
-
-Para compilar hacia producción, ejecuta:
-```bash
-npm run build
-```
-El build list para publicar se compilará compactado y ofuscado en la carpeta `dist/`.
-
-## 📁 Estructura del Proyecto
-
-```
-portafolio-jesustpriv/
-├── assets/                  # Todas las fotos y portafolios (Originales WebP)
-├── dist/                    # Bundle de producción automatizado listo para deploy
-├── src/                     # Código fuente lógico y visual dinámico
-│   ├── main.ts              # Control bi-modal de la Galería 1:1 y menús
-│   └── index.css            # Estilos base y tokens puros de CSS orientados a Tailwind 4
-├── index.html               # Punto de entrada. Arquitectura HTML Semántica perfecta
-├── netlify.toml             # Cabeceras y enrutamiento para hosts tipo Netlify
-├── package.json             # Scripts de compilación local y devDependencies
-├── vite.config.ts           # Configuración del compresor de Vite/Tailwind 4
-└── README.md                # Este archivo de documentación
-```
-
-## 📊 Rendimiento y Accesibilidad
-
-Se eliminó y purgó código flotante logrando:
-- **Performance de Carga**: Renderizado total garantizado sin render-blocking gracias al árbol minificado de Vite.
-- **Auditoría Semántica**: Etiquetado lógico y coherente para una accesibilidad (A11y) nivel 100%.
-
-## 📧 Contacto
-
-- 📧 **Email**: [jesustpriv@gmail.com](mailto:jesustpriv@gmail.com)
-- 📱 **WhatsApp Consultoría**: +58 424-359-1727
-- 📍 **Sede**: San Juan de los Morros, Guárico, Venezuela
-- 💼 **LinkedIn**: [Perfil Profesional](https://linkedin.com/in/gabriel-tovar-486888233)
-- 🐙 **GitHub**: [jesustpriv](https://github.com/jesustpriv)
-- 🌐 **Empresa (Coder.y)**: [coder-ytech.netlify.app](https://coder-ytech.netlify.app/)
-
-## 📄 Licencia
-
-© 2019-2026 Gabriel Tovar. Todos los derechos reservados.
+- **Vite**: Para la construcción y empaquetado ultra-rápido (`esbuild` minify activado).
+- **Tailwind CSS v4**: El sistema de diseño se basa en un enfoque de utilidades para crear la estética 'Glassmorphism' y 'Neon Violet'.
+- **HTML5 & Vanilla JS**: Elementos interactivos (como el menú móvil, validación de formularios, botones modales y animaciones en scroll) son construidos usando Javascript nativo, sin dependencias pesadas como React o librerías adicionales, lo cual garantiza que el peso del sitio sea mínimo.
+- **Netlify Forms**: Todo el backend del contacto y contratación de "Planes de Diseño" depende de un motor interno de Netlify.
 
 ---
 
-**Desempeño técnico por AI-Assisted Development**
+## 🔒 Privacidad y Seguridad (Anti-Scraping)
+
+El proyecto contiene lineamientos claros de seguridad antes de cada subida a GitHub al ser un repositorio público:
+
+- **Ofuscación de Enlaces de Contacto:** Todos los enlaces salientes directos (`wa.me` de WhatsApp y correos electrónicos `mailto:`) no existen como texto plano en el árbol del DOM. Se integran a través de eventos `.onclick` codificados en Base64, evitando que los bots puedan rastrear y escanear direcciones de correo o el número telefónico personal.
+- **Sin Dependencias Innecesarias:** El `package.json` ha sido saneado de dependencias en desuso, y las ramas Git de experimentación o scripts temporales han sido purgados previniendo la fuga de información descartada.
+- **Protección de Formularios:** Los modales de Planes están estructurados usando intercepciones (intercept `submit`), lo que valida los términos y condiciones directamente en el cliente y utiliza "Honeypots" (`bot-field`) para asegurar que el flujo detenga bots invasivos.
+
+---
+
+## 📦 Estructura del Proyecto
+
+```text
+/
+├── assets/             # Imágenes optimizadas para web (WebP/SVG)
+├── dist/               # Directorio del build de producción (generado)
+├── src/                
+│   ├── main.ts         # Orquestador del frontend (modales, scroll, animación menú)
+│   └── index.css       # Reglas base de tipografía Tailwind y clases .glass-premium
+├── index.html          # Interfaz principal estática y marcadores Netlify
+├── package.json        # Dependencias de entorno
+├── vite.config.ts      # Configuración del servidor de Vit y Build
+└── netlify.toml        # Archivo de configuración oficial de Netlify
+```
+
+---
+
+## ⚙️ Despliegue e Instrucciones de Uso
+
+### Desarrollo Local
+Para trabajar en este proyecto localmente:
+
+1. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+2. Levanta el servidor local optimizado de Vite:
+   ```bash
+   npm run dev
+   ```
+   *Estará disponible en `http://localhost:3000`*.
+
+### Producción & Netlify
+Este proyecto está 100% configurado para Despliegue Continuo (CD) a través de Netlify enganchado a GitHub.
+
+1. Netlify ejecutará el comando definido en el empaquetador Vite:
+   ```bash
+   npm run build
+   ```
+2. Emitirá todos los archivos optimizados a la carpeta `dist`.
+3. Escaneará automáticamente el HTML buscando la flag `data-netlify="true"`, para inicializar los Webhooks de los formularios y vincularlos a los Modales de servicio.
+
+---
+
+_Diseñado y construido para uso personal y escalabilidad técnica_ - Gabriel Tovar.

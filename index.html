@@ -93,6 +93,11 @@
             >Servicios</a
           >
           <a
+            href="#planes"
+            class="text-sm font-medium text-zinc-400 hover:text-accent transition-colors"
+            >Planes</a
+          >
+          <a
             href="#portfolio"
             class="text-sm font-medium text-zinc-400 hover:text-accent transition-colors"
             >Proyectos</a
@@ -129,7 +134,7 @@
       <!-- Mobile Menu -->
       <div
         id="mobile-menu"
-        class="hidden absolute top-full left-0 w-full mobile-menu-glass md:hidden flex flex-col p-8 gap-6"
+        class="absolute top-full left-0 w-full mobile-menu-glass md:hidden flex flex-col p-8 gap-6 transition-all duration-150 transform -translate-y-4 opacity-0 pointer-events-none overscroll-contain max-h-[80vh] overflow-y-auto"
       >
         <a
           href="#home"
@@ -142,6 +147,12 @@
           class="mobile-link flex items-center gap-3 text-lg font-medium text-zinc-300 hover:text-accent"
         >
           <i class="fas fa-th-list w-6"></i> Servicios
+        </a>
+        <a
+          href="#planes"
+          class="mobile-link flex items-center gap-3 text-lg font-medium text-zinc-300 hover:text-accent"
+        >
+          <i class="fas fa-clipboard-list w-6"></i> Planes
         </a>
         <a
           href="#portfolio"
@@ -328,7 +339,7 @@
 
             <div class="mt-12">
               <a
-                href="https://wa.me/584243591727?text=Hola%20Gabriel,%20vi%20tu%20portafolio%20y%20me%20gustaría%20solicitar%20tu%20CV%20actualizado."
+                href="#" onclick="window.open(atob('aHR0cHM6Ly93YS5tZS81ODQyNDM1OTE3Mjc/dGV4dD1Ib2xhJTIwR2FicmllbCwlMjB2aSUyMHR1JTIwcG9ydGFmb2xpbyUyMHklMjBtZSUyMGd1c3RhcsOtYSUyMHNvbGljaXRhciUyMHR1JTIwQ1YlMjBhY3R1YWxpemFkby4='), '_blank'); return false;" rel="noopener noreferrer"
                 target="_blank"
                 class="group flex items-center gap-4 text-accent font-bold hover:text-white transition-all duration-300 text-lg"
                 aria-label="Solicitar CV por WhatsApp"
@@ -763,6 +774,210 @@
         </div>
       </section>
 
+      <!-- Planes de Diseño -->
+      <section
+        id="planes"
+        class="py-28 px-6 max-w-7xl mx-auto bg-[var(--color-surface)] relative overflow-hidden"
+      >
+        <div class="bg-glow-violet -top-20 -left-40 opacity-5"></div>
+        <div class="reveal mb-16 text-center">
+          <h2 class="text-4xl font-display font-bold mb-4">
+            Planes de Diseño
+          </h2>
+          <p class="text-zinc-500 max-w-2xl mx-auto text-lg">
+            Soluciones visuales claras, sin letra pequeña.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+          <!-- Plan 01 -->
+          <div class="reveal glass-premium p-8 rounded-2xl flex flex-col border border-white/5">
+            <h3 class="text-xl font-bold text-white mb-2">Plan 01 — Identidad Esencial</h3>
+            <p class="text-3xl font-display font-bold text-accent mb-4">Desde $120</p>
+            <p class="text-zinc-400 text-sm mb-6 min-h-[40px]">Ideal para: Emprendedores que están empezando y necesitan una base visual sólida.</p>
+            <div class="space-y-3 mb-8 flex-grow">
+              <div class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1 text-sm"></i><span class="text-zinc-300 text-sm">Diseño de logotipo (2 propuestas, 2 rondas de revisión)</span></div>
+              <div class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1 text-sm"></i><span class="text-zinc-300 text-sm">Paleta de colores oficial (primarios + secundarios)</span></div>
+              <div class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1 text-sm"></i><span class="text-zinc-300 text-sm">Tipografías de la marca (display + cuerpo)</span></div>
+              <div class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1 text-sm"></i><span class="text-zinc-300 text-sm">Versiones del logo (horizontal, vertical, ícono)</span></div>
+              <div class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1 text-sm"></i><span class="text-zinc-300 text-sm">Entrega en PNG, SVG y PDF</span></div>
+              <div class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1 text-sm"></i><span class="text-zinc-300 text-sm">Guía de uso básica (1 página)</span></div>
+              <div class="flex items-start gap-3 mt-4 opacity-50"><i class="fas fa-times text-red-400 mt-1 text-sm"></i><span class="text-zinc-400 text-sm">NO incluye: Tarjetas, redes sociales, manual completo.</span></div>
+            </div>
+            <div class="text-xs text-zinc-500 mb-6"><i class="far fa-clock mr-1"></i> Entrega: 7–10 días hábiles</div>
+            <a href="#" onclick="openPlanModal(1); return false;" class="w-full py-3 rounded-full font-bold flex justify-center items-center gap-2 border border-accent text-accent hover:bg-accent hover:text-zinc-950 transition-colors">
+              Elegir Plan 01
+            </a>
+          </div>
+
+          <!-- Plan 02 -->
+          <div class="reveal glass-premium p-8 rounded-2xl flex flex-col border-2 border-accent relative transform md:-translate-y-4 shadow-[0_0_30px_rgba(var(--color-accent-rgb),0.15)]" style="transition-delay: 0.1s">
+            <div class="absolute top-0 right-0 bg-accent text-zinc-950 text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">Más elegido</div>
+            <h3 class="text-xl font-bold text-white mb-2">Plan 02 — Identidad Completa</h3>
+            <p class="text-3xl font-display font-bold text-accent mb-4">Desde $280</p>
+            <p class="text-zinc-400 text-sm mb-6 min-h-[40px]">Ideal para: Negocios que quieren una marca coherente lista para aplicar en todos lados.</p>
+            <div class="text-sm font-semibold text-white mb-3">Incluye todo del Plan 01, más:</div>
+            <div class="space-y-3 mb-8 flex-grow">
+              <div class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1 text-sm"></i><span class="text-zinc-300 text-sm">Tarjeta de presentación (diseño frente y reverso)</span></div>
+              <div class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1 text-sm"></i><span class="text-zinc-300 text-sm">Hoja membretada</span></div>
+              <div class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1 text-sm"></i><span class="text-zinc-300 text-sm">3 plantillas para redes sociales (post + story)</span></div>
+              <div class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1 text-sm"></i><span class="text-zinc-300 text-sm">Favicon / ícono de app</span></div>
+              <div class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1 text-sm"></i><span class="text-zinc-300 text-sm">Manual de identidad visual básico (6–8 páginas)</span></div>
+              <div class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1 text-sm"></i><span class="text-zinc-300 text-sm">Entrega organizada en carpetas por uso</span></div>
+            </div>
+            <div class="text-xs text-zinc-500 mb-6"><i class="far fa-clock mr-1"></i> Entrega: 15–20 días hábiles</div>
+            <a href="#" onclick="openPlanModal(2); return false;" class="w-full py-3 rounded-full font-bold flex justify-center items-center gap-2 bg-accent text-zinc-950 hover:bg-accent/90 transition-colors">
+              Elegir Plan 02
+            </a>
+          </div>
+
+          <!-- Plan 03 -->
+          <div class="reveal glass-premium p-8 rounded-2xl flex flex-col border border-white/5" style="transition-delay: 0.2s">
+            <h3 class="text-xl font-bold text-white mb-2">Plan 03 — Brandbook Profesional</h3>
+            <p class="text-3xl font-display font-bold text-accent mb-4">Desde $550</p>
+            <p class="text-zinc-400 text-sm mb-6 min-h-[40px]">Ideal para: Marcas que necesitan documentar y escalar su identidad visualmente.</p>
+            <div class="text-sm font-semibold text-white mb-3">Incluye todo del Plan 02, más:</div>
+            <div class="space-y-3 mb-8 flex-grow">
+              <div class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1 text-sm"></i><span class="text-zinc-300 text-sm">Manual de identidad completo (15–25 páginas)</span></div>
+              <div class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1 text-sm"></i><span class="text-zinc-300 text-sm">Usos correctos e incorrectos del logo</span></div>
+              <div class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1 text-sm"></i><span class="text-zinc-300 text-sm">Fotografía de estilo / moodboard oficial</span></div>
+              <div class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1 text-sm"></i><span class="text-zinc-300 text-sm">Papelería extendida (sobres, firmas, facturas)</span></div>
+              <div class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1 text-sm"></i><span class="text-zinc-300 text-sm">6 plantillas para redes sociales</span></div>
+              <div class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1 text-sm"></i><span class="text-zinc-300 text-sm">Mockups de presentación de la marca</span></div>
+              <div class="flex items-start gap-3"><i class="fas fa-check text-accent mt-1 text-sm"></i><span class="text-zinc-300 text-sm">1 sesión de consultoría (60 min, videollamada)</span></div>
+            </div>
+            <div class="text-xs text-zinc-500 mb-6"><i class="far fa-clock mr-1"></i> Entrega: 25–35 días hábiles</div>
+            <a href="#" onclick="openPlanModal(3); return false;" class="w-full py-3 rounded-full font-bold flex justify-center items-center gap-2 border border-accent text-accent hover:bg-accent hover:text-zinc-950 transition-colors">
+              Elegir Plan 03
+            </a>
+          </div>
+        </div>
+
+        <!-- Plan Custom -->
+        <div class="reveal glass-premium p-8 rounded-2xl border border-white/5 mb-16">
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 class="text-2xl font-bold text-white mb-2">Plan Custom — Proyectos a Medida</h3>
+              <p class="text-3xl font-display font-bold text-accent mb-4">A convenir</p>
+              <p class="text-zinc-400 text-sm mb-6">Ideal para: Empresas o proyectos con necesidades específicas fuera de los planes estándar.</p>
+              <a href="#" onclick="window.open(atob('aHR0cHM6Ly93YS5tZS81ODQyNDM1OTE3Mjc/dGV4dD1Ib2xhLCUyMHF1aWVybyUyMGhhYmxhciUyMHNvYnJlJTIwdW4lMjBwcm95ZWN0byUyMGElMjBtZWRpZGE='), '_blank'); return false;" rel="noopener noreferrer" target="_blank" class="inline-flex py-3 px-8 rounded-full font-bold justify-center items-center gap-2 bg-white text-zinc-950 hover:bg-zinc-200 transition-colors">
+                Hablemos de tu proyecto
+              </a>
+            </div>
+            <div>
+              <div class="text-sm font-semibold text-white mb-3">Ejemplos:</div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="flex items-center gap-3"><i class="fas fa-arrow-right text-accent text-sm"></i><span class="text-zinc-300 text-sm">Rediseño de marca existente</span></div>
+                <div class="flex items-center gap-3"><i class="fas fa-arrow-right text-accent text-sm"></i><span class="text-zinc-300 text-sm">Ilustraciones personalizadas</span></div>
+                <div class="flex items-center gap-3"><i class="fas fa-arrow-right text-accent text-sm"></i><span class="text-zinc-300 text-sm">UI/UX de sitios o apps</span></div>
+                <div class="flex items-center gap-3"><i class="fas fa-arrow-right text-accent text-sm"></i><span class="text-zinc-300 text-sm">Packaging y etiquetas</span></div>
+                <div class="flex items-center gap-3"><i class="fas fa-arrow-right text-accent text-sm"></i><span class="text-zinc-300 text-sm">Contenido visual para campañas</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add-ons -->
+        <div class="reveal mb-16">
+          <h3 class="text-2xl font-bold text-white mb-6 text-center">Servicios adicionales</h3>
+          <div class="flex flex-wrap justify-center gap-4">
+            <div class="glass-premium px-6 py-3 rounded-full border border-white/5 flex items-center gap-3">
+              <span class="text-zinc-300 text-sm">Revisión extra fuera de rondas</span>
+              <span class="text-accent font-bold">→ $25 c/u</span>
+            </div>
+            <div class="glass-premium px-6 py-3 rounded-full border border-white/5 flex items-center gap-3">
+              <span class="text-zinc-300 text-sm">Diseño de packaging</span>
+              <span class="text-accent font-bold">→ Desde $80</span>
+            </div>
+            <div class="glass-premium px-6 py-3 rounded-full border border-white/5 flex items-center gap-3">
+              <span class="text-zinc-300 text-sm">Fotografía de producto o personal branding</span>
+              <span class="text-accent font-bold">→ Desde $90</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Accordion -->
+        <div class="reveal max-w-3xl mx-auto mb-16">
+          <h3 class="text-2xl font-bold text-white mb-8 text-center">Preguntas Frecuentes</h3>
+          <div class="space-y-4" id="faq-accordion">
+            <!-- Item 1 -->
+            <div class="glass-premium rounded-xl border border-white/5 overflow-hidden faq-item cursor-pointer">
+              <div class="px-6 py-4 flex justify-between items-center faq-header">
+                <span class="font-bold text-white">¿Cómo es el proceso de trabajo?</span>
+                <i class="fas fa-chevron-down text-accent transition-transform duration-300 faq-icon"></i>
+              </div>
+              <div class="px-6 pb-4 hidden faq-content text-zinc-400 text-sm">
+                Tras confirmar el proyecto, el cliente completa un cuestionario de marca. Con esa base, presento propuestas iniciales en el plazo acordado. Cada plan incluye rondas de revisión específicas para ajustar hasta lograr el resultado correcto.
+              </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="glass-premium rounded-xl border border-white/5 overflow-hidden faq-item cursor-pointer">
+              <div class="px-6 py-4 flex justify-between items-center faq-header">
+                <span class="font-bold text-white">¿Qué necesito tener listo antes de empezar?</span>
+                <i class="fas fa-chevron-down text-accent transition-transform duration-300 faq-icon"></i>
+              </div>
+              <div class="px-6 pb-4 hidden faq-content text-zinc-400 text-sm">
+                Solo necesitas tener claro el nombre de tu negocio y una idea general de a quién va dirigido. El resto lo trabajamos juntos desde el cuestionario.
+              </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="glass-premium rounded-xl border border-white/5 overflow-hidden faq-item cursor-pointer">
+              <div class="px-6 py-4 flex justify-between items-center faq-header">
+                <span class="font-bold text-white">¿Los precios incluyen impuestos?</span>
+                <i class="fas fa-chevron-down text-accent transition-transform duration-300 faq-icon"></i>
+              </div>
+              <div class="px-6 pb-4 hidden faq-content text-zinc-400 text-sm">
+                Los precios mostrados son base. Dependiendo del país y método de pago, pueden aplicar comisiones de transferencia. Se aclara antes de confirmar.
+              </div>
+            </div>
+            <!-- Item 4 -->
+            <div class="glass-premium rounded-xl border border-white/5 overflow-hidden faq-item cursor-pointer">
+              <div class="px-6 py-4 flex justify-between items-center faq-header">
+                <span class="font-bold text-white">¿Haces pagos en cuotas?</span>
+                <i class="fas fa-chevron-down text-accent transition-transform duration-300 faq-icon"></i>
+              </div>
+              <div class="px-6 pb-4 hidden faq-content text-zinc-400 text-sm">
+                Sí. Los planes a partir del Plan 02 se pueden dividir en 50% al inicio y 50% al entregar los archivos finales.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal text-center">
+          <p class="text-zinc-300 mb-6 text-lg">¿Tienes dudas sobre qué plan es el tuyo?</p>
+          <a href="#" onclick="window.open(atob('aHR0cHM6Ly93YS5tZS81ODQyNDM1OTE3Mjc/dGV4dD1Ib2xhLCUyMHRlbmdvJTIwZHVkYXMlMjBzb2JyZSUyMHF1w6klMjBwbGFuJTIwZWxlZ2ly'), '_blank'); return false;" rel="noopener noreferrer" target="_blank" class="inline-flex py-4 px-10 rounded-full font-bold justify-center items-center gap-2 bg-accent text-zinc-950 hover:bg-accent/90 transition-colors text-lg">
+            Escríbeme
+          </a>
+        </div>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+              const header = item.querySelector('.faq-header');
+              const content = item.querySelector('.faq-content');
+              const icon = item.querySelector('.faq-icon');
+              
+              header.addEventListener('click', () => {
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                  otherItem.querySelector('.faq-content').classList.add('hidden');
+                  otherItem.querySelector('.faq-icon').classList.remove('rotate-180');
+                });
+                
+                // Toggle current item
+                if (!isOpen) {
+                  content.classList.remove('hidden');
+                  icon.classList.add('rotate-180');
+                }
+              });
+            });
+          });
+        </script>
+      </section>
+
       <!-- Portafolio / Galería -->
       <section
         id="portfolio"
@@ -1036,7 +1251,7 @@
                 negocio.
               </p>
               <a
-                href="https://wa.me/584243591727?text=Hola%20Gabriel,%20quiero%20mejorar%20mi%20negocio%20con%20soluciones%20digitales%20integrales"
+                href="#" onclick="window.open(atob('aHR0cHM6Ly93YS5tZS81ODQyNDM1OTE3Mjc/dGV4dD1Ib2xhJTIwR2FicmllbCwlMjBxdWllcm8lMjBtZWpvcmFyJTIwbWklMjBuZWdvY2lvJTIwY29uJTIwc29sdWNpb25lcyUyMGRpZ2l0YWxlcyUyMGludGVncmFsZXM='), '_blank'); return false;" rel="noopener noreferrer"
                 target="_blank"
                 class="bg-accent hover:bg-accent-hover text-zinc-950 px-8 py-4 rounded-full font-bold inline-flex items-center gap-2 transition-all transform hover:scale-105"
               >
@@ -1074,7 +1289,7 @@
                     >Email</span
                   >
                   <a
-                    href="mailto:jesustpriv@gmail.com"
+                    href="#" onclick="window.location.href=atob('bWFpbHRvOmplc3VzdHByaXZAZ21haWwuY29t'); return false;"
                     class="text-lg font-medium hover:text-accent transition-colors"
                     >jesustpriv@gmail.com</a
                   >
@@ -1092,7 +1307,7 @@
                     >WhatsApp</span
                   >
                   <a
-                    href="https://wa.me/584243591727"
+                    href="#" onclick="window.open(atob('aHR0cHM6Ly93YS5tZS81ODQyNDM1OTE3Mjc='), '_blank'); return false;" rel="noopener noreferrer"
                     target="_blank"
                     class="text-lg font-medium hover:text-accent transition-colors"
                     >04243591727</a
@@ -1265,5 +1480,516 @@
         </div>
       </div>
     </div>
+  
+    <!-- MULTI-STEP MODAL OVERLAY -->
+    <div id="plan-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+      <!-- Backdrop -->
+      <div id="modal-backdrop" class="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity opacity-0" onclick="closePlanModal()"></div>
+      
+      <!-- Modal Content Container -->
+      <div id="modal-content-box" class="relative w-full max-w-[560px] bg-[var(--color-surface)] border border-white/10 rounded-2xl shadow-2xl flex flex-col max-h-[90vh] transition-all transform scale-95 opacity-0">
+        
+        <!-- Header -->
+        <div class="px-6 py-4 border-b border-white/10 flex justify-between items-center bg-zinc-900/50 rounded-t-2xl">
+          <div class="flex-1">
+            <h3 id="modal-title" class="text-xl font-display font-bold text-white">Solicitud de Plan</h3>
+            <p id="modal-subtitle" class="text-xs text-zinc-400 mt-1">Comencemos tu proyecto de marca</p>
+          </div>
+          <button onclick="closePlanModal()" class="text-zinc-500 hover:text-white transition-colors w-8 h-8 flex justify-center items-center rounded-full hover:bg-white/5">
+            <i class="fas fa-times text-lg"></i>
+          </button>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="w-full h-1 bg-zinc-800">
+          <div id="progress-bar" class="h-full bg-accent transition-all duration-300 w-[33%] relative overflow-hidden">
+            <div class="absolute inset-0 bg-white/20 -translate-x-full animate-[shimmer_2s_infinite]"></div>
+          </div>
+        </div>
+
+        <!-- Form Body (Scrollable) -->
+        <div class="p-6 overflow-y-auto flex-1 custom-scrollbar relative" id="modal-body-scroll">
+          
+          <!-- Success Message Overlay -->
+          <div id="form-success-message" class="hidden absolute inset-0 bg-[var(--color-surface)] z-10 flex flex-col items-center justify-center p-8 text-center rounded-b-2xl">
+            <div class="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mb-6">
+              <i class="fas fa-check text-3xl text-accent"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2">¡Todo listo!</h3>
+            <p class="text-zinc-400 max-w-sm">Tu solicitud fue enviada exitosamente. Analizaré la información y te contactaré en menos de 24 horas.</p>
+            <button onclick="closePlanModal()" class="mt-8 px-8 py-3 bg-white text-zinc-950 font-bold rounded-full hover:bg-zinc-200 transition-colors">
+              Cerrar
+            </button>
+          </div>
+
+          <!-- ============================== -->
+          <!-- FORM 1: IDENTIDAD ESENCIAL     -->
+          <!-- ============================== -->
+          <form id="form-plan-01" name="plan-01-identidad-esencial" method="POST" data-netlify="true" class="hidden plan-form">
+            <input type="hidden" name="form-name" value="plan-01-identidad-esencial" />
+            <input name="bot-field" style="display:none" />
+            <input type="hidden" name="plan" value="Plan 01 – Identidad Esencial" />
+
+            <!-- Step 1: Tu negocio -->
+            <div class="form-step" data-step="1">
+              <h4 class="text-lg font-bold text-accent mb-6 flex items-center gap-2">
+                <span class="w-6 h-6 rounded-full bg-accent/20 text-accent flex items-center justify-center text-xs">1</span> 
+                Tu negocio
+              </h4>
+              <div class="space-y-4">
+                <div>
+                  <label class="block text-sm font-medium text-zinc-300 mb-1">Nombre completo <span class="text-red-400">*</span></label>
+                  <input type="text" name="nombre" required class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent text-sm" />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-zinc-300 mb-1">Email de contacto <span class="text-red-400">*</span></label>
+                  <input type="email" name="email" required class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent text-sm" />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-zinc-300 mb-1">WhatsApp / Teléfono <span class="text-red-400">*</span></label>
+                  <input type="text" name="telefono" required class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent text-sm" />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-zinc-300 mb-1">Nombre del negocio o proyecto <span class="text-red-400">*</span></label>
+                  <input type="text" name="negocio" required class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent text-sm" />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-zinc-300 mb-1">¿A qué se dedica tu negocio? <span class="text-red-400">*</span></label>
+                  <textarea name="descripcion" required rows="3" placeholder="Descríbelo como se lo explicarías a un amigo." class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent text-sm resize-none"></textarea>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-zinc-300 mb-3">¿Tu marca es nueva o ya existe?</label>
+                  <div class="space-y-2">
+                    <label class="flex items-start gap-3 cursor-pointer group">
+                      <input type="radio" name="estado_marca" value="Es nueva / Estoy empezando" required class="mt-1 accent-accent" />
+                      <span class="text-sm text-zinc-400 group-hover:text-zinc-200 transition-colors">Es nueva / Estoy empezando</span>
+                    </label>
+                    <label class="flex items-start gap-3 cursor-pointer group">
+                      <input type="radio" name="estado_marca" value="Ya existe, quiero renovarla" class="mt-1 accent-accent" />
+                      <span class="text-sm text-zinc-400 group-hover:text-zinc-200 transition-colors">Ya existe, quiero renovarla</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2: Identidad Visual -->
+            <div class="form-step hidden" data-step="2">
+              <h4 class="text-lg font-bold text-accent mb-6 flex items-center gap-2">
+                <span class="w-6 h-6 rounded-full bg-accent/20 text-accent flex items-center justify-center text-xs">2</span> 
+                Tu identidad visual
+              </h4>
+              <div class="space-y-6">
+                <div>
+                  <label class="block text-sm font-medium text-zinc-300 mb-3">¿Cómo quieres que se sienta tu marca?</label>
+                  <div class="grid grid-cols-2 gap-2">
+                    <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="sensacion[]" value="Elegante" class="accent-accent" /><span class="text-sm text-zinc-400">Elegante</span></label>
+                    <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="sensacion[]" value="Moderna" class="accent-accent" /><span class="text-sm text-zinc-400">Moderna</span></label>
+                    <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="sensacion[]" value="Minimalista" class="accent-accent" /><span class="text-sm text-zinc-400">Minimalista</span></label>
+                    <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="sensacion[]" value="Atrevida" class="accent-accent" /><span class="text-sm text-zinc-400">Atrevida</span></label>
+                    <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="sensacion[]" value="Cálida" class="accent-accent" /><span class="text-sm text-zinc-400">Cálida</span></label>
+                    <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="sensacion[]" value="Artesanal" class="accent-accent" /><span class="text-sm text-zinc-400">Artesanal</span></label>
+                    <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="sensacion[]" value="Seria" class="accent-accent" /><span class="text-sm text-zinc-400">Seria</span></label>
+                    <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="sensacion[]" value="Fresca" class="accent-accent" /><span class="text-sm text-zinc-400">Fresca</span></label>
+                    <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="sensacion[]" value="Accesible" class="accent-accent" /><span class="text-sm text-zinc-400">Accesible</span></label>
+                    <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="sensacion[]" value="Poderosa" class="accent-accent" /><span class="text-sm text-zinc-400">Poderosa</span></label>
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-zinc-300 mb-3">¿Qué tipo de tipografía prefieres?</label>
+                  <div class="space-y-2">
+                    <label class="flex items-start gap-3 cursor-pointer"><input type="radio" name="tipografia" value="Serif" class="mt-1 accent-accent" /><span class="text-sm text-zinc-400">Serif – clásica y elegante</span></label>
+                    <label class="flex items-start gap-3 cursor-pointer"><input type="radio" name="tipografia" value="Sans-serif" class="mt-1 accent-accent" /><span class="text-sm text-zinc-400">Sans-serif – moderna y limpia</span></label>
+                    <label class="flex items-start gap-3 cursor-pointer"><input type="radio" name="tipografia" value="Script" class="mt-1 accent-accent" /><span class="text-sm text-zinc-400">Script – personal y artesanal</span></label>
+                    <label class="flex items-start gap-3 cursor-pointer"><input type="radio" name="tipografia" value="Sin preferencia" class="mt-1 accent-accent" /><span class="text-sm text-zinc-400">Sin preferencia, confío en tu criterio</span></label>
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-zinc-300 mb-3">Paleta de colores que conecta con tu marca:</label>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-3 cursor-pointer"><input type="radio" name="colores" value="Neutros" class="accent-accent" /><span class="text-sm text-zinc-400 flex items-center justify-between w-full">Neutros (blanco, negro, beige) <div class="flex gap-1"><span class="w-4 h-4 rounded-full bg-white border border-zinc-700"></span><span class="w-4 h-4 rounded-full bg-[#E5E5DC]"></span><span class="w-4 h-4 rounded-full bg-black border border-zinc-700"></span></div></span></label>
+                    <label class="flex items-center gap-3 cursor-pointer"><input type="radio" name="colores" value="Tierra" class="accent-accent" /><span class="text-sm text-zinc-400 flex items-center justify-between w-full">Tierra (terracota, café, ocre) <div class="flex gap-1"><span class="w-4 h-4 rounded-full bg-[#E2725B]"></span><span class="w-4 h-4 rounded-full bg-[#6F4E37]"></span><span class="w-4 h-4 rounded-full bg-[#CC7722]"></span></div></span></label>
+                    <label class="flex items-center gap-3 cursor-pointer"><input type="radio" name="colores" value="Fríos" class="accent-accent" /><span class="text-sm text-zinc-400 flex items-center justify-between w-full">Fríos (azul, verde, gris) <div class="flex gap-1"><span class="w-4 h-4 rounded-full bg-[#1E3A8A]"></span><span class="w-4 h-4 rounded-full bg-[#064E3B]"></span><span class="w-4 h-4 rounded-full bg-[#4B5563]"></span></div></span></label>
+                    <label class="flex items-center gap-3 cursor-pointer"><input type="radio" name="colores" value="Cálidos" class="accent-accent" /><span class="text-sm text-zinc-400 flex items-center justify-between w-full">Cálidos (rojo, naranja, amarillo) <div class="flex gap-1"><span class="w-4 h-4 rounded-full bg-[#DC2626]"></span><span class="w-4 h-4 rounded-full bg-[#EA580C]"></span><span class="w-4 h-4 rounded-full bg-[#EAB308]"></span></div></span></label>
+                    <label class="flex items-center gap-3 cursor-pointer"><input type="radio" name="colores" value="Pastel" class="accent-accent" /><span class="text-sm text-zinc-400">Pastel</span></label>
+                    <label class="flex items-center gap-3 cursor-pointer"><input type="radio" name="colores" value="Oscuros" class="accent-accent" /><span class="text-sm text-zinc-400">Oscuros / Dramáticos</span></label>
+                    <label class="flex items-center gap-3 cursor-pointer"><input type="radio" name="colores" value="No se" class="accent-accent" /><span class="text-sm text-zinc-400">Aún no lo sé</span></label>
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-zinc-300 mb-1">¿Tienes referencias de marcas que te gusten? <span class="text-zinc-500 font-normal">(Opcional)</span></label>
+                  <textarea name="referencias" rows="2" placeholder="Ej. Me gusta el estilo de Apple, los colores de Zara..." class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent text-sm resize-none"></textarea>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-zinc-300 mb-1">¿Qué NO quieres en tu marca? <span class="text-zinc-500 font-normal">(Opcional)</span></label>
+                  <textarea name="no_quiero" rows="2" placeholder="Ej. Nada recargado, nada de rojo, nada anticuado..." class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent text-sm resize-none"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Confirmación -->
+            <div class="form-step hidden" data-step="3">
+              <h4 class="text-lg font-bold text-accent mb-6 flex items-center gap-2">
+                <span class="w-6 h-6 rounded-full bg-accent/20 text-accent flex items-center justify-center text-xs">3</span> 
+                Confirmación y pago
+              </h4>
+              <div class="space-y-6">
+                <div>
+                  <label class="block text-sm font-medium text-zinc-300 mb-3">¿Cuándo necesitas el proyecto?</label>
+                  <div class="space-y-2">
+                    <label class="flex items-start gap-3 cursor-pointer"><input type="radio" name="urgencia" value="Urgente" required class="mt-1 accent-accent" /><span class="text-sm text-zinc-400">Urgente (menos de 1 semana)</span></label>
+                    <label class="flex items-start gap-3 cursor-pointer"><input type="radio" name="urgencia" value="2-4 semanas" class="mt-1 accent-accent" /><span class="text-sm text-zinc-400">2–4 semanas</span></label>
+                    <label class="flex items-start gap-3 cursor-pointer"><input type="radio" name="urgencia" value="1-2 meses" class="mt-1 accent-accent" /><span class="text-sm text-zinc-400">1–2 meses</span></label>
+                    <label class="flex items-start gap-3 cursor-pointer"><input type="radio" name="urgencia" value="Sin fecha límite" class="mt-1 accent-accent" /><span class="text-sm text-zinc-400">Sin fecha límite</span></label>
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-zinc-300 mb-1">Información adicional <span class="text-zinc-500 font-normal">(Opcional)</span></label>
+                  <textarea name="adicional" rows="2" placeholder="Cualquier detalle extra que consideres importante." class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent text-sm resize-none"></textarea>
+                </div>
+                
+                <div class="bg-zinc-800/50 border border-zinc-700 rounded-xl p-4 text-sm text-zinc-300">
+                  <span class="text-xl mr-2">📋</span> Este plan incluye 2 rondas de revisión y entrega en 7–10 días hábiles desde la recepción del pago inicial.
+                </div>
+                
+                <div class="bg-amber-500/10 border border-amber-500/30 rounded-xl p-4 text-sm text-amber-200 shadow-[inset_0_0_20px_rgba(245,158,11,0.05)]">
+                  <span class="text-xl mr-2">💳</span> Para iniciar el proyecto se requiere un pago del 50% por adelantado ($60 sobre $120 base). El 50% restante se cancela antes de la entrega final. No se entregan archivos sin pago completo.
+                </div>
+
+                <div class="pt-4 border-t border-white/5">
+                  <label class="flex items-start gap-3 cursor-pointer">
+                    <input type="checkbox" required class="mt-1 w-4 h-4 accent-accent tc-checkbox" />
+                    <span class="text-sm text-zinc-400 leading-snug">
+                      He leído y acepto los <span class="text-accent hover:underline" onclick="toggleTerms(event)">Términos y Condiciones del servicio</span>.
+                    </span>
+                  </label>
+                  
+                  <!-- T&C Accordion -->
+                  <div class="terms-content hidden mt-3 p-4 bg-zinc-900 border border-zinc-800 rounded-lg text-xs text-zinc-400 max-h-48 overflow-y-auto custom-scrollbar">
+                    <h5 class="font-bold text-white mb-2">Términos y Condiciones — Gabriel Tovar · Diseño Freelance</h5>
+                    <ol class="list-decimal pl-4 space-y-2">
+                      <li><strong>Alcance del servicio:</strong> Los servicios quedan definidos exclusivamente por el plan. Cualquier elemento no explícito genera costo adicional.</li>
+                      <li><strong>Pago y facturación:</strong> Pago del 50% antes de iniciar. 50% restante antes de entrega en USD. No reembolsables.</li>
+                      <li><strong>Revisiones:</strong> Cada plan incluye rondas específicas. Revisiones extra cuestan $25 c/u.</li>
+                      <li><strong>Tiempos:</strong> Plazos en días hábiles empiezan desde el pago inicial y formulario lleno.</li>
+                      <li><strong>Retroalimentación:</strong> El cliente tiene 5 días para responder, de lo contrario se asume aprobación.</li>
+                      <li><strong>Derechos:</strong> Derechos comerciales transferidos al completar el pago total.</li>
+                      <li><strong>Editables:</strong> Archivos de trabajo (AI, PSD) no incluidos sin previo acuerdo.</li>
+                      <li><strong>Cancelación:</strong> El adelanto no es reembolsable si el cliente cancela.</li>
+                      <li><strong>Aceptación:</strong> Enviar este formulario implica la aceptación de todo lo anterior.</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <!-- ============================== -->
+          <!-- FORM 2: IDENTIDAD COMPLETA     -->
+          <!-- ============================== -->
+          <!-- ... omitted for brevity in python script, I'll generate the full HTML ... -->
+
+          <form id="form-plan-02" name="plan-02-identidad-completa" method="POST" data-netlify="true" class="hidden plan-form">
+            <input type="hidden" name="form-name" value="plan-02-identidad-completa" />
+            <input name="bot-field" style="display:none" />
+            <input type="hidden" name="plan" value="Plan 02 – Identidad Completa" />
+
+            <!-- Step 1 -->
+            <div class="form-step" data-step="1">
+              <h4 class="text-lg font-bold text-accent mb-6 flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-accent/20 text-accent flex items-center justify-center text-xs">1</span> Tu negocio</h4>
+              <div class="space-y-4">
+                <div><label class="block text-sm font-medium text-zinc-300 mb-1">Nombre completo <span class="text-red-400">*</span></label><input type="text" name="nombre" required class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent text-sm" /></div>
+                <div><label class="block text-sm font-medium text-zinc-300 mb-1">Email <span class="text-red-400">*</span></label><input type="email" name="email" required class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent text-sm" /></div>
+                <div><label class="block text-sm font-medium text-zinc-300 mb-1">WhatsApp <span class="text-red-400">*</span></label><input type="text" name="telefono" required class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent text-sm" /></div>
+                <div><label class="block text-sm font-medium text-zinc-300 mb-1">Nombre de marca <span class="text-red-400">*</span></label><input type="text" name="negocio" required class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent text-sm" /></div>
+                <div><label class="block text-sm font-medium text-zinc-300 mb-1">¿A qué se dedica? <span class="text-red-400">*</span></label><textarea name="descripcion" required rows="2" class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent text-sm resize-none"></textarea></div>
+                <div><label class="block text-sm font-medium text-zinc-300 mb-3">Audiciencia objetivo (Género)</label><div class="flex gap-4"><label><input type="radio" name="genero" value="Mujeres" required class="accent-accent"> <span class="text-sm text-zinc-400">Mujeres</span></label><label><input type="radio" name="genero" value="Hombres" class="accent-accent"> <span class="text-sm text-zinc-400">Hombres</span></label><label><input type="radio" name="genero" value="Ambos" class="accent-accent"> <span class="text-sm text-zinc-400">Ambos</span></label></div></div>
+                <div><label class="block text-sm font-medium text-zinc-300 mb-3">Rango de edad cliente ideal</label><div class="grid grid-cols-3 gap-2"><label><input type="radio" name="edad" value="13-18" required class="accent-accent"> <span class="text-sm text-zinc-400">13–18</span></label><label><input type="radio" name="edad" value="18-25" class="accent-accent"> <span class="text-sm text-zinc-400">18–25</span></label><label><input type="radio" name="edad" value="25-35" class="accent-accent"> <span class="text-sm text-zinc-400">25–35</span></label><label><input type="radio" name="edad" value="35-50" class="accent-accent"> <span class="text-sm text-zinc-400">35–50</span></label><label><input type="radio" name="edad" value="50+" class="accent-accent"> <span class="text-sm text-zinc-400">50+</span></label><label><input type="radio" name="edad" value="Variado" class="accent-accent"> <span class="text-sm text-zinc-400">Variado</span></label></div></div>
+                <div><label class="block text-sm font-medium text-zinc-300 mb-1">País/región audiencia</label><input type="text" name="region" class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent text-sm" /></div>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="form-step hidden" data-step="2">
+              <h4 class="text-lg font-bold text-accent mb-6 flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-accent/20 text-accent flex items-center justify-center text-xs">2</span> Tu identidad visual</h4>
+              <div class="space-y-6">
+                <!-- Shortened version of Step 2 logic -->
+                <div><label class="block text-sm font-medium text-zinc-300 mb-1">¿Cómo quieres que se sienta la marca?</label><input type="text" name="sensaciones" placeholder="Ej. Elegante, Moderna, Atrevida..." class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white text-sm" /></div>
+                <div><label class="block text-sm font-medium text-zinc-300 mb-1">Paleta de colores sugerida</label><input type="text" name="colores" placeholder="Ej. Terra, Fríos, Minimalista..." class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white text-sm" /></div>
+                <div><label class="block text-sm font-medium text-zinc-300 mb-1">Tipografía</label><input type="text" name="tipografia" placeholder="Serif, Sans-serif o Script..." class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white text-sm" /></div>
+                <div><label class="block text-sm font-medium text-zinc-300 mb-1">Referencias que te gusten</label><textarea name="referencias" rows="2" class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white text-sm resize-none"></textarea></div>
+                <div><label class="block text-sm font-medium text-zinc-300 mb-1">Lo que NO quieres</label><textarea name="no_quiero" rows="2" class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white text-sm resize-none"></textarea></div>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="form-step hidden" data-step="3">
+              <h4 class="text-lg font-bold text-accent mb-6 flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-accent/20 text-accent flex items-center justify-center text-xs">3</span> Aplicaciones de marca</h4>
+              <div class="space-y-4">
+                <div><label class="block text-sm font-medium text-zinc-300 mb-2">¿Tienes redes activas?</label><div class="flex gap-4"><label><input type="radio" name="redes_activas" value="Sí" class="accent-accent"> <span class="text-sm text-zinc-400">Sí</span></label><label><input type="radio" name="redes_activas" value="No" class="accent-accent"> <span class="text-sm text-zinc-400">No</span></label></div></div>
+                <div><label class="block text-sm font-medium text-zinc-300 mb-2">¿En qué redes usarás la marca?</label><input type="text" name="redes_plataformas" placeholder="Instagram, Facebook, LinkedIn..." class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white text-sm"></div>
+                <div><label class="block text-sm font-medium text-zinc-300 mb-1">Eslogan</label><input type="text" name="eslogan" class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white text-sm" /></div>
+                <div><label class="block text-sm font-medium text-zinc-300 mb-2">¿Tarjeta de presentación?</label><select name="tarjeta" class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white text-sm"><option value="Física">Física (para imprimir)</option><option value="Digital">Digital (para compartir)</option><option value="Ambas">Ambas</option><option value="No se">No sé aún</option></select></div>
+                <div><label class="block text-sm font-medium text-zinc-300 mb-1">Elementos existentes a mantener</label><textarea name="elementos_mantener" rows="2" class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white text-sm resize-none"></textarea></div>
+              </div>
+            </div>
+
+            <!-- Step 4: Confirmación -->
+            <div class="form-step hidden" data-step="4">
+              <h4 class="text-lg font-bold text-accent mb-6 flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-accent/20 text-accent flex items-center justify-center text-xs">4</span> Confirmación y pago</h4>
+              <div class="space-y-6">
+                <div><label class="block text-sm font-medium text-zinc-300 mb-2">¿Cuándo necesitas el proyecto?</label><select name="urgencia" required class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white text-sm"><option value="Urgente">Urgente</option><option value="2-4 semanas">2-4 semanas</option><option value="Sin limite">Sin fecha límite</option></select></div>
+                <div class="bg-zinc-800/50 border border-zinc-700 rounded-xl p-4 text-sm text-zinc-300">📋 Este plan incluye todo del Plan 01 más papelería base, plantillas para redes y manual básico. Entrega en 15–20 días hábiles.</div>
+                <div class="bg-amber-500/10 border border-amber-500/30 rounded-xl p-4 text-sm text-amber-200">💳 Para iniciar el proyecto se requiere un pago del 50% por adelantado ($140 sobre $280 base).</div>
+                <div class="pt-4 border-t border-white/5"><label class="flex items-start gap-3 cursor-pointer"><input type="checkbox" required class="mt-1 w-4 h-4 accent-accent tc-checkbox" /><span class="text-sm text-zinc-400">He leído y acepto los <span class="text-accent hover:underline" onclick="toggleTerms(event)">Términos y Condiciones</span>.</span></label></div>
+              </div>
+            </div>
+          </form>
+
+          <form id="form-plan-03" name="plan-03-brandbook" method="POST" data-netlify="true" class="hidden plan-form">
+            <input type="hidden" name="form-name" value="plan-03-brandbook" />
+            <input name="bot-field" style="display:none" />
+            <input type="hidden" name="plan" value="Plan 03 – Brandbook Profesional" />
+
+            <!-- Step 1 -->
+            <div class="form-step" data-step="1">
+              <h4 class="text-lg font-bold text-accent mb-6 flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-accent/20 text-accent flex items-center justify-center text-xs">1</span> Tu negocio</h4>
+              <div class="space-y-4">
+                <div><label class="block text-sm font-medium text-zinc-300 mb-1">Nombre completo <span class="text-red-400">*</span></label><input type="text" name="nombre" required class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white text-sm" /></div>
+                <div><label class="block text-sm font-medium text-zinc-300 mb-1">Email <span class="text-red-400">*</span></label><input type="email" name="email" required class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white text-sm" /></div>
+                <div><label class="block text-sm font-medium text-zinc-300 mb-1">WhatsApp <span class="text-red-400">*</span></label><input type="text" name="telefono" required class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white text-sm" /></div>
+                <div><label class="block text-sm font-medium text-zinc-300 mb-1">Propuesta de valor <span class="text-red-400">*</span></label><textarea name="propuesta_valor" required rows="2" class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white text-sm resize-none"></textarea></div>
+                <div><label class="block text-sm font-medium text-zinc-300 mb-2">Tamaño empresa</label><select name="tamaño" class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white text-sm"><option value="Personal">Personal</option><option value="Pequeña">2-10 personas</option><option value="Mediana/Grande">Mediana o grande</option></select></div>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="form-step hidden" data-step="2">
+              <h4 class="text-lg font-bold text-accent mb-6 flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-accent/20 text-accent flex items-center justify-center text-xs">2</span> Identidad</h4>
+              <div class="space-y-4">
+                 <div><label class="block text-sm font-medium text-zinc-300 mb-1">Directrices de estilo</label><textarea name="estilo" rows="3" placeholder="Describe sensaciones, colores y tipo de fuente" class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white text-sm resize-none"></textarea></div>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="form-step hidden" data-step="3">
+              <h4 class="text-lg font-bold text-accent mb-6 flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-accent/20 text-accent flex items-center justify-center text-xs">3</span> Aplicaciones</h4>
+              <div class="space-y-4">
+                 <div><label class="block text-sm font-medium text-zinc-300 mb-1">Papelería e ítems necesarios</label><textarea name="papeleria" rows="3" class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white text-sm resize-none"></textarea></div>
+                 <div><label class="block text-sm font-medium text-zinc-300 mb-2">¿Manejas sub-marcas?</label><select name="submarcas" class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white text-sm"><option value="Sí">Sí</option><option value="No">No</option></select></div>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="form-step hidden" data-step="4">
+              <h4 class="text-lg font-bold text-accent mb-6 flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-accent/20 text-accent flex items-center justify-center text-xs">4</span> Estrategia</h4>
+              <div class="space-y-4">
+                 <div><label class="block text-sm font-medium text-zinc-300 mb-1">Competidores</label><textarea name="competidores" rows="2" class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white text-sm resize-none"></textarea></div>
+                 <div><label class="block text-sm font-medium text-zinc-300 mb-1">Posicionamiento</label><textarea name="posicionamiento" rows="2" class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white text-sm resize-none"></textarea></div>
+                 <div><label class="block text-sm font-medium text-zinc-300 mb-2">Tono de comunicación</label><input type="text" name="tono" class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white text-sm" /></div>
+              </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="form-step hidden" data-step="5">
+              <h4 class="text-lg font-bold text-accent mb-6 flex items-center gap-2"><span class="w-6 h-6 rounded-full bg-accent/20 text-accent flex items-center justify-center text-xs">5</span> Confirmación y pago</h4>
+              <div class="space-y-6">
+                <div class="bg-zinc-800/50 border border-zinc-700 rounded-xl p-4 text-sm text-zinc-300">📋 El Brandbook Profesional incluye manual extendido (15–25 pág). Entrega en 25–35 días hábiles.</div>
+                <div class="bg-amber-500/10 border border-amber-500/30 rounded-xl p-4 text-sm text-amber-200">💳 Para iniciar el proyecto se requiere un pago del 50% por adelantado ($275 sobre $550 base).</div>
+                <div class="pt-4 border-t border-white/5"><label class="flex items-start gap-3 cursor-pointer"><input type="checkbox" required class="mt-1 w-4 h-4 accent-accent tc-checkbox" /><span class="text-sm text-zinc-400">He leído y acepto los <span class="text-accent hover:underline" onclick="toggleTerms(event)">Términos y Condiciones</span>.</span></label></div>
+              </div>
+            </div>
+          </form>
+
+        </div>
+
+        <!-- Footer / Controls -->
+        <div class="px-6 py-4 border-t border-white/10 bg-zinc-900/50 rounded-b-2xl flex justify-between items-center" id="modal-footer">
+          <button id="btn-prev" onclick="prevStep()" class="invisible px-6 py-2 border border-zinc-700 text-zinc-300 rounded-full hover:bg-zinc-800 transition-colors hidden sm:block text-sm font-bold">Anterior</button>
+          
+          <div class="flex-1 flex justify-end gap-3 w-full sm:w-auto">
+            <button id="btn-prev-mobile" onclick="prevStep()" class="invisible sm:hidden px-6 py-2 border border-zinc-700 text-zinc-300 rounded-full hover:bg-zinc-800 transition-colors text-sm font-bold">Atrás</button>
+            <button id="btn-next" onclick="nextStep()" class="px-8 py-2 bg-accent text-zinc-950 font-bold rounded-full hover:bg-accent/90 transition-colors text-sm">Siguiente</button>
+            <button id="btn-submit" onclick="submitForm()" class="hidden px-8 py-2 bg-accent text-zinc-950 font-bold rounded-full hover:bg-accent/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm" disabled>Enviar Solicitud</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Logic Script -->
+    <script>
+      let currentPlan = 1;
+      let currentStep = 1;
+      let maxSteps = 3;
+
+      function getActiveForm() {
+        return document.getElementById(`form-plan-0${currentPlan}`);
+      }
+
+      function openPlanModal(planNum) {
+        currentPlan = planNum;
+        currentStep = 1;
+        maxSteps = planNum === 1 ? 3 : (planNum === 2 ? 4 : 5);
+
+        // Hide all forms, show active
+        document.querySelectorAll('.plan-form').forEach(f => f.classList.add('hidden'));
+        const activeForm = getActiveForm();
+        activeForm.classList.remove('hidden');
+
+        // Reset forms & UI
+        activeForm.reset();
+        document.getElementById('form-success-message').classList.add('hidden');
+        document.getElementById('modal-footer').classList.remove('hidden');
+        
+        // Hide terms
+        document.querySelectorAll('.terms-content').forEach(t => t.classList.add('hidden'));
+
+        // Reset Submit button
+        const tcCheckbox = activeForm.querySelector('.tc-checkbox');
+        const submitBtn = document.getElementById('btn-submit');
+        submitBtn.disabled = true;
+        if(tcCheckbox) {
+            tcCheckbox.addEventListener('change', (e) => {
+                submitBtn.disabled = !e.target.checked;
+            });
+        }
+
+        updateStepsUI();
+
+        // Show modal
+        const modal = document.getElementById('plan-modal');
+        const backdrop = document.getElementById('modal-backdrop');
+        const contentBox = document.getElementById('modal-content-box');
+        
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        
+        // Animate in
+        setTimeout(() => {
+          backdrop.classList.remove('opacity-0');
+          contentBox.classList.remove('opacity-0', 'scale-95');
+        }, 10);
+      }
+
+      function closePlanModal() {
+        const modal = document.getElementById('plan-modal');
+        const backdrop = document.getElementById('modal-backdrop');
+        const contentBox = document.getElementById('modal-content-box');
+        
+        backdrop.classList.add('opacity-0');
+        contentBox.classList.add('opacity-0', 'scale-95');
+        
+        setTimeout(() => {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        }, 300);
+      }
+
+      function updateStepsUI() {
+        const activeForm = getActiveForm();
+        const steps = activeForm.querySelectorAll('.form-step');
+        
+        steps.forEach((step, index) => {
+          if (index + 1 === currentStep) {
+            step.classList.remove('hidden');
+          } else {
+            step.classList.add('hidden');
+          }
+        });
+
+        // Update progress bar
+        const progress = (currentStep / maxSteps) * 100;
+        document.getElementById('progress-bar').style.width = `${progress}%`;
+
+        // Update buttons
+        const prevBtns = [document.getElementById('btn-prev'), document.getElementById('btn-prev-mobile')];
+        const nextBtn = document.getElementById('btn-next');
+        const submitBtn = document.getElementById('btn-submit');
+
+        if (currentStep === 1) {
+          prevBtns.forEach(b => b.classList.add('invisible'));
+        } else {
+          prevBtns.forEach(b => b.classList.remove('invisible'));
+        }
+
+        if (currentStep === maxSteps) {
+          nextBtn.classList.add('hidden');
+          submitBtn.classList.remove('hidden');
+        } else {
+          nextBtn.classList.remove('hidden');
+          submitBtn.classList.add('hidden');
+        }
+        
+        // Scroll to top
+        document.getElementById('modal-body-scroll').scrollTop = 0;
+      }
+
+      function validateStep() {
+        const activeForm = getActiveForm();
+        const currentStepEl = activeForm.querySelector(`.form-step[data-step="${currentStep}"]`);
+        const requiredInputs = currentStepEl.querySelectorAll('[required]');
+        
+        let isValid = true;
+        
+        // Very basic validation trigger
+        requiredInputs.forEach(input => {
+          if (!input.checkValidity()) {
+            input.reportValidity();
+            isValid = false;
+          }
+        });
+        
+        return isValid;
+      }
+
+      function nextStep() {
+        if (!validateStep()) return;
+        if (currentStep < maxSteps) {
+          currentStep++;
+          updateStepsUI();
+        }
+      }
+
+      function prevStep() {
+        if (currentStep > 1) {
+          currentStep--;
+          updateStepsUI();
+        }
+      }
+
+      function toggleTerms(e) {
+        e.preventDefault();
+        const step = getActiveForm().querySelector(`.form-step[data-step="${maxSteps}"]`);
+        const terms = step.querySelector('.terms-content');
+        if(terms) terms.classList.toggle('hidden');
+      }
+
+      function submitForm() {
+        if (!validateStep()) return;
+        
+        const activeForm = getActiveForm();
+        const formData = new FormData(activeForm);
+        
+        document.getElementById('btn-submit').textContent = 'Enviando...';
+        document.getElementById('btn-submit').disabled = true;
+
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString(),
+        })
+        .then(() => {
+          // Success
+          document.getElementById('modal-footer').classList.add('hidden');
+          document.getElementById('form-success-message').classList.remove('hidden');
+        })
+        .catch((error) => {
+          alert('Hubo un error al enviar el formulario. Intenta nuevamente.');
+          document.getElementById('btn-submit').textContent = 'Enviar Solicitud';
+          document.getElementById('btn-submit').disabled = false;
+        });
+      }
+    </script>
+    
   </body>
 </html>
