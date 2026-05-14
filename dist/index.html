@@ -62,7 +62,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <script type="module" crossorigin src="/assets/index-BIOhkLt8.js"></script>
+    <script type="module" crossorigin src="/assets/index-tbA_ejCn.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index.css">
   </head>
 
@@ -227,10 +227,12 @@
 
         <div class="text-center reveal">
           <span
+            id="hero-tagline"
             class="text-accent font-mono text-sm tracking-widest uppercase mb-4 block"
             >Soluciones Digitales Integrales</span
           >
           <h1
+            id="hero-name-container"
             class="text-5xl sm:text-7xl md:text-8xl font-display font-bold tracking-tighter mb-6 leading-tight"
           >
             GABRIEL <span class="text-accent">TOVAR</span>
@@ -257,19 +259,21 @@
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#portfolio"
+              id="hero-primary-cta"
               class="bg-accent hover:bg-accent-hover text-zinc-950 px-8 py-4 rounded-full font-bold flex items-center justify-center gap-2 transition-all transform hover:scale-105"
               aria-label="Ver proyectos"
             >
               <i class="fas fa-briefcase"></i>
-              Ver proyectos
+              <span>Ver proyectos</span>
             </a>
             <a
               href="#contact"
+              id="hero-secondary-cta"
               class="border border-zinc-800 hover:border-accent px-8 py-4 rounded-full font-bold flex items-center justify-center gap-2 transition-all"
               aria-label="Trabajar conmigo"
             >
               <i class="fas fa-handshake"></i>
-              Trabajar conmigo
+              <span>Trabajar conmigo</span>
             </a>
           </div>
         </div>
@@ -313,7 +317,7 @@
             >
               Perfil Profesional
             </h2>
-            <div class="space-y-8 text-zinc-300 leading-relaxed text-lg">
+            <div id="about-bio" class="space-y-8 text-zinc-300 leading-relaxed text-lg">
               <p>
                 Coordinador de Producción en Coder.y con experiencia integral
                 que abarca desde infraestructura de telecomunicaciones FTTH
@@ -355,7 +359,7 @@
           </div>
 
           <!-- Right Column: Skills Section -->
-          <div class="reveal space-y-8">
+          <div id="about-skills-container" class="reveal space-y-8">
             <!-- Infraestructura -->
             <div
               class="skill-card p-6 glass-premium transform hover:scale-102 transition-transform duration-300"
@@ -554,7 +558,7 @@
           </p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-8 mb-16">
+        <div id="services-grid" class="grid md:grid-cols-2 gap-8 mb-16">
           <!-- Creación de Identidad Visual y Branding -->
           <div class="skill-card reveal glass-premium p-8">
             <div
@@ -789,7 +793,7 @@
           </p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div id="plans-grid" class="grid md:grid-cols-3 gap-8 mb-8">
           <!-- Plan 01 -->
           <div class="reveal glass-premium p-8 rounded-2xl flex flex-col border border-white/5">
             <h3 class="text-xl font-bold text-white mb-2">Plan 01 — Identidad Esencial</h3>
@@ -1098,7 +1102,7 @@
         <div class="relative reveal">
           <div class="timeline-line"></div>
 
-          <div class="space-y-12">
+          <div id="experience-list" class="space-y-12">
             <!-- Coder.y -->
             <div class="relative pl-12 md:pl-0">
               <div class="timeline-dot"></div>
@@ -1289,7 +1293,8 @@
                     >Email</span
                   >
                   <a
-                    href="#" onclick="window.location.href=atob('bWFpbHRvOmplc3VzdHByaXZAZ21haWwuY29t'); return false;"
+                    id="contact-email"
+                    href="#"
                     class="text-lg font-medium hover:text-accent transition-colors"
                     >jesustpriv@gmail.com</a
                   >
@@ -1307,7 +1312,8 @@
                     >WhatsApp</span
                   >
                   <a
-                    href="#" onclick="window.open(atob('aHR0cHM6Ly93YS5tZS81ODQyNDM1OTE3Mjc='), '_blank'); return false;" rel="noopener noreferrer"
+                    id="contact-whatsapp"
+                    href="#"
                     target="_blank"
                     class="text-lg font-medium hover:text-accent transition-colors"
                     >04243591727</a
@@ -1389,7 +1395,8 @@
 
           <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4 reveal">
             <a
-              href="https://www.instagram.com/gabrielt.designs"
+              id="social-ig-design"
+              href="#"
               target="_blank"
               class="social-action-btn"
               aria-label="Ver mi Instagram de diseño"
@@ -1398,7 +1405,8 @@
               <span>Instagram Diseño</span>
             </a>
             <a
-              href="https://www.instagram.com/gabrielt.photograph"
+              id="social-ig-photo"
+              href="#"
               target="_blank"
               class="social-action-btn"
               aria-label="Ver mi Instagram de fotografía"
@@ -1407,7 +1415,8 @@
               <span>Instagram Fotografía</span>
             </a>
             <a
-              href="https://www.linkedin.com/in/gabriel-tovar-486888233"
+              id="social-linkedin"
+              href="#"
               target="_blank"
               class="social-action-btn"
               aria-label="Ver mi perfil profesional en LinkedIn"
@@ -1416,7 +1425,8 @@
               <span>Perfil Profesional</span>
             </a>
             <a
-              href="https://github.com/jesustpriv"
+              id="social-github"
+              href="#"
               target="_blank"
               class="social-action-btn"
               aria-label="Ver mi perfil de GitHub"

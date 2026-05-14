@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Creación de Identidad Visual y Branding",
+    "description": "Diseño de marcas memorables que conectan emocionalmente con tu audiencia y generan reconocimiento instantáneo.",
+    "icon": "fa-palette",
+    "features": ["Identidad visual completa y coherente", "Sistemas de marca escalables", "Posicionamiento estratégico"],
+    "result": "Marcas que generan confianza y se diferencian en el mercado."
+  },
+  {
+    "title": "Diseño de Experiencias Digitales (UI/UX)",
+    "description": "Interfaces intuitivas y atractivas diseñadas pensando en el usuario para maximizar conversiones y retención.",
+    "icon": "fa-laptop-code",
+    "features": ["Wireframing y prototipado interactivo", "Diseño responsivo centrado en el usuario", "Sistemas de diseño consistentes"],
+    "result": "Productos digitales que los usuarios aman usar y recomiendan."
+  },
+  {
+    "title": "Desarrollo Frontend Moderno",
+    "description": "Sitios web rápidos, seguros y escalables construidos con las últimas tecnologías del mercado.",
+    "icon": "fa-code",
+    "features": ["Arquitectura basada en componentes", "Optimización extrema de rendimiento (SEO técnico)", "Integración impecable con CMS y APIs"],
+    "result": "Presencia digital robusta que convierte visitantes en clientes."
+  },
+  {
+    "title": "Estrategia y Consultoría Digital",
+    "description": "Alineamos tu visión de negocio con las herramientas tecnológicas adecuadas para impulsar tu crecimiento.",
+    "icon": "fa-chart-line",
+    "features": ["Auditoría de presencia digital", "Definición de roadmap tecnológico", "Optimización de flujos de conversión"],
+    "result": "Decisiones informadas que maximizan tu retorno de inversión."
+  }
+]

@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "name": "Plan 01 — Identidad Esencial",
+    "price": "Desde $120",
+    "target": "Ideal para: Emprendedores que están empezando y necesitan una base visual sólida.",
+    "includes": [
+      "Diseño de logotipo (2 propuestas, 2 rondas de revisión)",
+      "Paleta de colores oficial (primarios + secundarios)",
+      "Tipografías de la marca (display + cuerpo)",
+      "Versiones del logo (horizontal, vertical, ícono)",
+      "Entrega en PNG, SVG y PDF",
+      "Guía de uso básica (1 página)"
+    ],
+    "excludes": [
+      "NO incluye: Tarjetas, redes sociales, manual completo."
+    ],
+    "delivery": "7–10 días hábiles",
+    "highlighted": false,
+    "highlightText": ""
+  },
+  {
+    "id": 2,
+    "name": "Plan 02 — Identidad Completa",
+    "price": "Desde $280",
+    "target": "Ideal para: Negocios que quieren una marca coherente lista para aplicar en todos lados.",
+    "includesLabel": "Incluye todo del Plan 01, más:",
+    "includes": [
+      "Tarjeta de presentación (diseño frente y reverso)",
+      "Hoja membretada",
+      "3 plantillas para redes sociales (post + story)",
+      "Favicon / ícono de app",
+      "Manual de identidad visual básico (6–8 páginas)",
+      "Entrega organizada en carpetas por uso"
+    ],
+    "excludes": [],
+    "delivery": "15–20 días hábiles",
+    "highlighted": true,
+    "highlightText": "Más elegido"
+  },
+  {
+    "id": 3,
+    "name": "Plan 03 — Brandbook Profesional",
+    "price": "Desde $550",
+    "target": "Ideal para: Marcas que necesitan documentar y escalar su identidad visualmente.",
+    "includesLabel": "Incluye todo del Plan 02, más:",
+    "includes": [
+      "Manual de identidad completo (15–25 páginas)",
+      "Usos correctos e incorrectos del logo",
+      "Fotografía de estilo / moodboard oficial",
+      "Papelería extendida (sobres, firmas, facturas)",
+      "6 plantillas para redes sociales",
+      "Mockups de presentación de la marca",
+      "1 sesión de consultoría (60 min, videollamada)"
+    ],
+    "excludes": [],
+    "delivery": "25–35 días hábiles",
+    "highlighted": false,
+    "highlightText": ""
+  }
+]

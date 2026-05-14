@@ -1,0 +1,24 @@
+{
+  "bio": "Coordinador de Producción en Coder.y con experiencia integral que abarca desde infraestructura de telecomunicaciones FTTH hasta producción audiovisual y gráfica. Mi enfoque resalta la visión estética combinada con estrategias comerciales efectivas.\n\nActualmente coordino procesos creativos, asegurando que cada entrega cumpla con altos estándares de calidad gráfica y audiovisual, apoyándome en potentes herramientas de diseño y flujo de trabajo digital.\n\nMi experiencia abarca producción audiovisual, diseño de identidades visuales con Adobe Creative Suite y Affinity, fotografía profesional con capturas en blanco y negro y color, y gestión operativa en entornos de tecnología y telecomunicaciones. Esto me permite tener una visión integral de cada desafío, desde la estrategia digital con Instagram/Facebook Ads hasta la implementación estética final.",
+  "skills": [
+    {
+      "category": "Infraestructura & Telecom",
+      "description": "Gestión de redes FTTH y Radio Enlace.",
+      "icon": "fa-network-wired",
+      "tags": ["Mikrotik", "Mikrowisp", "AdminOLT", "SmartOLT", "AirControl"]
+    },
+    {
+      "category": "Suite Creativa",
+      "description": "Identidad visual y contenido multimedia.",
+      "icon": "fa-palette",
+      "tags": ["Photoshop", "Illustrator", "CorelDraw", "Canva", "CapCut", "Affinity"]
+    },
+    {
+      "category": "Estrategia Digital",
+      "description": "Gestión de marca y posicionamiento.",
+      "icon": "fa-bullhorn",
+      "tags": ["Redacción", "Redes Sociales", "Marketing Digital", "Estudio de Mercado", "Instagram Ads", "Facebook Ads", "Google Workplace", "Google Cloud"]
+    }
+  ],
+  "keySkills": ["Coordinación de Proyectos", "Producción Audiovisual", "Infraestructura FTTH", "Fotografía Profesional", "Diseño Digital y Gráfico", "Marketing Digital y Publicidad"]
+}

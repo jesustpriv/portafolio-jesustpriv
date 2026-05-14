@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark-bg: #09090b;
+  --color-dark-surface: #121212;
+  --color-electric-blue: #b130ff;
+  --color-accent-hover: #c666ff;
+  --color-accent-glow: #b130ff1a;
+  --color-outline-glass: rgba(255, 255, 255, 0.05);
+  --font-sans: "Inter", "Space Grotesk", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--color-dark-bg)] text-gray-300 font-sans antialiased selection:bg-electric-blue selection:text-white;
+  }
+}
+
+@layer components {
+  .glass-premium {
+    @apply backdrop-blur-2xl bg-[#09090b]/80 border border-[var(--color-outline-glass)];
+    box-shadow: 0 0 40px -10px var(--color-accent-glow);
+  }
+
+  .bg-glow-violet {
+    @apply absolute pointer-events-none rounded-full blur-[120px] opacity-20;
+    background: radial-gradient(circle, var(--color-electric-blue), transparent 70%);
+    width: 600px;
+    height: 600px;
+  }
+}
